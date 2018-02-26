@@ -1,0 +1,47 @@
+{% include 'head.twig' %}
+<title>NewRestaurant</title>
+</head>
+<body>
+<form>
+    <!-- Displaying error message -->
+        {% if error is defined %}
+        <fieldset>
+            <p class="error">{{ error }}<br>Please try again:</p>
+        </fieldset>
+        {% endif %}
+
+        <fieldset class="name">
+            <label">NAME</label>
+            <input type="text" name="restaurantName">
+        </fieldset>
+        <fieldset class="phone">
+            <label">TELEFON</label>
+            <input type="text" name="phone">
+        </fieldset>
+        <fieldset class="address">
+            <label">ADRESSE</label>
+            <input type="text" name="address">
+        </fieldset>
+        <fieldset class="website">
+            <label">WEBSITE</label>
+            <input type="text" name="website">
+        </fieldset>
+        <fieldset class="email">
+            <label>EMAIL ADDRESS</label>
+            <input type="text" name="email">
+        </fieldset>
+
+<!--
+Öffnungszeiten (Date)
+
+checkboxen:
+Raucher (1-nichtraucher, 2-raucher, 3-beides)
+Wlan
+Preisklasse
+Lieferservice
+barrierefrei
+vegetarisch/vegan
+  -->
+        <button type="submit" name="submit" id="submit">ADD RESTAURANT</button>
+        </form>
+</body>
