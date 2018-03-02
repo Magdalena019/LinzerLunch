@@ -2,10 +2,10 @@
 <widget id="com.fhhagenberg.LinzerLunch" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>LinzerLunch</name>
     <description>
-        LinzerLunch
+        Die Linzer Restaurant App
     </description>
     <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Magdalena Geißbauer, Birgit Haselmayer, Andrea Maderthaner, Natascha Rammelmüller
+        Magdalena Geißbauer, Birgit Haselmayr, Andrea Maderthaner, Natascha Rammelmüller
     </author>
     <content src="index.php" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
@@ -25,5 +25,4 @@
     </platform>
     <engine name="ios" spec="~4.5.4" />
     <engine name="android" spec="~7.0.0" />
-    <plugin name="cordova-plugin-hostedwebapp" spec="^0.3.1" />
 </widget>
