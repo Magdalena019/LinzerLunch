@@ -1,0 +1,18 @@
+# App
+#Pro4/brainstorming
+
+Web app into native app
+
+### Cordova
+* Apache Cordova (sowohl für iOS als auch Android)
+* Cordova wie Compressor local im Projekt installieren
+* benötigt node.js und sdk for android (android studio) und iOS (Xcode)
+* Achtung: Content-Security-Policy! in Metadaten
+* Cordova.js (und index.js) anschauen evtl. einbinden
+* … siehe auch Ionic, PhoneGap
+
+### React Native
+* js framework
+* ebenfalls local im Projekt
+* native app coding - kein html, css (jedoch verwandt)
+* eher doppelte Arbeit

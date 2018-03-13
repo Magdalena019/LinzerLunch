@@ -1,0 +1,4 @@
+Jedes Restaurant bekommt einen eigenen Folder,
+in dem die Bilder, Infos usw. gespeichert werden,
+damit dann automatisch für jedes Restaurant eine
+Seite angelegt werden kann.

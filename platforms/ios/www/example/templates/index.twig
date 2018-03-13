@@ -1,0 +1,100 @@
+{% include 'head.twig' %}
+
+<script src='{{"public/js/js.cookie.js"}}'></script>
+<script src='{{"public/js/Cookies.js"}}'></script>
+<title>µnzn</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="space col-12"></div>
+        </div>
+    </div>
+
+    <header>
+        <div class="offset-8 col-4">
+            <button class="login white">SIGN IN</button>
+        </div>
+
+        <div>
+            <img id="logo" class="image" src="images/logo_large_w.png" height="540" width="183">
+            <div class="text offset-lg-2 col-lg-7 offset-lg-2 offset-md-2 col-md-9 offset-md-1 offset-sm-3 col-sm-8 offset-sm-1">
+                <h4>µnzn</h4>
+                <h1>CRYPTOCURRENCY CALCULATOR</h1>
+                <p class="explanation">
+                    A cryptocurrency exchange rate calculator and conversion tool offering a quick and simple overview of all your cryptocurrencies.
+                </p>
+                <a class="link" href="about.php">ABOUT</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <p class="offset-2 col-8">
+            Start today and create an account to manage all your coins in one place.
+        </p>
+
+        <form id="calculator" method="post">
+
+            <fieldset>
+                <div id="portfolio" class="container">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <button id="add" class="button" type="button" name="add">ADD CRYPTOCURRENCY</button>
+            </fieldset>
+
+            <fieldset>
+                <div id="totalSum" class="container">
+                    <div class="sum row">
+                        <select id="fiatoption" name="money"></select>
+                        <div class="output">0</div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <button class="black login" type="button" name="save">SAVE</button>
+            </fieldset>
+        </form>
+    </main>
+
+<div id="upForm">
+    <div class="upBox">
+        <div class="up-content">
+            <button class="offset-8" id="close">CLOSE</button>
+            <h2>WELCOME BACK</h2>
+            <p class="spaceAfter">LOGIN TO YOUR ACCOUNT</p>
+            <!-- Displaying error message -->
+            {% if error == true %}
+                <fieldset>
+                    <p class="error">Incorrect email or password.<br>Please try again:</p>
+                </fieldset>
+            {% endif %}
+            <form method="post" action="login/checklogin.php">
+                <fieldset id="input">
+                    <label>EMAIL ADDRESS</label>
+                    <input id="myemail" type="text" name="myemail" required>
+                    <label>PASSWORD</label>
+                    <input id="mypassword" type="password" name="mypassword" required>
+                    <div class="underline"></div>
+                </fieldset>
+                <fieldset id="action">
+                    <button class="black" type="submit" name="submit" value="SIGN IN">SIGN IN</button>
+                </fieldset>
+            </form>
+            <div id="register"><a href="register.php">CREATE A PORTFOLIO</a></div>
+        </div>
+    </div>
+</div>
+</body>
+
+{% if error == true %}
+    <script>
+        $('#upForm').removeAttr('class').addClass('log');
+        $('body').addClass('up-active');
+        $('main').addClass('up-active');
+    </script>
+{% endif %}
