@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+:root {
+  --blue:#ade5d8;
+  --orange:#ffcca1;
+}
+
+.body {
+    font-size: 20px;
+    line-height: 1.8;
+    background-color: darkred;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#logo {
+    margin-left: 50px;
+    margin-right: 50%;
+}
+
+#first {
+    align-content: center;
+    text-align: center;
+    background-color: darkcyan;
+    padding: 10px;
+}
+
+.container {
+    align-content: center;
+    text-align: center;
+    background-color: #ade5d8;
+    padding: 10px;
+}
+
+/*
+.firstrowbuttons {
+    float:left;
+    display: inline-block;
+    list-style-type:none;
+    margin-right:15px;
+}*/
+
+/* Start Breadcrumbs */
+
+/*
+* {
+    margin: 0px auto;
+    text-align:center;
+    padding: 0px;
+    list-style: none;
+    font-family: 'Open Sans';
+}
+
+.cont_breadcrumbs {
+    width: 350px;
+}
+
+.cont_breadcrumbs_1 {
+    position: relative;
+    width: 100%;
+    float: left;
+    margin: 20px;
+
+}
+
+.cont_breadcrumbs_1 > ul > li {
+    position: relative;
+    float: left;
+    transform: skewX(-15deg);
+    background-color: #fff;
+    box-shadow: -2px 0px 20px -6px rgba(0,0,0,0.5);
+    z-index: 1;
+    width: 70px;
+    margin-left: -50px;
+    transition: all 0.5s;
+}
+
+.cont_breadcrumbs_1 > ul > li  > a {
+    display: block;
+    padding: 10px;
+    font-size: 20px;
+    transform: skewX(15deg);
+    text-decoration:none;
+    color: #444;
+    font-weight: 300;
+}
+.cont_breadcrumbs_1 > ul > li:first-child {
+    margin-left: 0px;
+}
+.cont_breadcrumbs_1 > ul > li:hover {
+    background-color: #CFD8DC;
+}
+
+.cont_breadcrumbs_1 > ul > li:last-child {
+    background-color: #78909C;
+}
+
+.cont_breadcrumbs_1 > ul > li:last-child > a {
+    color: #fff;;
+}
+
+
+.cont_breadcrumbs_1 > ul:hover > li {
+    margin-left: 0px;
+}
+
+
+*/
+
+
+
+
+

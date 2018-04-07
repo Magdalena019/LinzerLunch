@@ -5,5 +5,4 @@ include 'globalcon.php';
 include 'dbconf.php';
 
 //Set this for global site use
-$site_name = 'mynzn';
-
+$site_name = 'linzerlunch';

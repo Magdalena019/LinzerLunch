@@ -1,7 +1,14 @@
-{% include 'head.twig' %}
+<head>
 
+  {% include 'head.twig'%}
+  <style>{{ source('style.css') }}</style>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat');
+  </style>
 <title>LinzerLunch</title>
 </head>
+
+
 
 <body>
 <!-- Navbar -->
@@ -16,7 +23,7 @@
       </button>
 
       <a class="navbar-brand" href="#">
-      <img src="logo.png" id="logo" alt="logo" width="50" height"50">
+      <img src="logo.png" id="logo" alt="logo" width="50" height="50">
       </a>
     </div>
     <div class="navbar-collapse collapse" id="myNavbar">
@@ -35,8 +42,6 @@
     <li><a href="#"> FILTERN </a></li>
     </ul>
   </button>
-</div>
-
 
 
 <!-- First Container -->
@@ -48,6 +53,22 @@
 -->
   <h3>Restaurantsuche leicht gemacht!</h3>
 </div> -->
+
+<!-- Start Breadcrumb Navigation -->
+
+<!--
+
+<div class="container" id="breadcrumbs">
+  <div class="cont_breadcrumbs_1">
+    <ul>
+      <li><a href="#">One</a></li>
+      <li><a href="#">Tow</a></li>
+      <li><a href="#">Three</a></li>
+      <li><a href="#">Four</a></li>
+      <li><a href="#">Five</a></li>
+    </ul>
+  </div>
+</div>
 
 
 <!-- Second Container (Grid) -->

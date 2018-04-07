@@ -1,0 +1,7 @@
+{
+    "require": {
+        "symfony/assetic-bundle": "^2.8",
+        "symfony/asset": "^3.4",
+        "symfony/console": "^3.4"
+    }
+}
