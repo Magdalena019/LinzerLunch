@@ -1,0 +1,147 @@
+<head>
+
+    {% include 'head.twig'%}
+    <style>{{ source('style.css') }}</style>
+    <style>
+        @import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900|Cabin:400,700|Droid+Serif:400,700|Playball');
+    </style>
+    <title>LinzerLunch</title>
+</head>
+
+<body>
+
+<!-- Start of the Header: Navigation Bar, Logo - Navbar Right Aligned & Fixed at the Top so that its always there when scrolling -->
+<!--=============== header ===============-->
+
+<header>
+    <div class="header-inner">
+        <div class="container">
+            <!--Navigation -->
+
+            <div class="nav-holder">
+                <!-->
+
+                <nav class="navbar navbar-inverse navbar-fixed-top">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">LinzerLunch</a>
+                            <a href="" class="pull-left"><img src="logo.png"></a>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Restaurants</a></li>
+                            <li><a href="#">Bars</a></li>
+                            <li><a href="#">Cafés</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!--header end-->
+
+
+<!--=============== Hero content ===============-->
+<div class="content full-height hero-content">
+    <div class="bg" style="background-image: url(bg1.jpg)"></div>
+    <div class="hero-title-holder">
+        <div class="overlay"></div>
+        <div class="hero-title">
+            <h3>Linzer Lunch</h3>
+            <h4>Die Linzer Restaurant Website</h4>
+        </div>
+        <div class="hero-link">
+            <a class="custom-scroll-link" href="#sec1"><i class="fa fa-angle-double-down"></i></a>
+        </div>
+    </div>
+</div>
+<!--hero end-->
+
+<em><br><br><br></em>
+
+
+<!-- First Container 2nd Try -->
+<!--=============== Restaurantsuche ===============-->
+
+<div id="wrapper1">
+
+        <div class="container">
+            <div class="row">
+                <!--about text-->
+                <div class="section-title">
+                    <h3>Contact us!</h3>
+                    <h4 class="decor-title">Du hast Fragen oder möchtest mit uns plaudern? Jetzt Kontakt aufnehmen!</h4>
+                </div>
+            </div>
+        </div>
+
+</div>
+
+<!-- Second Container 2nd Try -->
+<!--=============== About Linzer Lunch ===============-->
+<div id="wrapper1">
+      <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="well well-sm">
+                        <form class="form-horizontal" action="" method="post">
+                            <fieldset>
+                                <legend class="text-center">Lass uns wissen was dich beschäftigt!</legend>
+
+                                <!-- Name input-->
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="name">Name</label>
+                                    <div class="col-md-9">
+                                        <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
+                                    </div>
+                                </div>
+
+                                <!-- Email input-->
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="email">Your E-mail</label>
+                                    <div class="col-md-9">
+                                        <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
+                                    </div>
+                                </div>
+
+                                <!-- Message body -->
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="message">Your message</label>
+                                    <div class="col-md-9">
+                                        <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Form actions -->
+                                <div class="form-group">
+                                    <div class="col-md-12 text-right">
+                                        <button type="submit" class="btn btn-default" id="submitcontact">Submit</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <!--
+                    <div>
+                        <h3>Our Social Sites</h3>
+                        <ul class="list-inline banner-social-buttons">
+                            <li><a href="#" class="btn btn-default btn-lg"><i class="fa fa-twitter"> <span class="network-name">Twitter</span></i></a></li>
+                            <li><a href="#" class="btn btn-default btn-lg"><i class="fa fa-facebook"> <span class="network-name">Facebook</span></i></a></li>
+                            <li><a href="#" class="btn btn-default btn-lg"><i class="fa fa-youtube-play"> <span class="network-name">Youtube</span></i></a></li>
+                        </ul>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+    <p>A project from FH Hagenberg - Media Technology and Design <a href="https://www.fh-ooe.at">www.fh-ooe.at</a></p>
+</footer>
+</body>
