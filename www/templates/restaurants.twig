@@ -3,7 +3,7 @@
     {% include 'head.twig'%}
     <style>{{ source('style.css') }}</style>
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+        @import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900|Cabin:400,700|Droid+Serif:400,700|Playball');
     </style>
     <title>LinzerLunch</title>
 </head>
@@ -12,12 +12,15 @@
 
 <!-- Start of the Header: Navigation Bar, Logo - Navbar Right Aligned & Fixed at the Top so that its always there when scrolling -->
 <!--=============== header ===============-->
+
 <header>
     <div class="header-inner">
         <div class="container">
             <!--Navigation -->
+
             <div class="nav-holder">
                 <!-->
+
                 <nav class="navbar navbar-inverse navbar-fixed-top">
                     <div class="container-fluid">
                         <div class="navbar-header">
@@ -26,13 +29,7 @@
                         </div>
                         <ul class="nav navbar-nav">
                             <li><a href="#">Home</a></li>
-                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Restaurants<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Page 1-1</a></li>
-                                    <li><a href="#">Page 1-2</a></li>
-                                    <li><a href="#">Page 1-3</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="#">Restaurants</a></li>
                             <li><a href="#">Bars</a></li>
                             <li><a href="#">Cafés</a></li>
                         </ul>
@@ -48,101 +45,126 @@
 </header>
 <!--header end-->
 
-<!-- First Container: Huge Mood Picutre + Linzer Lunch Font -->
 
-<!--=============== wrapper ===============-->
-<div id="wrapper">
-    <!--=============== Hero content ===============-->
-    <div class="content full-height hero-content">
-        <div class="hero-title-holder">
-            <div class="overlay"></div>
-            <div class="hero-title">
-                <div class="hero-decor b-dec">
-                    <div class="half-circle"></div>
-                </div>
+<!--=============== Hero content ===============-->
+<div class="content full-height hero-content">
+    <div class="bg" style="background-image: url(bg1.jpg)"></div>
+    <div class="hero-title-holder">
+        <div class="overlay"></div>
+        <div class="hero-title">
+            <h3>Linzer Lunch</h3>
+            <h4>Die Linzer Restaurant Website</h4>
+        </div>
+        <div class="hero-link">
+            <a class="custom-scroll-link" href="#sec1"><i class="fa fa-angle-double-down"></i></a>
+        </div>
+    </div>
+</div>
+<!--hero end-->
 
-                <!-- so that the navigation doesnt overlay on anything:-->
-                <br><br><br><br><br>
+<em><br><br><br></em>
 
-                <div class="container-fluid bg-1 text-center">
-                    <h1 class="margin linz">Linzer Lunch</h1>
-                    <img src="bird.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
-                    <h3>Restaurantsuche leicht gemacht!</h3>
+
+<!-- First Container 2nd Try -->
+<!--=============== Restaurantsuche ===============-->
+
+<div id="wrapper1">
+    <section class="about-section" id="sec1">
+        <div class="container">
+            <div class="row">
+                <!--about text-->
+                <div class="section-title">
+                    <h3>Jetzt dein ideales Restaurant finden!</h3>
+                    <h4 class="decor-title">Finde hier alle Restaurants in Linz!</h4>
                 </div>
             </div>
         </div>
-    </div>
+</section>
 </div>
 
+<!-- Second Container 2nd Try -->
+<!--=============== Inspire Me ===============-->
+<div id="wrapper1">
+    <section class="about-section" id="sec2">
 
-
-<!-- Start Breadcrumb Navigation - must be dynamically for choosing menu -->
-<!--
-<div class="container" id="breadcrumbs">
-<div class="cont_breadcrumbs_1">
-  <ul>
-    <li><a href="#">One</a></li>
-    <li><a href="#">Tow</a></li>
-    <li><a href="#">Three</a></li>
-    <li><a href="#">Four</a></li>
-    <li><a href="#">Five</a></li>
-  </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-md-4">
+                    <div class="post">
+                        <div class="post-img-content">
+                            <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive" />
+                            <span class="post-title"><b>Make a Image Blur Effects With</b><br />
+                        <b>CSS3 Blur</b></span>
+                        </div>
+                        <div class="content">
+                            <div class="author">
+                                By <b>Bhaumik</b> |
+                                <time datetime="2014-01-20">January 20th, 2014</time>
+                            </div>
+                            <div>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </div>
+                            <div>
+                                <a href="http://www.jquery2dotnet.com/2014/01/jquery-highlight-table-row-and-column.html" class="btn btn-warning btn-sm">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <div class="post">
+                        <div class="post-img-content">
+                            <img src="http://placehold.it/460x250/2980b9/ffffff&text=CSS3" class="img-responsive" />
+                            <span class="post-title"><b>Make a Image Blur Effects With</b><br />
+                        <b>CSS3 Blur</b></span>
+                        </div>
+                        <div class="content">
+                            <div class="author">
+                                By <b>Bhaumik</b> |
+                                <time datetime="2014-01-20">January 20th, 2014</time>
+                            </div>
+                            <div>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </div>
+                            <div>
+                                <a href="http://www.jquery2dotnet.com/2013/11/share-social-media-round-buttons.html" class="btn btn-primary btn-sm">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <div class="post">
+                        <div class="post-img-content">
+                            <img src="http://placehold.it/460x250/47A447/ffffff&text=jQuery" class="img-responsive" />
+                            <span class="post-title"><b>Make a Image Blur Effects With</b><br />
+                        <b>CSS3 Blur</b></span>
+                        </div>
+                        <div class="content">
+                            <div class="author">
+                                By <b>Bhaumik</b> |
+                                <time datetime="2014-01-20">January 20th, 2014</time>
+                            </div>
+                            <div>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </div>
+                            <div>
+                                <a href="http://www.jquery2dotnet.com/2013/07/cool-social-sharing-button-using-css3.html" class="btn btn-success btn-sm">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
-</div>
-
-
-<!-- Second Container (Grid) -->
-<div class="container-fluid bg-3 text-center">
-    <h3 class="margin">Alle Restaurants in Linz</h3><br>
-    <div class="row">
-        <div class="col-sm-4">
-            <p>Restaurantbeispiel 1</p>
-
-        </div>
-        <div class="col-sm-4">
-            <p>Restaurantbeispiel 2</p>
-
-        </div>
-        <div class="col-sm-4">
-            <p>Restauratbeispiel 3</p>
-        </div>
-    </div>
-</div> -->
-
-
-<!-- Third Container -->
-<div class="container-fluid bg-2 text-center">
-    <h3 class="margin">Überrasche mich!</h3>
-    <p>Wir empfehlen dir ein Restaurant in deiner Umgebung welches dir gefallen könnte.</p>
-    <a href="#" class="btn btn-default btn-lg">
-        <span class="glyphicon glyphicon-search"></span> Inspire me
-    </a>
-</div>
-
-<!-- Fourth Container -->
-<div class="container bg-3 text-center" style="padding-top:140px; padding-bottom:140px;">
-    <div class="row">
-        <h3 class="margin">Einfach und bequem dein Restaurant finden.</h3>
-        <div><p>Worauf hast du Lust?</p>
-        </div>
-    </div>
-    <div class="row">
-        <a href="#" class="btn btn-primary btn-lg">
-            <span class="glyphicon glyphicon-grain"></span>
-        </a>
-        <a href="#" class="btn btn-primary btn-lg">
-            <span class="glyphicon glyphicon-cutlery"></span>
-        </a>
-        <a href="#" class="btn btn-primary btn-lg">
-            <span class="glyphicon glyphicon-glass"></span>
-        </a>
-    </div>
-</div> -->
-
 
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
     <p>A project from FH Hagenberg - Media Technology and Design <a href="https://www.fh-ooe.at">www.fh-ooe.at</a></p>
 </footer>
 </body>
-
