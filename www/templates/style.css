@@ -31,6 +31,15 @@
     margin-right:15px;
 }
 
+#logopicture {
+    margin: 10px;
+    padding-left: 10px;
+}
+
+#linzerlunchtitle {
+    font-size: 80px;
+}
+
 /* ---------- Restaurant Site Checkbox Layout ------------*/
 .searchable-container{margin:20px 0 0 0}
 .searchable-container label.btn-default.active{background-color:#ffcca1;color:#FFF;border-color: #ffcca1}
@@ -485,6 +494,8 @@ section.header-section {
     width:100%;
     height:100%;
     z-index:3;
+    background-image: url(images/bg2.jpg);
+    background-size: cover;
 }
 .hero-title-holder .overlay {
     opacity:0.4;
@@ -492,7 +503,7 @@ section.header-section {
 .hero-title {
     max-width:450px;
     margin:0 auto;
-    top:50%;
+    top:40%;
     position:relative;
     z-index:5;
 }
