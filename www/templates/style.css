@@ -413,6 +413,7 @@ section.header-section {
     height:20px;
     background:#fff;
     z-index:15;
+    background-image: url(images/arrowdown.png);
 }
 .hero-link a {
     font-size:24px;
