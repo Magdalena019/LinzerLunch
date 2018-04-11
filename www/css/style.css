@@ -595,3 +595,12 @@ section.header-section {
     border-radius:100%;
     font-size:20px;
 }
+
+/* --------- Icons --------------------------------------*/
+
+.icon {
+  height: 150px;
+  width: 150px;
+  padding: 15px;
+  margin: 15px;
+}
