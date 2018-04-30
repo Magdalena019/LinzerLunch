@@ -40,6 +40,13 @@
     font-size: 80px;
 }
 
+#linzerlunchtitel2 {
+  font-style: 'Montserrat', sans-serif;
+  font-weight: 300;
+
+}
+
+
 /* ---------- Restaurant Site Checkbox Layout ------------*/
 .searchable-container{margin:20px 0 0 0}
 .searchable-container label.btn-default.active{background-color:#ffcca1;color:#FFF;border-color: #ffcca1}
@@ -399,6 +406,15 @@ section.header-section {
     border:2px solid rgba(255,255,255,0.51);
     border-radius:100%;
     font-size:20px;
+}
+
+.foodicons {
+  height: 90px;
+  margin-bottom: 5px;
+}
+
+#checkicons {
+margin: 10px; 
 }
 
 
@@ -900,4 +916,3 @@ header.sticky nav a , header.sticky .subnav a  , header.flat-header .nav-social 
         background-position:center;
     }
 }
-
