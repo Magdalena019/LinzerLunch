@@ -8,7 +8,7 @@
 
 body {
   text-align: center;
-  background-color: var(--white);
+  background-color: var(--grey);
   color: var(--grey);
-
+font-family: 'Montserrat', sans-serif;
 }
