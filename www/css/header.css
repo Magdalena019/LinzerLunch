@@ -12,3 +12,12 @@ header {}
   background-color: #0a0f10;
   padding: 10px;
 }
+
+#headerwithImage {
+  width: 100%;
+}
+
+#imageBg {
+  background-image: url(../images/bg1.jpg);
+
+}
