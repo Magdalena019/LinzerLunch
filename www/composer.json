@@ -1,6 +1,5 @@
 {
     "require": {
-        "twig/twig": "~2.0",
-        "algolia/search-bundle": "^3.1"
+        "twig/twig": "~2.0"
     }
 }

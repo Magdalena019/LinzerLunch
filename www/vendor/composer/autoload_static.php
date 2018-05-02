@@ -7,8 +7,6 @@ namespace Composer\Autoload;
 class ComposerStaticInitc9e335793e8eb3a868384e9f33b0e0c4
 {
     public static $files = array (
-        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
-        '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
     );
 
@@ -19,23 +17,7 @@ class ComposerStaticInitc9e335793e8eb3a868384e9f33b0e0c4
         ),
         'S' => 
         array (
-            'Symfony\\Polyfill\\Php70\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
-            'Symfony\\Component\\Serializer\\' => 29,
-            'Symfony\\Component\\PropertyAccess\\' => 33,
-            'Symfony\\Component\\Inflector\\' => 28,
-            'Symfony\\Component\\Filesystem\\' => 29,
-        ),
-        'D' => 
-        array (
-            'Doctrine\\Common\\Inflector\\' => 26,
-            'Doctrine\\Common\\Cache\\' => 22,
-            'Doctrine\\Common\\Annotations\\' => 28,
-            'Doctrine\\Common\\' => 16,
-        ),
-        'A' => 
-        array (
-            'Algolia\\SearchBundle\\' => 21,
         ),
     );
 
@@ -44,49 +26,9 @@ class ComposerStaticInitc9e335793e8eb3a868384e9f33b0e0c4
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
         ),
-        'Symfony\\Polyfill\\Php70\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-php70',
-        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
-        ),
-        'Symfony\\Component\\Serializer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/serializer',
-        ),
-        'Symfony\\Component\\PropertyAccess\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/property-access',
-        ),
-        'Symfony\\Component\\Inflector\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/inflector',
-        ),
-        'Symfony\\Component\\Filesystem\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/filesystem',
-        ),
-        'Doctrine\\Common\\Inflector\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
-        ),
-        'Doctrine\\Common\\Cache\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache',
-        ),
-        'Doctrine\\Common\\Annotations\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations',
-        ),
-        'Doctrine\\Common\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
-        ),
-        'Algolia\\SearchBundle\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/algolia/search-bundle/src',
         ),
     );
 
@@ -98,34 +40,6 @@ class ComposerStaticInitc9e335793e8eb3a868384e9f33b0e0c4
                 0 => __DIR__ . '/..' . '/twig/twig/lib',
             ),
         ),
-        'D' => 
-        array (
-            'Doctrine\\Common\\Lexer\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/lexer/lib',
-            ),
-            'Doctrine\\Common\\Collections\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/collections/lib',
-            ),
-        ),
-        'A' => 
-        array (
-            'AlgoliaSearch' => 
-            array (
-                0 => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src',
-            ),
-        ),
-    );
-
-    public static $classMap = array (
-        'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
-        'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
-        'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
-        'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
-        'ParseError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ParseError.php',
-        'SessionUpdateTimestampHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php',
-        'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -134,7 +48,6 @@ class ComposerStaticInitc9e335793e8eb3a868384e9f33b0e0c4
             $loader->prefixLengthsPsr4 = ComposerStaticInitc9e335793e8eb3a868384e9f33b0e0c4::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitc9e335793e8eb3a868384e9f33b0e0c4::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInitc9e335793e8eb3a868384e9f33b0e0c4::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitc9e335793e8eb3a868384e9f33b0e0c4::$classMap;
 
         }, null, ClassLoader::class);
     }
