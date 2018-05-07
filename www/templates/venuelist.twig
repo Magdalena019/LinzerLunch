@@ -1,0 +1,56 @@
+<head>
+  {% include 'head.twig'%}
+</head>
+
+<body>
+  <header>
+    <div id="navbar" class="col-lg-12 ">
+      <a href="index.php" class="offset-5 col-1 align-middle navbarLink"><img src="images/LogoLLgoldig.png" height="40px"></a>
+      <a href="#about" class="offset-3 col-1 align-middle navbarLink" style="color:#fccda0;">Wer sind wir?</a>
+      <a href="#news" class="col-1 align-middle navbarLink" style="color:#fccda0;">Lass dich überraschen.</a>
+    </div>
+  </header>
+
+  <section class="row" id="icons">
+    <div id="listVenue" class="col-3 list">
+      <img id="iconRes" src="images/icons/LLRes.png" alt="Icon for Restaurant" width="50">
+      <img id="iconCaf" class="unused" src="images/icons/LLCafe.png" alt="Icon for Café" width="50">
+      <img id="iconBar" class="unused" src="images/icons/LLBar.png" alt="Icon for Bar" width="50">
+    </div>
+    <div id="listChecked" class="offset-3 col-6 list">
+      <img id="iconWifi" class="foodicons" src="images/icons/foodicons/wifi.png" alt="Icon for Restaurant" width="50">
+      <img id="iconNonSmoker" class="foodicons gone" src="images/icons/foodicons/nonSmoker.png" alt="Icon for NonSmoker" width="50">
+      <img id="iconSmoker" class="foodicons" src="images/icons/foodicons/smoker.png" alt="Icon for Smoker" width="50">
+      <img id="iconVegiie" class="foodicons" src="images/icons/foodicons/veggie.png" alt="Icon for Veggie" width="50">
+      <img id="iconBreakfast" class="foodicons" src="images/icons/foodicons/breakfast.png" alt="Icon for Breakfast" width="50">
+      <img id="iconVegan" class="foodicons gone" src="images/icons/foodicons/vegan.png" alt="Icon for Vegan" width="50">
+      <img id="iconGlutenfree" class="foodicons" src="images/icons/foodicons/glutenfree2.png" alt="Icon for Glutenfree" width="50">
+      <img id="iconDelivery" class="foodicons" src="images/icons/foodicons/delivery.png" alt="Icon for Delivery" width="50">
+      <img id="iconLunch" class="foodicons gone" src="images/icons/foodicons/lunch.png" alt="Icon for Lunch" width="50">
+    </div>
+  </section>
+  <section class="row" id="list">
+    <div class="col-3 suggestion">
+      <h4 class="col-12 title">Jack the Ripperl</h4>
+    </div>
+    <div class="col-3 suggestion">
+      <h4 class="col-12 title">{{ name }}</h4>
+    </div>
+    <div class="col-3 suggestion">
+      <h4 class="col-12 title">{{ name }}</h4>
+    </div>
+    <div class="col-3 suggestion">
+      <h4 class="col-12 title">{{ name }}</h4>
+    </div>
+
+  </section>
+  <footer>
+    <p id="footerText">
+      &copy; by Magdalena Geissbauer, Birgit Haselmayr, Andrea Maderthancer &amp; Natascha Rammelmüller
+      <br>
+      A project from FH Hagenberg - Media Technology and Design
+      <a href="https://www.fh-ooe.at">www.fh-ooe.at</a>
+    </p>
+  </footer>
+
+</body>

@@ -1,0 +1,19 @@
+:root {
+  --bluedark:#ade5d8;
+  --bluelight:#ffcca1;
+  --goldy: #fccda0;
+  --grey: #0a0f10;
+  --white: #ffffff;
+}
+
+footer {
+  background-color: var(--grey);
+  color: var(--white);
+  height: 80px;
+  padding-top: 10px;
+}
+
+#footerText {
+  text-align: center;
+  font-size: 8pt;
+}
