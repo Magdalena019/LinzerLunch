@@ -1,0 +1,62 @@
+{% include 'head.twig' %}
+<title>Welcome to LinzerLunch</title>
+</head>
+<body>
+<form action="add.php">
+  <!-- Displaying error message -->
+  {% if error is defined %}
+    <fieldset>
+      <p class="error">{{ error }}<br>Please try again:</p>
+    </fieldset>
+  {% endif %}
+
+  <fieldset>
+    <label>Name des Restaurants:</label>
+    <input type="text" name="name"> <br />
+  </fieldset>
+
+  <br />
+  <p>Adresse:</p>
+  <fieldset>
+    <label>Straße:</label>
+    <input type="text" name="street"> <br />
+    <label>PLZ:</label>
+    <input type="text" name="zip"> <br />
+    <label>Stadt:</label>
+    <input type="text" name="city"> <br />
+  </fieldset>
+
+  <br />
+  <p>Kontakt:</p>
+  <fieldset>
+    <label>Website:</label>
+    <input type="url" name="web"/> <br />
+    <label>Link zur Speisekarte:</label>
+    <input type="url" name="menu"/> <br />
+    <label>E-Mail</label>
+    <input type="email" name="email" /> <br />
+    <label>Telefonnummer:</label>
+    <input type="tel" name="phone"/> <br />
+  </fieldset>
+
+  <br />
+  <p>Kategorie:</p>
+  <fieldset>
+    <input type="checkbox" name="restaurant" value="restaurant"/>
+    <label>Restaurant</label>
+    <input type="checkbox" name="cafe" value="cafe"/>
+    <label>Cafe</label>
+    <input type="checkbox" name="bar" value="bar"/>
+    <label>Bar</label>
+  </fieldset>
+
+  <br />
+  <p>Information getrennt mit Leerzeichen eingeben</p>
+  <fieldset>
+    <input type="text" name="info"/>
+  </fieldset>
+
+  <br />
+  <button type="submit" name="submit" id="submit">ADD RESTAURANT</button>
+</form>
+</body>
