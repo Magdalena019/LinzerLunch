@@ -1,0 +1,98 @@
+<head>
+  {% include 'head.twig'%}
+</head>
+
+<body>
+  <header>
+    <div id="navbar" class="col-lg-12 ">
+      <a href="index.php" class="offset-5 col-1 align-middle navbarLink"><img src="images/LogoLLgoldig.png" height="40px"></a>
+      <a href="#about" class="offset-3 col-1 align-middle navbarLink" style="color:#fccda0;">Wer sind wir?</a>
+      <a href="#news" class="col-1 align-middle navbarLink" style="color:#fccda0;">Lass dich überraschen.</a>
+    </div>
+  </header>
+  <section id="lokal" class="row">
+    <div id="gallery" class="gallery">
+      <div class="gallery-cell">
+        <img src="images/bg1.jpg" height="100px">
+        <span class="bg c1"></span>
+      </div>
+      <!--<div class="gallery-cell"> <img src="https://images.unsplash.com/photo-1502819126416-d387f86d47a1?ixlib=rb-0.3.5&s=92720a269e9e7f37f1d6b3a0e78816f7&auto=format&fit=crop&w=1489&q=80"> <span class="bg c2"></span> </div> <div class="gallery-cell">
+      <img src="images/bg3.jpg"> <span class="bg c3"></span> </div> -->
+    </div>
+  </div>
+
+  <div class="col-12" id="information">
+    <h3 id="name">Jack the Ripperl</h3>
+
+    <div class="col-6">
+      <h6>Öffnungszeiten:</h6>
+      <p class="col-12">
+        Montag:
+        <span class="offset-1">11:00 - 00:00
+          {{ monday }}
+        </span><br>
+        Dienstag:
+        <span class="offset-1">11:00 - 00:00
+          {{ tuesday }}
+        </span><br>
+        Mittwoch:
+        <span class="offset-1">11:00 - 00:00
+          {{ wednesday }}
+        </span><br>
+        Donnerstag:
+        <span class="offset-1">11:00 - 00:00
+          {{ thursday }}
+        </span><br>
+        Freitag:
+        <span class="offset-1">11:00 - 00:00
+          {{ friday }}
+        </span><br>
+        Samstag:
+        <span class="offset-1">11:00 - 00:00
+          {{ saturday }}
+        </span><br>
+        Sonntag:
+        <span class="offset-1">11:00 - 00:00
+          {{ sunday }}
+        </span>
+      </p>
+    </div>
+    <div col-5>
+      <img src="images/icons/LLRes.png" height="75px">
+      <img src="images/icons/LLBar.png" class="unused" height="75px">
+      <img src="images/icons/LLCafe.png" class="unused" height="75px">
+    </div>
+
+    <div class="col-8">
+
+      <!--<h3>{{ name }}</h3>-->
+
+      <h6>Adresse:</h6>
+      <p class="col-12">
+        {{ address }}
+        Landstraße 11, 4020 Linz
+      </p>
+
+      <a href="https://www.jack-the-ripperl.at"><img src="images/web.png" height="30px">
+      </a>
+      <a href="https://www.facebook.com/JackTheRipperl.Restaurant/"><img src="images/facebook.png" height="30px">
+      </a>
+      <a href="https://www.instagram.com/jacktheripperl_linz/"><img src="images/instagram.png" height="30px"></a>
+
+      <!-- TODO Link für Icon gehört noch eingefügt irgendwo, damit wir es rechtlich verwenden dürfen -->
+      <!-- <a href="https://icons8.com">Icon pack by Icons8</a>-->
+
+    </div>
+  </div>
+
+</section>
+<footer>
+  <p id="footerText">
+    &copy; by Magdalena Geissbauer, Birgit Haselmayr, Andrea Maderthancer &amp; Natascha Rammelmüller
+    <br>
+    A project from FH Hagenberg - Media Technology and Design
+    <a href="https://www.fh-ooe.at">www.fh-ooe.at</a>
+  </p>
+</footer>
+
+</body>

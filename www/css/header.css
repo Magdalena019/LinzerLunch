@@ -1,0 +1,50 @@
+:root {
+  --bluedark:#ade5d8;
+  --bluelight:#ffcca1;
+  --goldy: #fccda0;
+  --grey: #0a0f10;
+  --white: #ffffff;
+}
+
+header {
+ margin-bottom: 5%;
+}
+
+#navbar {
+  background-color: var(--grey);
+  padding: 10px;
+  color: var(--goldy);
+  text-align: right;
+}
+
+.navbarLink {
+  color: var(--goldy);
+}
+
+#marginTop {}
+
+#backgroundIMG {
+  background: #ffffff;
+  background-image: url(../images/bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90%;
+}
+
+#headerLogo {
+  position: absolute;
+  height: 55%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+
+}
+
+#vonlinzern {
+    margin-top: -55px;
+
+    font-size: 24pt;
+    color: var(--goldy);
+    font-weight: 600;
+    text-align: center;
+}

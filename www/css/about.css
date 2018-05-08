@@ -1,0 +1,15 @@
+:root {
+  --bluedark:#ade5d8;
+  --bluelight:#ffcca1;
+  --goldy: #fccda0;
+  --grey: #0a0f10;
+  --white: #ffffff;
+}
+
+#about {
+  padding: 5% 2% 5% 3%;
+}
+
+#description {
+  margin: 10px 0 10px 0;
+}

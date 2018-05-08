@@ -1,0 +1,57 @@
+:root {
+  --bluedark: #ade5d8;
+  --bluelight: #ffcca1;
+  --goldy: #fccda0;
+  --grey: #0a0f10;
+  --white: #ffffff;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.8;
+  background-color: var(--grey);
+  font-family: 'Montserrat', sans-serif;
+  padding: 0% 4% 0% 4%;
+}
+
+h3 {
+  font-size: 24pt;
+  color: var(--goldy);
+  font-weight: 600;
+  text-align: center;
+}
+
+h6 {
+  text-align: center;
+}
+
+h4{
+  font-size: 20pt;
+  color: var(--goldy);
+  font-weight: 600;
+  text-align: center;
+}
+
+
+a {
+  font-size: 15px;
+  color: inherit;
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 450;
+}
+
+section {
+  background-color: #ffffff;
+  margin-right: 2%;
+  padding: 5px;
+}
