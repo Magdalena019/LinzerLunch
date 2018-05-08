@@ -41,12 +41,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="restaurants.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="restaurants.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/templates/restaurants.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="53" column="73" selection-start-line="53" selection-start-column="73" selection-end-line="53" selection-end-column="73" />
-              <folding />
+            <state relative-caret-position="301">
+              <caret line="145" column="34" selection-start-line="145" selection-start-column="34" selection-end-line="145" selection-end-column="34" />
+              <folding>
+                <element signature="e#7348#7354#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,7 +73,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cafes.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cafes.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/templates/cafes.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="616">
@@ -101,10 +103,10 @@
         <option value="$PROJECT_DIR$/www/templates/index.twig" />
         <option value="$PROJECT_DIR$/www/templates/style.css" />
         <option value="$PROJECT_DIR$/www/templates/bar.twig" />
-        <option value="$PROJECT_DIR$/www/templates/restaurants.twig" />
         <option value="$PROJECT_DIR$/www/templates/about.twig" />
         <option value="$PROJECT_DIR$/www/templates/contact.twig" />
         <option value="$PROJECT_DIR$/www/templates/cafes.twig" />
+        <option value="$PROJECT_DIR$/www/templates/restaurants.twig" />
       </list>
     </option>
   </component>
@@ -286,12 +288,12 @@
       <workItem from="1523275520290" duration="1985000" />
       <workItem from="1523354882485" duration="3546000" />
       <workItem from="1523373389659" duration="386000" />
-      <workItem from="1523437093534" duration="262000" />
+      <workItem from="1523437093534" duration="869000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25671000" />
+    <option name="totallyTimeSpent" value="26278000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="0" />
@@ -639,14 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/restaurants.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="53" column="73" selection-start-line="53" selection-start-column="73" selection-end-line="53" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/about.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
@@ -668,6 +662,16 @@
         <state relative-caret-position="616">
           <caret line="52" column="73" selection-start-line="52" selection-start-column="73" selection-end-line="52" selection-end-column="73" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/restaurants.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="145" column="34" selection-start-line="145" selection-start-column="34" selection-end-line="145" selection-end-column="34" />
+          <folding>
+            <element signature="e#7348#7354#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
