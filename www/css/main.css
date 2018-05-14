@@ -55,3 +55,46 @@ section {
   margin-right: 2%;
   padding: 5px;
 }
+
+/**
+ * COUNTERS
+ */
+
+
+ .counters {
+   top: 50%;
+   left: 50%;
+   width: 100vw;
+   list-style-type:none;
+   padding: 100px 100px;
+ }
+ @media screen and (min-width: 769px) {
+   .counters .column {
+     padding-left: 0;
+     float:left;
+   }
+ }
+
+ .counter {
+   padding-bottom: 1rem;
+   border-bottom: 1px solid #eee;
+   text-align: center;
+ }
+ @media screen and (min-width: 769px) {
+   .counter {
+     border-bottom: 0;
+     border-right: 1px solid #eee;
+   }
+ }
+ .column:last-of-type .counter {
+   border-bottom: 0;
+   border-right: 0;
+ }
+ .counter-number {
+   display: block;
+   font-size: 4rem;
+   font-weight: 700;
+ }
+ .counter-name {
+   display: block;
+ }
