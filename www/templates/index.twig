@@ -1,5 +1,6 @@
 <head>
   {% include 'head.twig'%}
+  <script src='{{"js/numbercounter.js"}}'></script>
 </head>
 
 <body>
@@ -21,23 +22,25 @@
   <section id="chooseType" class="row">
     <div class="small"></div>
     <h3 class="offset-3 col-6">Jetzt das perfekte Lokal finden!</h3>
+
+
     <ul class="counters">
       <div class="columns">
         <div class="column col-lg-4">
           <li class="counter">
-            <span class="counter-number">20</span>
+            <h2 class="timer count-title count-number counter-number" data-to="20" data-speed="1500"></h2>
             <span class="counter-name">Bars</span>
           </li>
         </div>
         <div class="column col-lg-4">
           <li class="counter">
-            <span class="counter-number">37</span>
+            <h2 class="timer count-title count-number counter-number" data-to="37" data-speed="1500"></h2>
             <span class="counter-name">Cafés</span>
           </li>
         </div>
         <div class="column col-lg-4">
           <li class="counter">
-            <span class="counter-number">59</span>
+          <h2 class="timer count-title count-number counter-number" data-to="59" data-speed="1500"></h2>
             <span class="counter-name">Restaurants</span>
           </li>
         </div>
