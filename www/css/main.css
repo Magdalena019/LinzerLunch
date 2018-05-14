@@ -98,3 +98,121 @@ section {
  .counter-name {
    display: block;
  }
+
+
+/* Start CSS Parallax */
+
+.parallax1 {
+    /* The image used */
+    background-image: url("../images/bg3.jpg");
+
+    /* Set a specific height */
+    height: 300px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 0% -40% 0% -4%;
+}
+
+.parallax2 {
+    /* The image used */
+    background-image: url("../images/bg4.jpg");
+
+    /* Set a specific height */
+    height: 300px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body .parallax {
+    padding: 0% -4% 0% -4%;
+}
+
+/* Ende Parallax */
+
+/* Start jQuery Counter Animation */
+
+.col-md-4 {
+    text-align: center;
+    padding-bottom: 50px;
+    border-right: 1px dashed black;
+}
+
+.col-md-4:last-child {
+    border-right: 0px solid black;
+}
+
+.counter {
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+
+i {
+    font-size: 20px !Important;
+}
+
+@media (max-width: 991px) {
+    .col-md-4 {
+        border-right: 0px dashed black;
+        border-bottom: 1px dashed black;
+        width: 50%;
+        margin: auto auto;
+    }
+
+    .col-md-4:last-child {
+        border-bottom: 0px dashed black;
+    }
+}
+
+/**
+ * COUNTERS
+
+
+
+.counters {
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    list-style-type:none;
+    padding: 100px 100px;
+}
+@media screen and (min-width: 769px) {
+    .counters .column {
+        padding-left: 0;
+        float:left;
+    }
+}
+
+.counter {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+@media screen and (min-width: 769px) {
+    .counter {
+        border-bottom: 0;
+        border-right: 1px solid #eee;
+    }
+}
+.column:last-of-type .counter {
+    border-bottom: 0;
+    border-right: 0;
+}
+.counter-number {
+    display: block;
+    font-size: 4rem;
+    font-weight: 700;
+}
+.counter-name {
+    display: block;
+}
+
+ */
