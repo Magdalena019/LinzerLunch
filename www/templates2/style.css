@@ -403,7 +403,7 @@ section.header-section {
 }
 
 #checkicons {
-margin: 10px; 
+margin: 10px;
 }
 
 
@@ -901,4 +901,47 @@ header.sticky nav a , header.sticky .subnav a  , header.flat-header .nav-social 
         -webkit-background-size:cover;
         background-position:center;
     }
+}
+
+/**
+ * COUNTERS
+ */
+
+.counters {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+	@media screen and (min-width: 769px) {
+		.column {
+			padding-left: 0;
+		}
+	}
+}
+
+.counter {
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #eee;
+	text-align: center;
+
+	@media screen and (min-width: 769px)  {
+		border-bottom: 0;
+		border-right: 1px solid #eee;
+	}
+
+	.column:last-of-type & {
+		border-bottom: 0;
+		border-right: 0;
+	}
+
+	&-number {
+		display: block;
+		font-size: 4rem;
+		font-weight: 700;
+	}
+
+	&-name {
+		display: block;
+	}
 }
