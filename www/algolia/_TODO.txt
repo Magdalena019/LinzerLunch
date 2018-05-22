@@ -1,0 +1,12 @@
+TODO: Öffnungszeiten einbinden
+
+Notes:
+
+- siehe agolia docs -
+implement infinite scroll
+sorting results - add sort ranking
+filter results around a location - app!
+& display results on a map - geo search
+offline mode - app!
+
+später interessant - im dashboard user verhalten beobachten

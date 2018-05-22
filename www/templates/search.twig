@@ -1,0 +1,19 @@
+<section id="results">
+  <div>
+    <input id="search">
+  </div>
+
+  <main>
+    <div id="hits"></div>
+  </main>
+
+  <!--Template für Ergebnisse-->
+  <script type="text/html" id="hit-template">
+      <div class="hit-content">
+        <h2 class="hit-name">{% verbatim %}{{{_highlightResult.name.value}}}{% endverbatim %}</h2>
+        <p class="hit-description">{% verbatim %}{{{_highlightResult.info.value}}}{% endverbatim %}</p>
+      </div>
+    </div>
+  </script>
+
+</section>

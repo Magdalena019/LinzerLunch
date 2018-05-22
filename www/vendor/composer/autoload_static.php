@@ -40,6 +40,13 @@ class ComposerStaticInitc9e335793e8eb3a868384e9f33b0e0c4
                 0 => __DIR__ . '/..' . '/twig/twig/lib',
             ),
         ),
+        'A' => 
+        array (
+            'AlgoliaSearch' => 
+            array (
+                0 => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src',
+            ),
+        ),
     );
 
     public static function getInitializer(ClassLoader $loader)

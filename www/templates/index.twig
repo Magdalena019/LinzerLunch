@@ -6,7 +6,7 @@
 <body>
   <header>
     <div id="navbar" class="col-lg-12 ">
-      <a href="index.php" class="offset-5 col-1 align-middle navbarLink" ><img src="images/LogoLLgoldig.png" height="40px"></a>
+      <a href="index.php" class="offset-5 col-1 align-middle navbarLink"><img src="images/LogoLLgoldig.png" height="40px"></a>
       <a href="#about" class="offset-3 col-1 align-middle navbarLink" style="color:#fccda0;">Wer sind wir?</a>
       <a href="venue.php" class="col-1 align-middle navbarLink" style="color:#fccda0;">Lass dich überraschen.</a>
     </div>
@@ -31,7 +31,9 @@
       takimata sanctus est Lorem ipsum dolor sit amet.
     </p>
 
-    <h5>Momentan habt ihr die Auswahl aus ... </h5><p><br /><br /></p>
+    <h5>Momentan habt ihr die Auswahl aus ...
+    </h5>
+    <p><br/><br/></p>
 
     <ul class="counters">
       <div class="columns">
@@ -58,30 +60,10 @@
 
     <!-- Start Restaurant Countup -->
 
-    <!-- THIS IS THE PEN INCLUDED HERE!
-    https://codepen.io/SeanWhelan/pen/bErZYo -->
+    <!-- THIS IS THE PEN INCLUDED HERE! https://codepen.io/SeanWhelan/pen/bErZYo -->
 
-    <!--
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4" >
-          <h1><span class="counter">120</span></h1>
-          <h3>Restaurants</h3>
-          <i class="fa fa-users"></i>
-        </div>
-        <div class="col-md-4">
-          <h1><span class="counter">80</span></h1>
-          <h3>Bars</h3>
-          <i class="fa fa-desktop"></i>
-          <span class="glyphicon glyphicon-glass"></span>
-        </div>
-        <div class="col-md-4">
-          <h1><span class="counter">210</span></h1>
-          <h3>Cafés</h3>
-          <i class="fa fa-coffee"></i>
-        </div>
-      </div>
-    </div>-->
+    <!-- <div class="container"> <div class="row"> <div class="col-md-4" > <h1><span class="counter">120</span></h1> <h3>Restaurants</h3> <i class="fa fa-users"></i> </div> <div class="col-md-4"> <h1><span class="counter">80</span></h1> <h3>Bars</h3> <i
+    class="fa fa-desktop"></i> <span class="glyphicon glyphicon-glass"></span> </div> <div class="col-md-4"> <h1><span class="counter">210</span></h1> <h3>Cafés</h3> <i class="fa fa-coffee"></i> </div> </div> </div>-->
 
   </section>
 
@@ -98,29 +80,26 @@
     <h6 class="offset-4 col-4">Schnell und einfach aus 20 Lokalen wählen!</h6>
 
     <div id="iconRestaurant" class="col-12">
-      <img id="iconRes" src="images/icons/LLRes.png" alt="Icon for Restaurant" width="150">
-      <img id="iconCaf" src="images/icons/LLCafe.png" alt="Icon for Café" width="150">
-      <img id="iconBar" src="images/icons/LLBar.png" alt="Icon for Bar" width="150">
+      <input type="radio" name="category" value="restaurant" id="restaurant"/>
+      <label for="restaurant">
+        <img id="iconRes" src="images/icons/LLRes.png" alt="Icon for Restaurant" width="150">
+      </label>
+      <input type="radio" name="category" value="cafe" id="cafe"/>
+      <label for="cafe">
+        <img id="iconCaf" src="images/icons/LLCafe.png" alt="Icon for Café" width="150">
+      </label>
+      <input type="radio" name="category" value="bar" id="bar"/>
+      <label for="bar">
+        <img id="iconBar" src="images/icons/LLBar.png" alt="Icon for Bar" width="150">
+      </label>
     </div>
-    <div id="checkicons" class="col-12">
-      <img id="iconWifi" class="foodicons" src="images/icons/foodicons/wifi.png" alt="Icon for Restaurant">
-      <img id="iconNonSmoker" class="foodicons" src="images/icons/foodicons/nonSmoker.png" alt="Icon for Restaurant">
-      <img id="iconSmoker" class="foodicons" src="images/icons/foodicons/smoker.png" alt="Icon for Restaurant">
-      <img id="iconVegiie" class="foodicons" src="images/icons/foodicons/veggie.png" alt="Icon for Restaurant">
-      <img id="iconBreakfast" class="foodicons" src="images/icons/foodicons/breakfast.png" alt="Icon for Restaurant">
-      <img id="iconVegan" class="foodicons" src="images/icons/foodicons/vegan.png" alt="Icon for Restaurant">
-      <img id="iconGlutenfree" class="foodicons" src="images/icons/foodicons/glutenfree2.png" alt="Icon for Restaurant">
-      <img id="iconDelivery" class="foodicons" src="images/icons/foodicons/delivery.png" alt="Icon for Restaurant">
-      <img id="iconLunch" class="foodicons" src="images/icons/foodicons/lunch.png" alt="Icon for Restaurant">
-      <a href="venuelist.php" class="offset-5 col-1 align-middle navbarLink"><img id="iconArrow" class="foodicons" src="images/icons/foodicons/arrow.png" alt="Icon for Restaurant"></a>
-    </div>
-  </section>
 
-<!-- bitte so lassen -->
-  <section>
+    {% include 'checkIcons.twig'%}
 
   </section>
-<!-- bitte so lassen - ende-->
+
+  <!-- Algolia Search -->
+  {% include 'search.twig'%}
 
   <!-- -------------------------------- -->
   <!-- Start Second Parallax Section - wollten ja irgendwie noch nen dritten Bereich -->
@@ -144,13 +123,14 @@
 
   </section>
 
-<footer>
-  <div class="offset-2 col-8 align-middle  ">
-        <p id="footerText">
-          &copy; by Magdalena Geissbauer, Birgit Haselmayr, Andrea Maderthancer &amp; Natascha Rammelmüller <br>
-          A project from FH Hagenberg - Media Technology and Design
-            <a href="https://www.fh-ooe.at">www.fh-ooe.at</a>
-        </p>
-      </div>
-</footer>
+  <footer>
+    <div class="offset-2 col-8 align-middle  ">
+      <p id="footerText">
+        &copy; by Magdalena Geissbauer, Birgit Haselmayr, Andrea Maderthancer &amp; Natascha Rammelmüller
+        <br>
+        A project from FH Hagenberg - Media Technology and Design
+        <a href="https://www.fh-ooe.at">www.fh-ooe.at</a>
+      </p>
+    </div>
+  </footer>
 </body>
