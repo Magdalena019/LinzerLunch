@@ -56,6 +56,18 @@ section {
   padding: 5px;
 }
 
+
+
+#navbar {
+    position: fixed;
+    margin-left: -70px;
+
+    /* position fixed, immer vordergrund */
+    z-index: 1;
+
+}
+
+
 /**
  * COUNTERS
  */
@@ -216,3 +228,108 @@ i {
 }
 
  */
+
+
+
+/* Navbar 2nd Try */
+
+/*
+
+.navbar {
+    border-radius: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.navbar-form .form-group input[class="form-control"] {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 2px solid #9d9d9d;
+    background: #222;
+    color: #fff;
+}
+.navbar-form .form-group input[class="form-control"]:hover {
+    cursor: pointer;
+    border-color: #fff;
+}
+.navbar-form .form-group input[class="form-control"]:hover ~ .mag-line {
+    background: #fff;
+}
+.navbar-form .form-group input[class="form-control"]:focus {
+    -webkit-animation: openSearchField 0.6s forwards;
+    animation: openSearchField 0.6s forwards;
+    outline: none;
+    box-shadow: none;
+    border-color: #fff;
+}
+.navbar-form .form-group input[class="form-control"]:focus ~ .mag-line {
+    display: none;
+}
+.navbar-form .form-group input[class="form-control"]:focus ~ button[type="submit"] {
+    display: inline-block;
+    -webkit-animation: showSearchSubmit 0.6s forwards;
+    animation: showSearchSubmit 0.6s forwards;
+}
+.navbar-form .form-group .mag-line {
+    display: inline-block;
+    position: absolute;
+    width: 2px;
+    height: 12px;
+    background: #9d9d9d;
+    -webkit-transform: rotate(-45deg) translateX(21px) translateY(15px);
+    transform: rotate(-45deg) translateX(21px) translateY(15px);
+}
+
+/* GO Button for the Navigation */
+/*
+.navbar-form .form-group button[type="submit"] {
+    display: none;
+    width: 0;
+    padding: 0;
+    opacity: 0;
+    overflow: hidden;
+    border: 2px solid #fff;
+    background: #fff;
+    color: #222;
+}
+
+@-webkit-keyframes openSearchField {
+    30% {
+        border-radius: 4px;
+    }
+    100% {
+        width: 300px;
+        height: 34px;
+        border-radius: 4px;
+    }
+}
+
+@keyframes openSearchField {
+    30% {
+        border-radius: 4px;
+    }
+    100% {
+        width: 300px;
+        height: 34px;
+        border-radius: 4px;
+    }
+}
+@-webkit-keyframes showSearchSubmit {
+    100% {
+        width: auto;
+        padding: 5px 8px;
+        opacity: 1;
+    }
+}
+@keyframes showSearchSubmit {
+    100% {
+        width: auto;
+        padding: 5px 8px;
+        opacity: 1;
+    }
+}
+
+
+
+/* END NAVBAR 2nd TRY */
