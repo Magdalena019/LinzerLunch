@@ -1,9 +1,10 @@
 <section id="results">
   <div>
-    <input id="search">
+    <input id="search" autocomplete="off" value="">
   </div>
 
   <main>
+    <div id="stats"></div>
     <div id="hits"></div>
   </main>
 
@@ -12,6 +13,14 @@
       <div class="hit-content">
         <h2 class="hit-name">{% verbatim %}{{{_highlightResult.name.value}}}{% endverbatim %}</h2>
         <p class="hit-description">{% verbatim %}{{{_highlightResult.info.value}}}{% endverbatim %}</p>
+      </div>
+    </div>
+  </script>
+
+  <!--Template für die Anzahl Ergebnisse-->
+  <script type="text/html" id="stats-template">
+      <div class="stats-content">
+        <p>Anzahl an gefundenen Restaurants: {% verbatim %}{{nbHits}}{% endverbatim %}</p>
       </div>
     </div>
   </script>

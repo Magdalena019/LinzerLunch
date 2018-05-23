@@ -10,6 +10,8 @@
     "author": "Apache Cordova Team",
     "license": "Apache-2.0",
     "dependencies": {
+        "algoliasearch": "^3.27.1",
+        "algoliasearch-helper": "^2.26.0",
         "cordova-android": "^7.0.0",
         "cordova-ios": "^4.5.4",
         "cordova-plugin-hostedwebapp": "^0.3.1",

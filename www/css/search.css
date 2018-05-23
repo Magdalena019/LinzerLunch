@@ -5,6 +5,10 @@
 }
 
 #search {
+  display: none;
+}
+
+#textSearch {
   width: 300px;
   text-align: center;
 }
