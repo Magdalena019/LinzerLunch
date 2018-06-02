@@ -6,6 +6,7 @@ $(document).ready(function() {
     appId: 'Z0U7V7EJ1E',
     apiKey: 'a85163449a3db7812f4de4b3cafa2e3c',
     indexName: 'restaurants',
+    searchParameters: ['name'],
     urlSync: true,
   });
 

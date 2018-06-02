@@ -43,6 +43,18 @@ $(document).ready(function() {
     return false;
   });
 
+  $('#goButton').click(function() {
+    startSearch();
+    $('#hits').removeClass('hide');
+  });
+
+  $('#resetButton').click(function() {
+    $('input:checkbox').prop('checked', false);
+    $('#search').val($('input[name=category]:checked', '#iconRestaurant').val());
+    $('#hits').addClass('hide');
+    startSearch();
+  });
+
   $('#iconRestaurant').change(function() {
     $('#search').val($('input[name=category]:checked', '#iconRestaurant').val());
     $('input:checkbox').prop('checked', false);
@@ -55,12 +67,20 @@ $(document).ready(function() {
     } else {
       $('#search').val($('#search').val().replace($(this).val(), ""));
     }
+    $('#hits').addClass('hide');
     startSearch();
   });
 
   function startSearch() {
     var query = $('#search').val().trim();
     search.helper.setQuery(query).search();
+
+    alert($('#numberOfResults').text());
+    // nimmt wert von voriger suche 
+
+    if ($('#numberOfResults').text() == 0) {
+      $('#hits').removeClass('hide');
+    }
   }
 
   function init() {

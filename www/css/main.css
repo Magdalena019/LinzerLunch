@@ -6,6 +6,10 @@
   --white: #ffffff;
 }
 
+.hide {
+  display: none;
+}
+
 body {
   font-size: 16px;
   line-height: 1.8;
