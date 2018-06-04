@@ -5,25 +5,25 @@
   <h6 class="offset-4 col-4">Schnell und einfach aus 20 Lokalen wählen!</h6>
 
   <div id="iconRestaurant" class="col-12 row">
-    <div class="col-4">
+    <div class="col-3" id="resBG">
       <input type="radio" name="category" value="restaurant" id="restaurant"/>
       <label for="restaurant">
         <img id="iconRes" src="images/icons/resgoldy.png" alt="Icon for Restaurant" width="150">
       </label>
     </div>
-    <div class="col-4">
+    <div class="col-3" id="cafBG">
       <input type="radio" name="category" value="cafe" id="cafe"/>
       <label for="cafe">
         <img id="iconCaf" src="images/icons/cafegoldy.png" alt="Icon for Café" width="150">
       </label>
     </div>
-    <div class="col-4">
+    <div class="col-3" id="barBG">
       <input type="radio" name="category" value="bar" id="bar"/>
       <label for="bar">
         <img id="iconBar" src="images/icons/bargoldy.png" alt="Icon for Bar" width="150">
       </label>
     </div>
-    <div class="col-4">
+    <div class="col-3" id="allBGs">
       <input type="radio" name="category" value="" id="all"/>
       <label for="all">
         <img id="iconAll" src="images/icons/allgoldy.png" alt="Icon for All" width="150">
@@ -86,18 +86,26 @@
         <img id="iconLunch" class="foodicons" src="images/icons/foodicons/lunch.png" alt="Icon for Restaurant" width="150">
       </label>
     </div>
-
-    <!-- TODO: hier reset, überraschung und go button einfügen -->
-    <div id="iconSearch" class="col-12 row">
-      <div class="col-4">
-        <button id="goButton">GO</button>
+    <div class="col-3">
+      <input type="checkbox" name="info" value="garden"/>
+      <label for="lunch">
+        <img id="iconGarden" class="foodicons" src="images/icons/foodicons/gastgarten.png" alt="Icon for Restaurant" width="150">
       </label>
     </div>
-    <div class="col-4">
-      <button id="resetButton">Reset</button>
+
+    <!-- TODO: hier reset, überraschung und go button einfügen -->
+    <div id="iconSearch" class="offset-2 col-12 row">
+      <div class="col-3">
+        <button id="goButton" class="buttons">
+          <img id="iconGo" src="images/icons/goButton.png" width="150">
+        </button>
+      </label>
     </div>
-    <div class="col-4">
-      <button id="surpriseButton">Random</button>
+    <div class="col-3" class="buttons">
+      <button id="resetButton"><img id="iconReset" src="images/icons/resetButton.png" width="150"></button>
+    </div>
+    <div class="col-3" class="buttons">
+      <button id="surpriseButton"><img id="iconRandom" src="images/icons/randomButton.png" width="150"></button>
     </div>
   </div>
 

@@ -10,3 +10,13 @@
   background-color: var(--white);
   padding: 5% 2% 5% 3%;
 }
+
+.buttons {
+    border: none;
+    background: rgba(0, 0, 0, 0.0);
+}
+
+#iconRestaurant {
+  background-image: url(../images/restaurant.jpg);
+  height: 200px;
+}
