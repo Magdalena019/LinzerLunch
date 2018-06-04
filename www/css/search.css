@@ -13,6 +13,11 @@
   text-align: center;
 }
 
+/* Class für die Items in der Hitliste bei der Search */
+.ais-hits--item {
+  width: inherit;
+}
+
 /* CSS Vom Natascha Pen */
 
 .btn {
@@ -586,5 +591,6 @@
   color: #444;
   display: inline
 }
+
 
 /*# sourceMappingURL=instantsearch.min.css.map */

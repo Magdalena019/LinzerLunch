@@ -1,4 +1,5 @@
 <section id="results">
+
   <div>
     <input id="search" autocomplete="off" value="">
   </div>
@@ -45,18 +46,18 @@
   <!-- Pen Version 2 -->
 
   <script type="text/html" id="hit-template">
-    <ul class="cards">
-      <li class="cards__item">
-        <div class="card">
-          <div class="card__image card__image--fence"></div>
-          <div class="card__content">
-            <h2 class="card-title">{% verbatim %}{{{_highlightResult.name.value}}}{% endverbatim %}</h2>
-            <p class="card__text">{% verbatim %}{{{_highlightResult.info.value}}}{% endverbatim %}</p>
-            <button class="btn btn--block card__btn">Button</button>
+      <ul class="cards">
+        <li class="cards__item">
+          <div class="card">
+            <div class="card__image card__image--fence"></div>
+            <div class="card__content">
+              <h2 class="card-title">{% verbatim %}{{{_highlightResult.name.value}}}{% endverbatim %}</h2>
+              <p class="card__text">{% verbatim %}{{{_highlightResult.info.value}}}{% endverbatim %}</p>
+              <button class="btn btn--block card__btn">Mehr Infos hier!</button>
+            </div>
           </div>
-        </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
   </script>
 
 
