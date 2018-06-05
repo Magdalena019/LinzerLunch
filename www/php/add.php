@@ -1,6 +1,4 @@
 <?php
-// TODO: validation input & error messages
-
 $error = false;
 
 $name = input($_POST['name']);
@@ -18,6 +16,10 @@ $phone = input($_POST['phone']);
 $restaurant = (isset($_POST['restaurant']) ? "restaurant" : "");
 $cafe = (isset($_POST['cafe']) ? "cafe" : "");
 $bar = (isset($_POST['bar']) ? "bar" : "");
+
+$r = (isset($_POST['restaurant']) ? 1 : 0);
+$c = (isset($_POST['cafe']) ? 1 : 0);
+$b = (isset($_POST['bar']) ? 1 : 0);
 
 $wifi = (isset($_POST['wifi']) ? "wifi" : "");
 $nonSmoker = (isset($_POST['nonSmoker']) ? "nonSmoker" : "");
