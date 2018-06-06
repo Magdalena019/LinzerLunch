@@ -5,8 +5,6 @@ function init() {
 }
 
 function search() {
-  var readyToFetchMore = true;
-  var hitsContainer = $('#hits');
 
   const search = instantsearch({
     appId: 'Z0U7V7EJ1E',
@@ -42,57 +40,6 @@ function search() {
       }
     })
   );
-
-  search.addWidget(
-  {
-    init: function (params) {
-
-      function scrollhandler() {
-
-        var isAtBottomOfPage = $(window).scrollTop() + $(window).height()
-                                > $(document).height() - 500;
-
-        if (readyToFetchMore && isAtBottomOfPage) {
-          readyToFetchMore = false;
-          params.helper.nextPage().search();
-        }
-      }
-
-      $(window).bind("scroll", scrollhandler);
-    },
-
-/*    render: function (params) {
-
-      readyToFetchMore = true;
-
-      var hits = params.results.hits;
-
-
-      if (params.state.page === 0) { // because '0' means we changed the query
-        hitsContainer.html('');
-      }
-
-      var html = '';
-
-      if (params.results.nbHits > 0) {
-
-        html = hits.map(function (hit) {
-
-          return '<div class="hit">'
-                    + '<img src="http://image.tmdb.org/t/p/w300/' + hit.image_path + '" />'
-                    + '<div class="actor_name">' + hit.name + '</div>'
-                  + '</div>';
-
-        });
-
-      } else {
-          html = ['No results'];
-      }
-
-      hitsContainer.append(html.join(''));
-    } */
-  }
-);
 
   search.start();
 

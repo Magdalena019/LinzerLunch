@@ -33,11 +33,13 @@ $(document).ready(function() {
 
   textSearch.start();
 
+/*
   $('#textSearch').keydown(function() {
     var input = $('#textSearch').val().trim();
 
     if(input.length > 0) {
       $('#textHits').removeClass('hide');
-    } 
+    }
   });
+  */
 });
