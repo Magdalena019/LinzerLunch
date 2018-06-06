@@ -17,8 +17,8 @@
       </form>-->
 
       <!-- Include Here -->
-
-      <a href="index.php" class="offset-5 col-1 align-middle navbarLink"><img src="images/LogoLLgoldig.png" height="40px"></a>
+      <a href="#restaurantSearch" class="col-2 align-middle navbarLink" style="color:#fccda0;">Nach bestimmtem Restaurant suchen?</a>
+      <a href="index.php" class="offset-2 col-1 align-middle navbarLink"><img src="images/LogoLLgoldig.png" height="40px"></a>
       <a href="#about" class="offset-3 col-1 align-middle navbarLink" style="color:#fccda0;">Wer sind wir?</a>
       <a href="venue.php" class="col-1 align-middle navbarLink" style="color:#fccda0;">Lass dich überraschen.</a>
     </div>
@@ -131,15 +131,16 @@
 
   <!-- Falls wir noch eine dritte Section brauchen hab ich gleich hier n Parralax dafür und den Section Placeholder -->
 
-  <section id="placeholder" class="row">
+  <section id="restaurantSearch" class="row">
 
-    <h3 id="wirsind" class="offset-3 col-5"><br><br>Lass dich überraschen!</h3>
-    <h5 class="offset-4 col-4">... von dem neuen Linzer Restaurant-Portal!</h5>
+    <h3 id="wirsind" class="offset-3 col-5"><br><br>Nach einem bestimmten Restaurant suchen:</h3>
 
     <p id="description">
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-      takimata sanctus est Lorem ipsum dolor sit amet.
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
     </p>
+
+    <!-- Algolia Search -->
+    {% include 'textSearch.twig'%}
 
   </section>
 
