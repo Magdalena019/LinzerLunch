@@ -6,11 +6,7 @@ foreach ($index->browse('') as $hit) {
     $hits[] = $hit;
 }
 
-$random = $hits[0];
+$random = $hits[array_rand($hits)];
 
-$r = [
-  "name" => $random["name"];
-]
-
-echo json_encode($r);
+echo $random;
 ?>

@@ -1,22 +1,17 @@
-$('#iconRandom').click(function() {
-
-  alert('clicked');
-
-  $.ajax({
-    type: "POST",
-    url: "getRandom.php",
-  })
-});
-
 function random() {
+  let random = $('#random');
+
   $('#iconRandom').click(function() {
 
     $.ajax({
-      url: 'aloglia/getRandom.php',
+      url: 'algolia/getRandom.php',
       type: 'POST',
+      dataType: "json",
 
-      success: function() {
-        alert('Email Sent');
+      success: function(data) {
+        var div = $('<div>');
+        div.text(data.name);
+        div.appendTo(random);
       }
     });
 
