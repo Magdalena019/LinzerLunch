@@ -51,6 +51,16 @@ function search() {
     startSearch();
     $('#hits').removeClass('hide');
     $('#headline').removeClass('hide');
+
+    $.ajax({
+           url: 'algolia/searchSettings.php',
+           type: 'POST',
+           dataType: 'json',
+           success: function (data) {
+
+           }
+       });
+
   });
 
   $('#resetButton').click(function() {
@@ -81,14 +91,6 @@ function search() {
   function startSearch() {
     var query = $('#search').val().trim();
     search.helper.setQuery(query).search();
-
-    //meldung "keine restaurants" noch bevor go button
-    //alert($('#numberOfResults').text());
-    // nimmt wert von voriger suche
-
-    //if ($('#numberOfResults').text() == 0) {
-    //  $('#hits').removeClass('hide');
-    //}
   }
 }
 
