@@ -1,6 +1,5 @@
 <?php
 require 'init.php';
-require 'objId.php';
 require '../php/add.php';
 require 'counterValues.php';
 

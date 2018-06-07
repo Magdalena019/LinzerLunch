@@ -8,6 +8,7 @@ function random() {
            type: 'POST',
            dataType: 'json',
            success: function (data) {
+             //TODO: hier dem template die werte zuweisen
              random.text(data["name"]);
            }
        });
