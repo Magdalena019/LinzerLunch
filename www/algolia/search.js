@@ -5,6 +5,7 @@ function init() {
 }
 
 function search() {
+  var readyToFetchMore = true;
 
   const search = instantsearch({
     appId: 'Z0U7V7EJ1E',
@@ -56,6 +57,11 @@ function search() {
            url: 'algolia/searchSettings.php',
            type: 'POST',
            dataType: 'json',
+           
+           data: {
+             search: $('search').val()
+           },
+
            success: function (data) {
 
            }

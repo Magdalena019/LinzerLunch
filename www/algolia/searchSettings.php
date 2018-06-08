@@ -3,7 +3,7 @@ require 'init.php';
 
 //infinite scroll
 $index->setSettings([
-  //'paginationLimitedTo' => 0 
+  'paginationLimitedTo' => 0 
 ]);
 
 ?>

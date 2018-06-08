@@ -1,8 +1,10 @@
 <?php
 require 'init.php';
 
+$search = $_POST["search"];
+
 $hits = [];
-foreach ($index->browse('') as $hit) {
+foreach ($index->browse($search) as $hit) {
     $hits[] = $hit;
 }
 
