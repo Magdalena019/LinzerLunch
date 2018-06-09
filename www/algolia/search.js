@@ -1,5 +1,6 @@
 function init() {
   $('input:checkbox').removeAttr('checked');
+  $('input:checkbox').removeClass('checked');
   $('input:radio').removeAttr('checked');
   $('#search').val(" ");
 
@@ -81,9 +82,11 @@ function search() {
 
   $('#resetButton').click(function() {
     $('input:checkbox').prop('checked', false);
+    $('input:radio').prop('checked', false);
     $('#search').val($('input[name=category]:checked', '#iconRestaurant').val());
     $('#hits').addClass('hide');
     $('#headline').addClass('hide');
+    $('input[type=checkbox] + .checked').removeClass('checked');
     startSearch();
   });
 

@@ -4,24 +4,6 @@ $(document).ready(function() {
   $('#textHits').addClass('hide');
   $('#headline').addClass('hide');
 
-/*  $.getJSON("algolia/counterValues.json", function(json){
-    console.log(json);
-    var items=[];
-    $.each(json, function(key,val){
-      //items.push(val);
-      console.log(val.restaurant);
-      $('#firstCounter').attr("data-count", val.restaurant);
-      $('#secondCounter').attr("data-count", val.cafe);
-      $('#thirdCounter').attr("data-count", val.bar);
-
-    });
-
-    //console.log(items);
-    //$('#firstCounter').attr("data-count", items[0]);
-    //$('#secondCounter').attr("data-count", items[1]);
-    //$('#thirdCounter').attr("data-count", items[2]);
-
-});*/
 
 var requestURL="algolia/counterValues.json";
 var request = new XMLHttpRequest();
@@ -40,6 +22,87 @@ request.onload= function(){
 
   });
 }
+$('.input_class_checkbox').each(function(){
+    $(this).hide().after('<div class="wifiID" />');
+});
+
+$('.wifiID').on('click',function(){
+  $(this).toggleClass('checked').prev().prop('checked',$(this).is('.checked'));
+});
+
+$('.input_class_checkbox_nosmoker').each(function(){
+    $(this).hide().after('<div class="nosmoker" />');
+});
+
+$('.nosmoker').on('click',function(){
+  $(this).toggleClass('checked').prev().prop('checked',$(this).is('.checked'));
+});
+
+$('.input_class_checkbox_smoker').each(function(){
+    $(this).hide().after('<div class="smoker" />');
+});
+
+$('.smoker').on('click',function(){
+  $(this).toggleClass('checked').prev().prop('checked',$(this).is('.checked'));
+});
+
+$('.input_class_checkbox_veggie').each(function(){
+    $(this).hide().after('<div class="veggie" />');
+});
+
+$('.veggie').on('click',function(){
+  $(this).toggleClass('checked').prev().prop('checked',$(this).is('.checked'));
+});
+
+$('.input_class_checkbox_vegan').each(function(){
+    $(this).hide().after('<div class="vegan" />');
+});
+
+$('.vegan').on('click',function(){
+  $(this).toggleClass('checked').prev().prop('checked',$(this).is('.checked'));
+});
+
+$('.input_class_checkbox_breakfast').each(function(){
+    $(this).hide().after('<div class="breakfast" />');
+});
+
+$('.breakfast').on('click',function(){
+  $(this).toggleClass('checked').prev().prop('checked',$(this).is('.checked'));
+});
+
+$('.input_class_checkbox_glutenfree').each(function(){
+    $(this).hide().after('<div class="glutenfree" />');
+});
+
+$('.glutenfree').on('click',function(){
+  $(this).toggleClass('checked').prev().prop('checked',$(this).is('.checked'));
+});
+
+$('.input_class_checkbox_delivery').each(function(){
+    $(this).hide().after('<div class="delivery" />');
+});
+
+$('.delivery').on('click',function(){
+  $(this).toggleClass('checked').prev().prop('checked',$(this).is('.checked'));
+});
+
+$('.input_class_checkbox_garden').each(function(){
+    $(this).hide().after('<div class="garden" />');
+});
+
+$('.garden').on('click',function(){
+  $(this).toggleClass('checked').prev().prop('checked',$(this).is('.checked'));
+});
+
+$('.input_class_checkbox_lunch').each(function(){
+    $(this).hide().after('<div class="lunch" />');
+});
+
+$('.lunch').on('click',function(){
+  $(this).toggleClass('checked').prev().prop('checked',$(this).is('.checked'));
+});
+
+
 });
 
 /*$.ajax({

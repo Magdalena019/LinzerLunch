@@ -340,6 +340,8 @@ i {
   height: 200px;
 }*/
 
+
+
 input[type="radio"]{
   display:none;
 }
@@ -391,9 +393,92 @@ label.mix >span{
 }
 
 input[type="radio"]#all:checked +label.mix > span{
-  background-image:  url(../images/icons/randomButton.png);
+  background-image:  url(../images/icons/allblack.png);
   opacity: 0.5;
 }
+
+
+/*checkbox toggle class*/
+.wifiID{
+  display: block;
+  width: 151px;
+  height:151px;
+  background: url(../images/icons/foodicons/Wifi.png) 0 center no-repeat;
+  background-size: 150px;
+}
+
+.nosmoker{
+  display: block;
+  width: 151px;
+  height:151px;
+  background: url(../images/icons/foodicons/NonSmoker.png) 0 center no-repeat;
+  background-size: 150px;
+}
+
+.smoker{
+  display: block;
+  width: 151px;
+  height:151px;
+  background: url(../images/icons/foodicons/smoker.png) 0 center no-repeat;
+  background-size: 150px;
+}
+
+.smoker.checked, .veggie.checked, .nosmoker.checked, .wifiID.checked, .vegan.checked, .breakfast.checked, .glutenfree.checked, .delivery.checked, .lunch.checked, .garden.checked{
+  opacity: 0.5;
+}
+
+.veggie{
+  display: block;
+  width: 151px;
+  height:151px;
+  background: url(../images/icons/foodicons/veggie.png) 0 center no-repeat;
+  background-size: 150px;
+}
+
+.vegan{
+  display: block;
+  width: 151px;
+  height:151px;
+  background: url(../images/icons/foodicons/vegan.png) 0 center no-repeat;
+  background-size: 150px;
+}
+
+.breakfast{
+  display: block;
+  width: 151px;
+  height:151px;
+  background: url(../images/icons/foodicons/Breakfast.png) 0 center no-repeat;
+  background-size: 150px;
+}
+.glutenfree{
+  display: block;
+  width: 151px;
+  height:151px;
+  background: url(../images/icons/foodicons/glutenfree2.png) 0 center no-repeat;
+  background-size: 150px;
+}
+.delivery{
+  display: block;
+  width: 151px;
+  height:151px;
+  background: url(../images/icons/foodicons/delivery.png) 0 center no-repeat;
+  background-size: 150px;
+}
+.garde{
+  display: block;
+  width: 151px;
+  height:151px;
+  background: url(../images/icons/foodicons/gastgarten.png) 0 center no-repeat;
+  background-size: 150px;
+}
+.lunch{
+  display: block;
+  width: 151px;
+  height:151px;
+  background: url(../images/icons/foodicons/lunch.png) 0 center no-repeat;
+  background-size: 150px;
+}
+
 
 
 
