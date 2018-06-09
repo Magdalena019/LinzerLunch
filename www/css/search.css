@@ -15,7 +15,7 @@
 
 /* Class für die Items in der Hitliste bei der Search */
 .ais-hits--item {
-  width: inherit;
+  /*width: inherit; */
 }
 
 /* CSS Vom Natascha Pen */
@@ -37,6 +37,7 @@
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+
   list-style: none;
   margin: 0;
   padding: 0;
@@ -47,6 +48,7 @@
   display: flex;
   padding: 1rem;
 }
+/*
 @media (min-width: 40rem) {
   .cards__item {
     width: 50%;
@@ -56,7 +58,7 @@
   .cards__item {
     width: 33.3333%;
   }
-}
+} */
 .card {
   background-color: white;
   border-radius: 0.25rem;
@@ -107,11 +109,12 @@
   display: block;
   padding-top: 56.25%;
 }
+/*
 @media (min-width: 40rem) {
   .card__image::before {
     padding-top: 66.6%;
   }
-}
+} */
 .card__image--flowers {
   background-image: url(https://unsplash.it/800/600?image=82);
 }

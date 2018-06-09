@@ -8,7 +8,7 @@ $(document).ready(function() {
     indexName: 'restaurants',
     urlSync: true,
     searchParameters: {
-    hitsPerPage: 5
+    //hitsPerPage: 5
   }
   });
 

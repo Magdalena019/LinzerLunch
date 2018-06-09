@@ -1,16 +1,14 @@
 <?php
 require 'init.php';
 
+$search = $_POST["search"];
+
 $hits = [];
-foreach ($index->browse('') as $hit) {
+foreach ($index->browse($search) as $hit) {
     $hits[] = $hit;
 }
 
-$random = $hits[0];
+$random = $hits[array_rand($hits)];
 
-$r = [
-  "name" => $random["name"];
-]
-
-echo json_encode($r);
+echo json_encode($random);
 ?>

@@ -123,8 +123,7 @@ if (!$error) {
     "menu" => $menu,
     "email" => $email,
     "info" => $info,
-    "registered" => $date,
-    "objectID" => $counter
+    "registered" => $date
   ));
 
   $fp = fopen('../algolia/restaurant.json', 'w');
