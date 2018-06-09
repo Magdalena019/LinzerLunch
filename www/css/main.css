@@ -335,6 +335,66 @@ i {
         opacity: 1;
     }
 }
+/*#iconRestaurant {
+  background-image: url(../images/restaurant.jpg);
+  height: 200px;
+}*/
+
+input[type="radio"]{
+  display:none;
+}
+label.reslabel >span{
+  display: inline-block;
+  width: 151px;
+  height:151px;
+  background: url(../images/icons/resgoldy.png) 0 center no-repeat;
+  background-size: 150px;
+}
+
+input[type="radio"]#restaurant:checked +label.reslabel > span{
+  background-image:  url(../images/icons/res.png);
+  opacity: 0.5;
+}
+
+label.caflabel >span{
+  display: inline-block;
+  width: 151px;
+  height:151px;
+  background: url(../images/icons/cafegoldy.png) 0 center no-repeat;
+  background-size: 150px;
+}
+
+input[type="radio"]#cafe:checked +label.caflabel > span{
+  background-image:  url(../images/icons/cafe.png);
+  opacity: 0.5;
+}
+
+label.barlabel >span{
+  display: inline-block;
+  width: 151px;
+  height:151px;
+  background: url(../images/icons/bargoldy.png) 0 center no-repeat;
+  background-size: 150px;
+}
+
+input[type="radio"]#bar:checked +label.barlabel > span{
+  background-image:  url(../images/icons/bar.png);
+  opacity: 0.5;
+}
+
+label.mix >span{
+  display: inline-block;
+  width: 151px;
+  height:151px;
+  background: url(../images/icons/allgoldy.png) 0 center no-repeat;
+  background-size: 150px;
+}
+
+input[type="radio"]#all:checked +label.mix > span{
+  background-image:  url(../images/icons/randomButton.png);
+  opacity: 0.5;
+}
+
 
 
 

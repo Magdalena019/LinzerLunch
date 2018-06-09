@@ -595,14 +595,6 @@
   display: inline
 }
 
-input[type="radio"]{
-  display:none;
-}
-
-input[type="radio"]#restaurant + label{
-  background: url(images/icons/resgoldy.png) 0 -1px no-repeat;
-
-}
 
 
 /*# sourceMappingURL=instantsearch.min.css.map */

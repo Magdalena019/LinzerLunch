@@ -2,7 +2,17 @@ function init() {
   $('input:checkbox').removeAttr('checked');
   $('input:radio').removeAttr('checked');
   $('#search').val(" ");
+
+  /*var togSrc= ["images/icons/resgoldy.png","images/icons/cafe.png"];
+  $('#iconRes').click(function(){
+    this.src=togSrc.reverse()[0];
+  }*/
+
 }
+
+
+
+
 
 function search() {
   var readyToFetchMore = true;
@@ -57,7 +67,7 @@ function search() {
            url: 'algolia/searchSettings.php',
            type: 'POST',
            dataType: 'json',
-           
+
            data: {
              search: $('search').val()
            },
