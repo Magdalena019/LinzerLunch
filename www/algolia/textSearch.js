@@ -1,6 +1,5 @@
 $(document).ready(function() {
-
-  $('#textSearch').val(" ");
+  $('#textSearch').val(' ');
 
   const textSearch = instantsearch({
     appId: 'Z0U7V7EJ1E',
@@ -8,8 +7,8 @@ $(document).ready(function() {
     indexName: 'restaurants',
     urlSync: true,
     searchParameters: {
-    //hitsPerPage: 5
-  }
+      hitsPerPage: 5
+    }
   });
 
   textSearch.addWidget(
@@ -21,25 +20,40 @@ $(document).ready(function() {
     })
   );
 
-  textSearch.addWidget(
-    instantsearch.widgets.hits({
-      container: '#textHits',
-      templates: {
-        item: document.getElementById('textHit-template').innerHTML,
-        empty: "Leider kein Restaurant mit diesem Namen gefunden!"
-      }
-    })
-  );
+  textSearch.addWidget({
+    render: function(data) {
+      var $hits = [];
+      data.results.hits.forEach(function(hit) {
+        //TODO: Template hier bauen: - class und value müssen beibehalten werden
+        var $hit = $('<div class="hit">' + hit.name + '</div>' +
+                        '<div class="resultInfo hide" value="' + hit.name + '">' +
+                            '<p>' + hit.name + '</p>' +
+                            '<p>Beschreibung: ' + hit.description + '</p>' +
+                            '<p>Info: ' + hit.info + '</p>' +
+                        '</div>');
+        $hit.click(function() {
+          var name = hit['name'];
+          $('[value="' + name + '"]').toggleClass('hide');
+          $('.hit').toggleClass('hide');
+        });
+        $hits.push($hit);
+      });
+      $('#textHits').html($hits);
+    }
+  });
 
   textSearch.start();
 
-/*
   $('#textSearch').keydown(function() {
-    var input = $('#textSearch').val().trim();
+    $('#hits').addClass('hide');
 
-    if(input.length > 0) {
-      $('#textHits').removeClass('hide');
-    }
+    $.ajax({
+      url: 'algolia/textSettings.php',
+      type: 'POST'
+    });
+
+    $('#textHits').removeClass('hide');
+    $('.resultInfo').addClass('hide');
   });
-  */
+
 });
