@@ -1,13 +1,13 @@
-<section id="results">
+<section id="results" class="row">
 
-  <div>
+  <div class="col-lg-12">
     <input id="search" autocomplete="off" value="">
   </div>
 
-  <main>
+  <main class="col-lg-12">
     <div id="stats"></div>
     <h1 id="headline" class="text-center">Gefundene Restaurants</h1>
-    <div id="hits"></div>
+    <div id="hits" class="col-lg-12"></div>
   </main>
 
   <!--Template für Ergebnisse-->
@@ -47,8 +47,12 @@
   <!-- Pen Version 2 -->
 
   <script type="text/html" id="hit-template">
-      <ul class="cards float-left col-4">
-        <li class="cards__item">
+    <section >
+
+
+
+      <ul class="cards">
+        <li class="cards__item ">
           <div class="card">
             <div class="card__image card__image--fence"></div>
             <div class="card__content">
@@ -59,6 +63,8 @@
           </div>
         </li>
       </ul>
+
+      </section>
   </script>
 
 

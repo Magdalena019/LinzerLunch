@@ -78,6 +78,9 @@ function search() {
            }
        });
 
+       $('div.ais-hits--item').addClass('col-lg-3 cl-sm-1');
+
+
   });
 
   $('#resetButton').click(function() {

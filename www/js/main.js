@@ -102,22 +102,7 @@ $('.lunch').on('click',function(){
   $(this).toggleClass('checked').prev().prop('checked',$(this).is('.checked'));
 });
 
+$('div.ais-hits--item').addClass('col-lg-3');
+$('div.ais-hits').addClass('col-lg-12');
 
 });
-
-/*$.ajax({
-  dataType: "json";
-  url: "algolia/counterValues.json";
-  mimeType: "application/json";
-  success: function(result){
-    $.each(json, function(key,val){
-      //items.push(val);
-      console.log(val.restaurant);
-      $('#firstCounter').attr("data-count", val.restaurant);
-      $('#secondCounter').attr("data-count", val.cafe);
-      $('#thirdCounter').attr("data-count", val.bar);
-
-    });
-  }
-
-});*/

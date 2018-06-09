@@ -479,7 +479,15 @@ input[type="radio"]#all:checked +label.mix > span{
   background-size: 150px;
 }
 
+.ais-hits--item{
+  float:left;
+  height:480px;
+//  width:33%;
+}
 
+.cards__item{
+  height:400px;
+}
 
 
 
