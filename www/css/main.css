@@ -10,6 +10,10 @@
   display: none;
 }
 
+#iconSearch {
+    padding-left: 10%;
+}
+
 body {
   font-size: 16px;
   line-height: 1.8;
