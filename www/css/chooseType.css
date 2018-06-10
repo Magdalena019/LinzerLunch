@@ -15,8 +15,3 @@
     border: none;
     background: rgba(0, 0, 0, 0.0);
 }
-
-#iconRestaurant {
-  background-image: url(../images/restaurant.jpg);
-  height: 200px;
-}

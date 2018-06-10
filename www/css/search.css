@@ -14,9 +14,9 @@
 }
 
 /* Class für die Items in der Hitliste bei der Search */
-.ais-hits--item {
-  width: inherit;
-}
+/*.ais-hits--item {
+  /*width: inherit; */
+/*}
 
 /* CSS Vom Natascha Pen */
 
@@ -25,18 +25,19 @@
   border: 1px solid #cccccc;
   color: #696969;
   padding: 0.5rem;
-  text-transform: lowercase;
 }
 .btn--block {
   display: block;
   width: 100%;
 }
+
 .cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+
   list-style: none;
   margin: 0;
   padding: 0;
@@ -45,18 +46,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1rem;
+  /*padding: 1rem;*/
 }
-@media (min-width: 40rem) {
-  .cards__item {
-    width: 50%;
-  }
-}
-@media (min-width: 56rem) {
-  .cards__item {
-    width: 33.3333%;
-  }
-}
+
 .card {
   background-color: white;
   border-radius: 0.25rem;
@@ -80,7 +72,7 @@
   display: flex;
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+  /*flex: 1 1 auto;*/
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -107,23 +99,11 @@
   display: block;
   padding-top: 56.25%;
 }
-@media (min-width: 40rem) {
-  .card__image::before {
-    padding-top: 66.6%;
-  }
+
+.card__image--restaurant {
+  background-image:url(../restaurants/tiktak/01.jpg);
 }
-.card__image--flowers {
-  background-image: url(https://unsplash.it/800/600?image=82);
-}
-.card__image--river {
-  background-image: url(https://unsplash.it/800/600?image=11);
-}
-.card__image--record {
-  background-image: url(https://unsplash.it/800/600?image=39);
-}
-.card__image--fence {
-  background-image: url(https://unsplash.it/800/600?image=59);
-}
+
 .card__title {
   color: #696969;
   font-size: 1.25rem;
@@ -139,6 +119,24 @@
   line-height: 1.5;
   margin-bottom: 1.25rem;
 }
+/*
+@media (min-width: 40rem) {
+  .card__image::before {
+    padding-top: 66.6%;
+  }
+} */
+
+/*
+@media (min-width: 40rem) {
+  .cards__item {
+    width: 50%;
+  }
+}
+@media (min-width: 56rem) {
+  .cards__item {
+    width: 33.3333%;
+  }
+} */
 
 /* ----------------- */
 
@@ -591,6 +589,7 @@
   color: #444;
   display: inline
 }
+
 
 
 /*# sourceMappingURL=instantsearch.min.css.map */

@@ -1,6 +1,22 @@
-$(document).ready(function() {
+function init() {
+  $('input:checkbox').removeAttr('checked');
+  $('input:checkbox').removeClass('checked');
+  $('input:radio').removeAttr('checked');
+  $('#search').val(" ");
 
-  init();
+  /*var togSrc= ["images/icons/resgoldy.png","images/icons/cafe.png"];
+  $('#iconRes').click(function(){
+    this.src=togSrc.reverse()[0];
+  }*/
+
+}
+
+
+
+
+
+function search() {
+  var readyToFetchMore = true;
 
   const search = instantsearch({
     appId: 'Z0U7V7EJ1E',
@@ -46,12 +62,34 @@ $(document).ready(function() {
   $('#goButton').click(function() {
     startSearch();
     $('#hits').removeClass('hide');
+    $('#headline').removeClass('hide');
+
+    $.ajax({
+           url: 'algolia/searchSettings.php',
+           type: 'POST',
+           dataType: 'json',
+
+           data: {
+             search: $('search').val()
+           },
+
+           success: function (data) {
+
+           }
+       });
+
+       $('div.ais-hits--item').addClass('col-lg-3 cl-sm-1');
+
+
   });
 
   $('#resetButton').click(function() {
     $('input:checkbox').prop('checked', false);
+    $('input:radio').prop('checked', false);
     $('#search').val($('input[name=category]:checked', '#iconRestaurant').val());
     $('#hits').addClass('hide');
+    $('#headline').addClass('hide');
+    $('input[type=checkbox] + .checked').removeClass('checked');
     startSearch();
   });
 
@@ -68,24 +106,15 @@ $(document).ready(function() {
       $('#search').val($('#search').val().replace($(this).val(), ""));
     }
     $('#hits').addClass('hide');
+    $('#headline').addClass('hide');
     startSearch();
   });
 
   function startSearch() {
     var query = $('#search').val().trim();
     search.helper.setQuery(query).search();
-
-    alert($('#numberOfResults').text());
-    // nimmt wert von voriger suche 
-
-    if ($('#numberOfResults').text() == 0) {
-      $('#hits').removeClass('hide');
-    }
   }
+}
 
-  function init() {
-    $('input:checkbox').removeAttr('checked');
-    $('input:radio').removeAttr('checked');
-    $('#search').val(" ");
-  }
-});
+$(document).ready(init);
+$(document).ready(search);

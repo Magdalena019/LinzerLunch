@@ -1,12 +1,13 @@
-<section id="results">
+<section id="results" class="row">
 
-  <div>
+  <div class="col-lg-12">
     <input id="search" autocomplete="off" value="">
   </div>
 
-  <main>
+  <main class="col-lg-12">
     <div id="stats"></div>
-    <div id="hits"></div>
+    <h1 id="headline" class="text-center">Gefundene Restaurants</h1>
+    <div id="hits" class="col-lg-12"></div>
   </main>
 
   <!--Template für Ergebnisse-->
@@ -20,52 +21,30 @@
     </div>
   </script>-->
 
-
-  <!--Template für Ergebnisse-->
-  <!-- Pen Version 1 -->
-  <!--
-  <script type="text/html" id="hit-template">
-
-    <div class="hit-content">
-
-         <figure>
-           <img class="media-object img-rounded img-responsive"  src="http://placehold.it/350x250" alt="placehold.it/350x250" >
-         </figure>
-
-         <h4 class="list-group-item-heading">{% verbatim %}{{{_highlightResult.name.value}}}{% endverbatim %}</h4>
-         <h2 class="hit-name">{% verbatim %}{{{_highlightResult.name.value}}}{% endverbatim %}</h2>
-         <p class="hit-description">{% verbatim %}{{{_highlightResult.info.value}}}{% endverbatim %}</p>
-         <button type="button" class="btn btn-default btn-lg btn-block"> Nähere Restaurant Infos! </button><br>
-
-    </div>
-
-  </script>-->
-
-
   <!--Template für Ergebnisse-->
   <!-- Pen Version 2 -->
 
   <script type="text/html" id="hit-template">
+    <section >
       <ul class="cards">
-        <li class="cards__item">
+        <li class="cards__item ">
           <div class="card">
-            <div class="card__image card__image--fence"></div>
+            <div class="card__image card__image--restaurant"></div>
             <div class="card__content">
-              <h2 class="card-title">{% verbatim %}{{{_highlightResult.name.value}}}{% endverbatim %}</h2>
-              <p class="card__text">{% verbatim %}{{{_highlightResult.info.value}}}{% endverbatim %}</p>
+              <h2 class="card-title">{% verbatim %}{{{name}}}{% endverbatim %}</h2>
+              <p class="card__text">{% verbatim %}{{{description}}}{% endverbatim %}</p>
               <button class="btn btn--block card__btn">Mehr Infos hier!</button>
             </div>
           </div>
         </li>
       </ul>
+      </section>
   </script>
-
 
   <!--Template für die Anzahl Ergebnisse-->
   <script type="text/html" id="stats-template">
       <div class="stats-content">
         <p>Anzahl an gefundenen Restaurants: </p>
-        <h1 class="text-center">Gefundene Restaurants</h1>
         <p id="numberOfResults">{% verbatim %}{{nbHits}}{% endverbatim %}</p>
       </div>
     </div>
@@ -74,46 +53,8 @@
 </section>
 
 
-<!-- Start Pen by Natascha -->
-
-<!--
-<div class="container">
-  <div class="row">
-    <div class="well">
-      <div class="list-group">
-        <a href="#" class="list-group-item active">
-          <div class="media col-md-3">
-            <figure class="pull-left">
-              <img class="media-object img-rounded img-responsive"  src="http://placehold.it/350x250" alt="placehold.it/350x250" >
-            </figure>
-          </div>
-          <div class="col-md-6">
-            <h4 class="list-group-item-heading"> List group heading </h4>
-            <p class="list-group-item-text"> Qui diam libris ei, vidisse incorrupte at mel. His euismod salutandi dissentiunt eu. Habeo offendit ea mea. Nostro blandit sea ea, viris timeam molestiae an has. At nisl platonem eum.
-              Vel et nonumy gubergren, ad has tota facilis probatus. Ea legere legimus tibique cum, sale tantas vim ea, eu vivendo expetendis vim. Voluptua vituperatoribus et mel, ius no elitr deserunt mediocrem. Mea facilisi torquatos ad.
-            </p>
-          </div>
-          <div class="col-md-3 text-center">
-            <h2> 14240 <small> votes </small></h2>
-            <button type="button" class="btn btn-default btn-lg btn-block"> Vote Now! </button>
-            <div class="stars">
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star-empty"></span>
-            </div>
-            <p> Average 4.5 <small> / </small> 5 </p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
 <!-- Start 2nd Pen Natascha -->
-
+<!--
 <ul class="cards">
   <li class="cards__item">
     <div class="card">
@@ -156,3 +97,4 @@
     </div>
   </li>
 </ul>
+-->

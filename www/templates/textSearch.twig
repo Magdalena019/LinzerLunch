@@ -1,23 +1,11 @@
 <section>
   <div>
-    <label>Nach einem bestimmten Restaurant suchen:</label>
     <input id="textSearch" autocomplete="off" value="">
   </div>
 
   <div>
     <div id="textHits"></div>
   </div>
-
-  <!--Template für Ergebnisse-->
-  <script type="text/html" id="textHit-template">
-    <div class="hit-content">
-      <h2 class="hit-name">
-        {% verbatim %}{{{_highlightResult.name.value}}}
-        {% endverbatim %}
-      </h2>
-    </div>
-  </div>
-</script>
 
 </section>
 
