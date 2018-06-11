@@ -7,20 +7,14 @@
 
     <div id="navbar" class="col-lg-12 ">
 
-      <!--
-      <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-          <div class="mag-line"></div>
-          <button class="btn btn-default" type="submit">Go!</button>
-        </div>
+      <!-- <form class="navbar-form navbar-right" role="search"> <div class="form-group"> <input type="text" class="form-control" placeholder="Search"> <div class="mag-line"></div> <button class="btn btn-default" type="submit">Go!</button> </div>
       </form>-->
 
       <!-- Include Here -->
       <a href="#restaurantSearch" class="col-2 align-middle navbarLink" style="color:#fccda0;">Nach bestimmtem Restaurant suchen?</a>
       <a href="index.php" class="offset-2 col-1 align-middle navbarLink"><img src="images/LogoLLgoldig.png" height="40px"></a>
       <a href="#about" class="offset-3 col-1 align-middle navbarLink" style="color:#fccda0;">Wer sind wir?</a>
-      <a href="venue.php" class="col-1 align-middle navbarLink" style="color:#fccda0;">Lass dich überraschen.</a>
+      <a href="#randomSection" class="col-1 align-middle navbarLink" style="color:#fccda0;">Lass dich überraschen.</a>
     </div>
     <div id="marginTop">
       <div class="layer row" id="backgroundIMG">
@@ -36,61 +30,41 @@
 
   <section id="about" class="row">
 
-    <h3 id="wirsind" class="offset-3 col-5">Was ist Linzer Lunch?</h3>
-    <h5 class="offset-4 col-4">Das neue Linzer Restaurant-Portal!</h5>
+    <h3 id="wirsind" class="col-12 center">Was ist Linzer Lunch?</h3>
+    <h5 class="col-12 center">Das neue Linzer Restaurant-Portal!</h5>
 
     <p id="description">
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
       takimata sanctus est Lorem ipsum dolor sit amet.
     </p>
 
-    <h5>Momentan habt ihr die Auswahl aus ...
+    <h5 class="col-12 center">Momentan habt ihr die Auswahl aus ...
     </h5>
     <p><br/><br/></p>
 
-<!--old counter without onScroll Function -->
-  <!--  <ul class="counters">
-      <div class="columns">
-        <div class="column col-lg-4">
-          <li class="counter">
-            <h2 class="timer count-title count-number counter-number" data-to="20" data-speed="1500"></h2>
-            <span class="counter-name">Bars</span>
-          </li>
-        </div>
-        <div class="column col-lg-4">
-          <li class="counter">
-            <h2 class="timer count-title count-number counter-number" data-to="37" data-speed="1500"></h2>
-            <span class="counter-name">Cafés</span>
-
-          </li>
-        </div>
-        <div class="column col-lg-4">
-          <li class="counter">
-            <h2 class="timer count-title count-number counter-number" data-to="59" data-speed="1500"></h2>
-            <span class="counter-name">Restaurants</span>
-          </li>
-        </div>
-      </div>
-    </ul>-->
+    <!--old counter without onScroll Function -->
+    <!-- <ul class="counters"> <div class="columns"> <div class="column col-lg-4"> <li class="counter"> <h2 class="timer count-title count-number counter-number" data-to="20" data-speed="1500"></h2> <span class="counter-name">Bars</span> </li> </div>
+    <div class="column col-lg-4"> <li class="counter"> <h2 class="timer count-title count-number counter-number" data-to="37" data-speed="1500"></h2> <span class="counter-name">Cafés</span> </li> </div> <div class="column col-lg-4"> <li class="counter">
+    <h2 class="timer count-title count-number counter-number" data-to="59" data-speed="1500"></h2> <span class="counter-name">Restaurants</span> </li> </div> </div> </ul>-->
 
     <ul class="counters">
       <div class="columns">
         <div class="column col-lg-4">
           <li class="counter">
-            <h2 class="timer count-title count-number counter-number" id="firstCounter"  data-speed="1500">0</h2>
+            <h2 class="timer count-title count-number counter-number" id="firstCounter" data-speed="1500">0</h2>
             <span class="counter-name">Restaurants</span>
           </li>
         </div>
         <div class="column col-lg-4">
           <li class="counter">
-            <h2 class="timer count-title count-number counter-number" id="secondCounter"  data-speed="1500">0</h2>
+            <h2 class="timer count-title count-number counter-number" id="secondCounter" data-speed="1500">0</h2>
             <span class="counter-name">Cafés</span>
 
           </li>
         </div>
         <div class="column col-lg-4">
           <li class="counter">
-            <h2 class="timer count-title count-number counter-number" id="thirdCounter"  data-speed="1500">0</h2>
+            <h2 class="timer count-title count-number counter-number" id="thirdCounter" data-speed="1500">0</h2>
             <span class="counter-name">Bars</span>
           </li>
         </div>
@@ -111,15 +85,13 @@
 
   <!-- in KEINE Section einbinden sonst funktionierts nicht schön über die ganze Länge! -->
 
-
-
   <div class="parallax1 col-lg-12"></div>
 
-    {% include 'icons.twig'%}
+  {% include 'icons.twig'%}
 
-    <!-- Algolia Search -->
-    <!--<div class="row"></div>-->
-    {% include 'search.twig'%}
+  <!-- Algolia Search -->
+  <!--<div class="row"></div>-->
+  {% include 'search.twig'%}
 
   <!-- -------------------------------- -->
   <!-- Start Second Parallax Section - wollten ja irgendwie noch nen dritten Bereich -->
@@ -132,29 +104,27 @@
   <!-- Falls wir noch eine dritte Section brauchen hab ich gleich hier n Parralax dafür und den Section Placeholder -->
 
   <section id="restaurantSearch" class="row">
-  <div class="col-lg-12">
-    <h3 id="wirsind" class="offset-3 col-5"><br><br>Nach einem bestimmten Restaurant suchen:</h3>
+    <div class="col-lg-12">
+      <h3 id="wirsind" class="col-12 center"><br><br>Nach einem bestimmten Restaurant suchen:</h3>
 
-    <p id="description">
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-    </p>
+      <!-- <p id="description"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p> -->
 
-    <!-- Algolia Search -->
-    {% include 'textSearch.twig'%}
+      <!-- Algolia Search -->
+      {% include 'textSearch.twig'%}
     </div>
   </section>
 
   <section id="randomSearch" class="row">
-  <div class="col-lg-12">
-    <h3 id="wirsind" class="offset-3 col-5"><br><br>Lass dich überraschen:</h3>
+    <div class="col-lg-12">
+      <h3 id="wirsind" class="offset-3 col-5"><br><br>Lass dich überraschen:</h3>
 
-    <p id="description">
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-    </p>
+      <p id="description">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+      </p>
 
-    <!-- Algolia Search -->
-    {% include 'random.twig'%}
-</div>
+      <!-- Algolia Search -->
+      {% include 'random.twig'%}
+    </div>
   </section>
 
   <footer>

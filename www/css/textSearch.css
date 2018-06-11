@@ -1,4 +1,11 @@
 /*! instantsearch.js 2.3.3 | © Algolia Inc. and other contributors; Licensed MIT | github.com/algolia/instantsearch.js */
+:root {
+  --bluedark:#ade5d8;
+  --bluelight:#ffcca1;
+  --goldy: #fccda0;
+  --grey: #0a0f10;
+  --white: #ffffff;
+}
 
 .section {
   background-color: black;
@@ -19,6 +26,15 @@
   text-align: center;
 }
 */
+
+input[type=text] {
+  /*background-color: var(--goldy);
+  color: var(--white);*/
+  border: solid 1px var(--goldy);
+  width: 80%;
+
+  text-align: center;
+}
 
 @-webkit-keyframes sbx-reset-in {
   0% {
@@ -598,6 +614,3 @@ mark { background-color:pink; }
 .btn-extra {
   width:100%;
   border-top:.5px solid #d2d2d2; }
-
-
-
