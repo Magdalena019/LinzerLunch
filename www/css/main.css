@@ -471,11 +471,11 @@ input[type="radio"]#all:checked +label.mix > span{
   background: url(../images/icons/foodicons/delivery.png) 0 center no-repeat;
   background-size: 150px;
 }
-.garde{
+.garden{
   display: block;
   width: 151px;
   height:151px;
-  background: url(../images/icons/foodicons/gastgarten.png) 0 center no-repeat;
+  background: url(../images/icons/foodicons/garden.png) 0 center no-repeat;
   background-size: 150px;
 }
 .lunch{
