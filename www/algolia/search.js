@@ -115,11 +115,13 @@ function search() {
     startSearch();
   });
 
-  $('#checkicons input[type=checkbox]').change(function() {
-    if (this.checked) {
-      $('#search').val($('#search').val() + " " + $(this).val());
+  $('#checkicons input[type=checkbox] +div').click(function() {
+    if ($(this).hasClass("checked")) {
+      console.log($(this).attr("value") + " ist gecheckt" + $('#search').val());
+      $('#search').val($('#search').val() + " " + $(this).attr("value"));
     } else {
-      $('#search').val($('#search').val().replace($(this).val(), ""));
+      console.log($(this).attr("value") + " ist nicht gecheckt");
+      $('#search').val($('#search').val().replace($(this).attr("value"), ""));
     }
     $('#hits').addClass('hide');
     $('#headline').addClass('hide');
