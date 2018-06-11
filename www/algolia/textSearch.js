@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('#textSearch').val(' ');
+  //$('#textSearch').val(' ');
 
   const textSearch = instantsearch({
     appId: 'Z0U7V7EJ1E',
