@@ -13,6 +13,7 @@
   text-align: center;
 }
 
+
 /* Class für die Items in der Hitliste bei der Search */
 /*.ais-hits--item {
   /*width: inherit; */
@@ -29,6 +30,13 @@
 .btn--block {
   display: block;
   width: 100%;
+
+}
+
+.btn--block:hover {
+  border-color: #fccda0;
+  border: 1px solid;
+  color: #fccda0;
 }
 
 .cards {
@@ -52,7 +60,7 @@
 .card {
   background-color: white;
   border-radius: 0.25rem;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  /*box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
