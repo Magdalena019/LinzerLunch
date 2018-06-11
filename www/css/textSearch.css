@@ -1,7 +1,8 @@
 /*! instantsearch.js 2.3.3 | © Algolia Inc. and other contributors; Licensed MIT | github.com/algolia/instantsearch.js */
+
 :root {
-  --bluedark:#ade5d8;
-  --bluelight:#ffcca1;
+  --bluedark: #ade5d8;
+  --bluelight: #ffcca1;
   --goldy: #fccda0;
   --grey: #0a0f10;
   --white: #ffffff;
@@ -30,9 +31,9 @@
 input[type=text] {
   /*background-color: var(--goldy);
   color: var(--white);*/
-  border: solid 1px var(--goldy);
+  border: solid 1px var(--grey);
   width: 80%;
-
+  margin-top: 1%;
   text-align: center;
 }
 
@@ -62,14 +63,11 @@ input[type=text] {
   }
 }
 
-.ais-search-box {
-}
+.ais-search-box {}
 
-.ais-search-box--input {
-}
+.ais-search-box--input {}
 
-.ais-ais-result {
-}
+.ais-ais-result {}
 
 .ais-ais-result svg {
   display: block
@@ -488,7 +486,6 @@ input[type=text] {
 
 /*# sourceMappingURL=instantsearch.min.css.map */
 
-
 /* NAVBAR STUFF */
 
 /* Navbar 2nd Try */
@@ -507,13 +504,16 @@ input[type=text] {
   background: #222;
   color: #fff;
 }
+
 .navbar-form .form-group input[class="form-control"]:hover {
   cursor: pointer;
   border-color: #fff;
 }
-.navbar-form .form-group input[class="form-control"]:hover ~ .mag-line {
+
+.navbar-form .form-group input[class="form-control"]:hover~.mag-line {
   background: #fff;
 }
+
 .navbar-form .form-group input[class="form-control"]:focus {
   -webkit-animation: openSearchField 0.6s forwards;
   animation: openSearchField 0.6s forwards;
@@ -521,14 +521,17 @@ input[type=text] {
   box-shadow: none;
   border-color: #fff;
 }
-.navbar-form .form-group input[class="form-control"]:focus ~ .mag-line {
+
+.navbar-form .form-group input[class="form-control"]:focus~.mag-line {
   display: none;
 }
-.navbar-form .form-group input[class="form-control"]:focus ~ button[type="submit"] {
+
+.navbar-form .form-group input[class="form-control"]:focus~button[type="submit"] {
   display: inline-block;
   -webkit-animation: showSearchSubmit 0.6s forwards;
   animation: showSearchSubmit 0.6s forwards;
 }
+
 .navbar-form .form-group .mag-line {
   display: inline-block;
   position: absolute;
@@ -540,6 +543,7 @@ input[type=text] {
 }
 
 /* GO Button for the Navigation */
+
 .navbar-form .form-group button[type="submit"] {
   display: none;
   width: 0;
@@ -572,6 +576,7 @@ input[type=text] {
     border-radius: 4px;
   }
 }
+
 @-webkit-keyframes showSearchSubmit {
   100% {
     width: auto;
@@ -579,6 +584,7 @@ input[type=text] {
     opacity: 1;
   }
 }
+
 @keyframes showSearchSubmit {
   100% {
     width: auto;
@@ -587,30 +593,35 @@ input[type=text] {
   }
 }
 
-
-
 /* Hello */
 
-mark { background-color:pink; }
-
+mark {
+  background-color: pink;
+}
 
 .list-autocomplete {
-  padding:0; }
+  padding: 0;
+}
+
 .list-autocomplete em {
-  font-style:normal;
-  background-color:#e1f2f9;
+  font-style: normal;
+  background-color: #e1f2f9;
 }
 
 .hasNoResults {
-  color:#aaa; }
-.hasNoResults,
-.btn-extra {
-  display:block;
-  padding:10px; }
+  color: #aaa;
+}
+
+.hasNoResults, .btn-extra {
+  display: block;
+  padding: 10px;
+}
 
 .hasNoResults {
-  color:#aaa; }
+  color: #aaa;
+}
 
 .btn-extra {
-  width:100%;
-  border-top:.5px solid #d2d2d2; }
+  width: 100%;
+  border-top: .5px solid #d2d2d2;
+}
