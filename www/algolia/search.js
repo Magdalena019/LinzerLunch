@@ -1,19 +1,32 @@
+var numberOfResults = 0;
+var numberOfRR = 0;
+
 function init() {
   $('input:checkbox').removeAttr('checked');
   $('input:checkbox').removeClass('checked');
   $('input:radio').removeAttr('checked');
   $('#search').val(" ");
 
+  $.ajax({
+    url: 'algolia/searchSettings.php',
+    type: 'POST',
+
+    data: {
+      search: ""
+    },
+
+    success: function(data) {
+
+      numberOfResults = data;
+      numberOfRR = data;
+    }
+  });
+
   /*var togSrc= ["images/icons/resgoldy.png","images/icons/cafe.png"];
   $('#iconRes').click(function(){
     this.src=togSrc.reverse()[0];
   }*/
-
 }
-
-
-
-
 
 function search() {
   var readyToFetchMore = true;
@@ -23,6 +36,9 @@ function search() {
     apiKey: 'a85163449a3db7812f4de4b3cafa2e3c',
     indexName: 'restaurants',
     urlSync: true,
+    searchParameters: {
+      hitsPerPage: 100
+    }
   });
 
   search.addWidget(
@@ -65,20 +81,20 @@ function search() {
     $('#headline').removeClass('hide');
 
     $.ajax({
-           url: 'algolia/searchSettings.php',
-           type: 'POST',
-           dataType: 'json',
+      url: 'algolia/searchSettings.php',
+      type: 'POST',
+      dataType: 'json',
 
-           data: {
-             search: $('search').val()
-           },
+      data: {
+        search: $('search').val()
+      },
 
-           success: function (data) {
+      success: function(data) {
 
-           }
-       });
+      }
+    });
 
-       $('div.ais-hits--item').addClass('col-lg-3 cl-sm-1');
+    $('div.ais-hits--item').addClass('col-lg-3 cl-sm-1');
 
 
   });
