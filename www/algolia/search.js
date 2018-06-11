@@ -6,6 +6,7 @@ function init() {
   $('input:checkbox').removeClass('checked');
   $('input:radio').removeAttr('checked');
   $('#search').val(" ");
+  $('div#checkicons').hide();
 
   $.ajax({
     url: 'algolia/searchSettings.php',
@@ -106,7 +107,13 @@ function search() {
     $('#hits').addClass('hide');
     $('#headline').addClass('hide');
     $('input[type=checkbox] + .checked').removeClass('checked');
+    $('div#checkicons').fadeOut(1000,0);
     startSearch();
+  });
+
+  $('#iconRestaurant').click(function(){
+    //$('input:checkbox').prop('checked', false);
+    $('div#checkicons').fadeTo(1000,1.0);
   });
 
   $('#iconRestaurant').change(function() {
