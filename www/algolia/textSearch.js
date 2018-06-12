@@ -59,7 +59,9 @@ $(document).ready(function() {
 
     $.ajax({
       url: 'algolia/textSettings.php',
-      type: 'POST'
+      type: 'POST',
+      success: function(data){
+      }
     });
 
     $('#textHits').removeClass('hide');

@@ -125,8 +125,6 @@ function search() {
 
   $('#goButton').click(function() {
     startSearch();
-    $('#hits').removeClass('hide');
-    $('#headline').removeClass('hide');
 
     $.ajax({
       url: 'algolia/searchSettings.php',
@@ -147,6 +145,9 @@ function search() {
       }
     });
 
+    $('#hits').removeClass('hide');
+    $('#headline').removeClass('hide');
+
     $('div.ais-hits--item').addClass('col-lg-3 cl-sm-1');
 
 
@@ -160,6 +161,7 @@ function search() {
     $('#headline').addClass('hide');
     $('input[type=checkbox] + .checked').removeClass('checked');
     $('div#checkicons').fadeOut(1000, 0);
+    setSettings();
     startSearch();
   });
 
@@ -173,6 +175,7 @@ function search() {
     $('#search').val($('input[name=category]:checked', '#iconRestaurant').val());
     $('input:checkbox').prop('checked', false);
     $('#hits').addClass('hide');
+    setSettings();
     startSearch();
   });
 
@@ -184,12 +187,22 @@ function search() {
     }
     $('#hits').addClass('hide');
     $('#headline').addClass('hide');
+    setSettings();
     startSearch();
   });
 
   function startSearch() {
     var query = $('#search').val().trim();
     search.helper.setQuery(query).search();
+  }
+
+  function setSettings() {
+    $.ajax({
+      url: 'algolia/searchSettings.php',
+      type: 'POST',
+      success: function(data) {
+      }
+    });
   }
 }
 
