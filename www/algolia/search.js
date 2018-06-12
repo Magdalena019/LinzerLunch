@@ -1,27 +1,9 @@
-var numberOfResults = 0;
-var numberOfRR = 0;
-
 function init() {
   $('input:checkbox').removeAttr('checked');
   $('input:checkbox').removeClass('checked');
   $('input:radio').removeAttr('checked');
   $('#search').val(" ");
   $('div#checkicons').hide();
-
-  $.ajax({
-    url: 'algolia/searchSettings.php',
-    type: 'POST',
-
-    data: {
-      search: ""
-    },
-
-    success: function(data) {
-
-      numberOfResults = data;
-      numberOfRR = data;
-    }
-  });
 
   /*var togSrc= ["images/icons/resgoldy.png","images/icons/cafe.png"];
   $('#iconRes').click(function(){
@@ -31,15 +13,12 @@ function init() {
 
 function search() {
   var readyToFetchMore = true;
+  var hitsContainer = $('#hits');
 
   const search = instantsearch({
     appId: 'Z0U7V7EJ1E',
     apiKey: 'a85163449a3db7812f4de4b3cafa2e3c',
-    indexName: 'restaurants',
-    urlSync: true,
-    searchParameters: {
-      hitsPerPage: 100
-    }
+    indexName: 'restaurants'
   });
 
   search.addWidget(
@@ -60,6 +39,74 @@ function search() {
       }
     })
   );
+
+  /* Infinte Scroll */
+/*  search.addWidget({
+      init: function(params) {
+        params.helper.setQueryParameter('hitsPerPage', 8);
+
+        function scrollhandler() {
+
+          var isAtBottomOfPage = $(window).scrollTop() + $(window).height() >
+            $(document).height() - 500;
+
+          if (readyToFetchMore && isAtBottomOfPage) {
+            readyToFetchMore = false;
+            params.helper.nextPage().search();
+          }
+        }
+
+        $(window).bind("scroll", scrollhandler);
+      },
+
+      render: function(params) {
+
+        readyToFetchMore = true;
+
+        var hits = params.results.hits;
+
+
+        if (params.state.page === 0) {
+          hitsContainer.html('');
+        }
+
+        var html = '';
+
+        if (params.results.nbHits > 0) {
+
+          html = hits.map(function(hit) {
+
+            //TODO: Template hier bauen:
+
+            return '<div class="ais-hits--item col-lg-3 cl-sm-1>"' +
+            '<section>' +
+              '<ul class="cards">' +
+                '<li class="cards__item ">' +
+                  '<div class="card">' +
+
+                  // TODO: Image Source Path: src="restaurants/' + hit.path + '/01.jpg"
+
+                    '<div class="card__image card__image--restaurant"></div>' +
+                    '<div class="card__content">' +
+                      '<h2 class="card-title">' + hit.name + '</h2>' +
+                      '<p class="card__text">' + hit.description + '</p>' +
+                      '<button class="btn btn--block card__btn">Mehr Infos hier!</button>' +
+                    '</div>' +
+                  '</div>' +
+                '</li>' +
+              '</ul>' +
+              '</section>' +
+            '</div>';
+
+          });
+
+        } else {
+          html = ['Leider kein passendes Restaurant gefunden!'];
+        }
+
+        hitsContainer.append(html.join(''));
+      }
+    }); */
 
   search.addWidget(
     instantsearch.widgets.stats({
@@ -84,14 +131,19 @@ function search() {
     $.ajax({
       url: 'algolia/searchSettings.php',
       type: 'POST',
-      dataType: 'json',
 
       data: {
-        search: $('search').val()
+        search: $('#search').val()
       },
 
       success: function(data) {
-
+        if (data == 0) {
+          $('#headline').addClass('hide');
+          $('#noResult').removeClass('hide');
+        } else {
+          $('#headline').removeClass('hide');
+          $('#noResult').addClass('hide');
+        }
       }
     });
 
@@ -107,27 +159,27 @@ function search() {
     $('#hits').addClass('hide');
     $('#headline').addClass('hide');
     $('input[type=checkbox] + .checked').removeClass('checked');
-    $('div#checkicons').fadeOut(1000,0);
+    $('div#checkicons').fadeOut(1000, 0);
     startSearch();
   });
 
-  $('#iconRestaurant').click(function(){
+  $('#iconRestaurant').click(function() {
     //$('input:checkbox').prop('checked', false);
-    $('div#checkicons').fadeTo(1000,1.0);
+    $('div#checkicons').fadeTo(1000, 1.0);
+    $('#hits').addClass('hide');
   });
 
   $('#iconRestaurant').change(function() {
     $('#search').val($('input[name=category]:checked', '#iconRestaurant').val());
     $('input:checkbox').prop('checked', false);
+    $('#hits').addClass('hide');
     startSearch();
   });
 
   $('#checkicons input[type=checkbox] +div').click(function() {
     if ($(this).hasClass("checked")) {
-      console.log($(this).attr("value") + " ist gecheckt" + $('#search').val());
       $('#search').val($('#search').val() + " " + $(this).attr("value"));
     } else {
-      console.log($(this).attr("value") + " ist nicht gecheckt");
       $('#search').val($('#search').val().replace($(this).attr("value"), ""));
     }
     $('#hits').addClass('hide');
