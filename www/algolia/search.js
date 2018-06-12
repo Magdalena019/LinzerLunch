@@ -125,6 +125,8 @@ function search() {
 
   $('#goButton').click(function() {
     startSearch();
+    $('#hits').removeClass('hide');
+    $('#headline').removeClass('hide');
 
     $.ajax({
       url: 'algolia/searchSettings.php',
@@ -144,9 +146,6 @@ function search() {
         }
       }
     });
-
-    $('#hits').removeClass('hide');
-    $('#headline').removeClass('hide');
 
     $('div.ais-hits--item').addClass('col-lg-3 cl-sm-1');
 
