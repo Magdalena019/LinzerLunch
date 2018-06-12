@@ -24,14 +24,6 @@ $(document).ready(function() {
       data.results.hits.forEach(function(hit) {
         counter++;
         //TODO: Template hier bauen: - class und value müssen beibehalten werden
-        var result = $('<div>').addClass('hit');
-
-        //'<div class="hit">' + hit.name + '</div>';
-        if (counter > 5) {
-          //result.addClass('hide');
-        }
-
-        result.text("hi");
 
         //var button = $('<button class="">Mehr Infos</button>');
 
