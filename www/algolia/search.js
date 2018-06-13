@@ -90,14 +90,20 @@ function search() {
                       '<div class="card__content">' +
                         '<h2 class="card-title">' + hit.name + '</h2>' +
                         '<p class="card__text">' + hit.description + '</p>' +
-                        '<button class="btn btn--block card__btn">Mehr Infos hier!</button>' +
+
+                        //TODO: Aufklappbares Template bauen:
+                        '<div class="moreInfoTemplate hide" value="' + hit.name +'">' +
+                          '<p>' + hit.street + '</p>' +
+                          '<p>' + hit.zip + ' ' + hit.city + '</p>' +
+                        '</div>' +
+
+                        '<button class="moreInfo btn btn--block card__btn" value="' + hit.name +'">Mehr Infos hier!</button>' +
                       '</div>' +
                     '</div>' +
                   '</li>' +
                 '</ul>' +
                 '</section>' +
               '</div>';
-
             });
 
           } else {
@@ -203,6 +209,18 @@ function search() {
     });
   }
 }
+
+document.addEventListener('click', (e) => {
+  if (e.target.matches('.moreInfo')) {
+    let name = e.target.value;
+    $('.moreInfoTemplate[value="' + name + '"]').toggleClass("hide");
+    if ($('.moreInfo[value="' + name + '"]').text() == "Mehr Infos hier!") {
+      $('.moreInfo[value="' + name + '"]').text('Weniger anzeigen!');
+    } else {
+      $('.moreInfo[value="' + name + '"]').text('Mehr Infos hier!');
+    }
+  }
+})
 
 $(document).ready(init);
 $(document).ready(search);

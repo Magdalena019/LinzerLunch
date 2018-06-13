@@ -37,7 +37,7 @@ $(document).ready(function() {
 
           $hit.click(function() {
           var name = hit['name'];
-          $('[value="' + name + '"]').removeClass('hide');
+          $('.resultInfo[value="' + name + '"]').removeClass('hide');
           $(this).removeClass('hide');
           $('.hit').addClass('hide');
         });
