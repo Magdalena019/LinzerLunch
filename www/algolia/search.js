@@ -30,83 +30,83 @@ function search() {
     })
   );
 
-  search.addWidget(
-    instantsearch.widgets.hits({
-      container: '#hits',
-      templates: {
-        item: document.getElementById('hit-template').innerHTML,
-        empty: "Leider kein passendes Restaurant gefunden!"
-      }
-    })
-  );
+  /*  search.addWidget(
+      instantsearch.widgets.hits({
+        container: '#hits',
+        templates: {
+          item: document.getElementById('hit-template').innerHTML,
+          empty: "Leider kein passendes Restaurant gefunden!"
+        }
+      })
+    );
 
-  /* Infinte Scroll */
-/*  search.addWidget({
-      init: function(params) {
-        params.helper.setQueryParameter('hitsPerPage', 8);
+    /* Infinte Scroll */
+   search.addWidget({
+        init: function(params) {
+          params.helper.setQueryParameter('hitsPerPage', 8);
 
-        function scrollhandler() {
+          function scrollhandler() {
 
-          var isAtBottomOfPage = $(window).scrollTop() + $(window).height() >
-            $(document).height() - 500;
+            var isAtBottomOfPage = $(window).scrollTop() + $(window).height() >
+              $(document).height() - 1000;
 
-          if (readyToFetchMore && isAtBottomOfPage) {
-            readyToFetchMore = false;
-            params.helper.nextPage().search();
+            if (readyToFetchMore && isAtBottomOfPage) {
+              readyToFetchMore = false;
+              params.helper.nextPage().search();
+            }
           }
-        }
 
-        $(window).bind("scroll", scrollhandler);
-      },
+          $(window).bind("scroll", scrollhandler);
+        },
 
-      render: function(params) {
+        render: function(params) {
 
-        readyToFetchMore = true;
+          readyToFetchMore = true;
 
-        var hits = params.results.hits;
+          var hits = params.results.hits;
 
 
-        if (params.state.page === 0) {
-          hitsContainer.html('');
-        }
+          if (params.state.page === 0) {
+            hitsContainer.html('');
+          }
 
-        var html = '';
+          var html = '';
 
-        if (params.results.nbHits > 0) {
+          if (params.results.nbHits > 0) {
 
-          html = hits.map(function(hit) {
+            html = hits.map(function(hit) {
 
-            //TODO: Template hier bauen:
+              //TODO: Template hier bauen:
 
-            return '<div class="ais-hits--item col-lg-3 cl-sm-1>"' +
-            '<section>' +
-              '<ul class="cards">' +
-                '<li class="cards__item ">' +
-                  '<div class="card">' +
+              return '<div class="ais-hits--item col-lg-3 cl-sm-1>"' +
+              '<section>' +
+                '<ul class="cards">' +
+                  '<li class="cards__item ">' +
+                    '<div class="card">' +
 
-                  // TODO: Image Source Path: src="restaurants/' + hit.path + '/01.jpg"
+                    // TODO: Image Source Path: src="restaurants/' + hit.path + '/01.jpg"
 
-                    '<div class="card__image card__image--restaurant"></div>' +
-                    '<div class="card__content">' +
-                      '<h2 class="card-title">' + hit.name + '</h2>' +
-                      '<p class="card__text">' + hit.description + '</p>' +
-                      '<button class="btn btn--block card__btn">Mehr Infos hier!</button>' +
+                      '<div class="card__image card__image--restaurant"></div>' +
+                      '<div class="card__content">' +
+                        '<h2 class="card-title">' + hit.name + '</h2>' +
+                        '<p class="card__text">' + hit.description + '</p>' +
+                        '<button class="btn btn--block card__btn">Mehr Infos hier!</button>' +
+                      '</div>' +
                     '</div>' +
-                  '</div>' +
-                '</li>' +
-              '</ul>' +
-              '</section>' +
-            '</div>';
+                  '</li>' +
+                '</ul>' +
+                '</section>' +
+              '</div>';
 
-          });
+            });
 
-        } else {
-          html = ['Leider kein passendes Restaurant gefunden!'];
+          } else {
+            html = ['Leider kein passendes Restaurant gefunden!'];
+          }
+
+          hitsContainer.append(html.join(''));
         }
-
-        hitsContainer.append(html.join(''));
-      }
-    }); */
+      });
 
   search.addWidget(
     instantsearch.widgets.stats({
@@ -199,8 +199,7 @@ function search() {
     $.ajax({
       url: 'algolia/searchSettings.php',
       type: 'POST',
-      success: function(data) {
-      }
+      success: function(data) {}
     });
   }
 }

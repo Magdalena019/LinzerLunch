@@ -25,18 +25,21 @@ $(document).ready(function() {
         counter++;
         //TODO: Template hier bauen: - class und value müssen beibehalten werden
 
-        //var button = $('<button class="">Mehr Infos</button>');
+        var button = $();
 
         var $hit = $('<div class="hit">' + hit.name + '</div>' +
                         '<div class="resultInfo hide" value="' + hit.name + '">' +
                             '<p>' + hit.name + '</p>' +
                             '<p>Beschreibung: ' + hit.description + '</p>' +
                             '<p>Info: ' + hit.info + '</p>' +
-                        '</div>');
+                        '</div>' +
+                        '<button class="getInfo hide" value="' + hit.name + '">Zurück</button>');
+
           $hit.click(function() {
           var name = hit['name'];
-          $('[value="' + name + '"]').toggleClass('hide');
-          $('.hit').toggleClass('hide');
+          $('[value="' + name + '"]').removeClass('hide');
+          $(this).removeClass('hide');
+          $('.hit').addClass('hide');
         });
         $hits.push($hit);
       });
@@ -61,3 +64,11 @@ $(document).ready(function() {
   });
 
 });
+
+document.addEventListener('click', (e) => {
+  if (e.target.matches('.getInfo')) {
+    $('.resultInfo').addClass('hide');
+    $('.getInfo').addClass('hide');
+    $('.hit').removeClass('hide');
+  }
+})
