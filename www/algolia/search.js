@@ -78,7 +78,10 @@ function search() {
 
               //TODO: Template hier bauen:
 
-              return '<div class="ais-hits--item col-lg-3 cl-sm-1>"' +
+              /* col-sm3 und col-md-offset-2 bitte unbedingt lassen das hat für nen schönen
+              abstand bei den cards geführt außer bei der 1.!   */
+
+              return '<div class="ais-hits--item  col-sm-3 col-md-3">' +
               '<section>' +
                 '<ul class="cards">' +
                   '<li class="cards__item ">' +
@@ -86,15 +89,16 @@ function search() {
 
                     // TODO: Image Source Path: src="restaurants/' + hit.path + '/01.jpg"
 
-                      '<div class="card__image card__image--restaurant"></div>' +
+                      '<img src="../www/restaurants/' + hit.path + '/01.jpg" class="card__image" height=" 50%"' +
                       '<div class="card__content">' +
+                      '<br>' +
                         '<h2 class="card-title">' + hit.name + '</h2>' +
                         '<p class="card__text">' + hit.description + '</p>' +
 
                         //TODO: Aufklappbares Template bauen:
                         '<div class="moreInfoTemplate hide" value="' + hit.name +'">' +
                           '<p>' + hit.street + '</p>' +
-                          '<p>' + hit.zip + ' ' + hit.city + '</p>' +
+                          '<p>' + hit.zip + '&nbsp;' + hit.city + '</p>' +
                         '</div>' +
 
                         '<button class="moreInfo btn btn--block card__btn" value="' + hit.name +'">Mehr Infos hier!</button>' +
