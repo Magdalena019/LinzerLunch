@@ -17,12 +17,6 @@
   margin:30px; padding:30px;
 }
 
-
-/* Class für die Items in der Hitliste bei der Search */
-/*.ais-hits--item {
-  /*width: inherit; */
-/*}
-
 /* CSS Vom Natascha Pen */
 
 .btn {
@@ -58,7 +52,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /*padding: 1rem;*/
+  padding: 1rem;
 }
 
 .card {
@@ -101,6 +95,8 @@
   filter: contrast(70%);
   overflow: hidden;
   position: relative;
+  width: 100%;
+  height: 100%;
   -webkit-transition: -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
   transition: -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
   transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);

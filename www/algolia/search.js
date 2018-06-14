@@ -78,18 +78,13 @@ function search() {
 
               //TODO: Template hier bauen:
 
-              /* col-sm3 und col-md-offset-2 bitte unbedingt lassen das hat für nen schönen
-              abstand bei den cards geführt außer bei der 1.!   */
-
-              return '<div class="ais-hits--item  col-sm-3 col-md-3">' +
+              return '<div class="ais-hits--item  col-xs-4 col-sm-4 col-md-4 col-lg-4>"' +
               '<section>' +
                 '<ul class="cards">' +
                   '<li class="cards__item ">' +
                     '<div class="card">' +
 
-                    // TODO: Image Source Path: src="restaurants/' + hit.path + '/01.jpg"
-
-                      '<img src="../www/restaurants/' + hit.path + '/01.jpg" class="card__image" height=" 50%"' +
+                      '<img src="../www/restaurants/' + hit.path + '/01.jpg" class="card__image" height="40%"' +
                       '<div class="card__content">' +
                       '<br>' +
                         '<h2 class="card-title">' + hit.name + '</h2>' +

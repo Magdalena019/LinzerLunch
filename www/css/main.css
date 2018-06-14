@@ -62,7 +62,7 @@ a:link, a:visited {
 a:hover, a:focus {
   color: inherit;
   text-decoration: none;
-  font-weight: 450;
+  /*font-weight: 450;*/
 }
 
 section {
@@ -199,54 +199,6 @@ i {
 }
 
 
-
-/**
- * COUNTERS
-
-
-
-.counters {
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    list-style-type:none;
-    padding: 100px 100px;
-}
-@media screen and (min-width: 769px) {
-    .counters .column {
-        padding-left: 0;
-        float:left;
-    }
-}
-
-.counter {
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #eee;
-    text-align: center;
-}
-@media screen and (min-width: 769px) {
-    .counter {
-        border-bottom: 0;
-        border-right: 1px solid #eee;
-    }
-}
-.column:last-of-type .counter {
-    border-bottom: 0;
-    border-right: 0;
-}
-.counter-number {
-    display: block;
-    font-size: 4rem;
-    font-weight: 700;
-}
-.counter-name {
-    display: block;
-}
-
- */
-
-
-
 /* Navbar 2nd Try */
 
 /*
@@ -349,7 +301,6 @@ i {
   background-image: url(../images/restaurant.jpg);
   height: 200px;
 }*/
-
 
 
 input[type="radio"]{
@@ -500,5 +451,91 @@ input[type="radio"]#all:checked +label.mix > span{
 }
 
 
+/* CSS FOR THE SCROLL DOWN BUTTON */
+/** Pen -- https://codepen.io/nxworld/pen/OyRrGy */
 
-/* END NAVBAR 2nd TRY */
+.demo a {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #fccda0;
+    letter-spacing: .1em;
+    transition: opacity .3s;
+}
+.demo a:hover {
+    opacity: .5;
+}
+
+#section02 a {
+    padding-top: 40px;
+}
+#section02 a span {
+    position: absolute;
+    margin-left: -15px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fccda0;
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+#section02 a span::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    width: 16px;
+    height: 16px;
+    margin: -12px 0 0 -8px;
+    border-left: 1px solid #fccda0;
+    border-bottom: 1px solid #fccda0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+}
+
+
+/** Code for the Return to Top Button **/
+
+#return-to-top {
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    background: #fccda0;
+    width: 60px;
+    height: 60px;
+    display: block;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+#return-to-top i {
+    color: #fff;
+    position: relative;
+    left: 21px;
+    top: 20px;
+    font-size: 40px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: #fccda0;
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}

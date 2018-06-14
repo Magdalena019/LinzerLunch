@@ -216,5 +216,28 @@ $('.lunch').on('click',function(){
 });
 
 
+  /* Function for Scroll Down Button */
+  $(function() {
+    $('a[href*=#]').on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+    });
+  });
+
+  /* Function for the Return to Top Button */
+  // ===== Scroll to Top ====
+  $(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+      $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+      $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+  });
+  $('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+      scrollTop : 0                       // Scroll to top of body
+    }, 500);
+  });
+
 
 });

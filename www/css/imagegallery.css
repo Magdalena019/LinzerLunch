@@ -10,6 +10,10 @@
   box-sizing: border-box;
 }
 
+/* Wtf ist das hier  alles??? lg Natascha */
+/* Habs mal auskommentiert weils 1000 Fehlermeldungen gebracht hat */
+
+/*
 $base-font-size: 0.9375rem;
 $base-line-height: 1.5rem;
 $measure: 760px;
@@ -50,12 +54,15 @@ $h4-line-height: $h4-line * $h4-lines;
 $h4-margin-top: 1 * $h4-line;
 $h4-margin-bottom: 1 * $h4-line;
 
+*/
+
 html, body {
   margin: 0;
   height: 100%;
   font-family: Lato, sans-serif;
 }
 
+/*
 .h1 {
   font-size: $h1-font-size;
   line-height: $h1-line-height;
@@ -130,6 +137,7 @@ html, body {
 }
 
 /* dots are lines */
+/*
 .flickity-page-dots .dot {
   height: 0.4rem;
   width: 0.4rem;
