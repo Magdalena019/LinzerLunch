@@ -179,6 +179,7 @@ function search() {
     $('#search').val($('input[name=category]:checked', '#iconRestaurant').val());
     $('input:checkbox').prop('checked', false);
     $('#hits').addClass('hide');
+    $('#checkicons input[type=checkbox] +div').removeClass('checked');
     setSettings();
     startSearch();
   });
