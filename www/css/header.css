@@ -33,10 +33,11 @@ header {
 
 #headerLogo {
   position: absolute;
-  height: 55%;
+  max-height: 55%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -45%);
+  max-width:60%;
 
 }
 

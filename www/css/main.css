@@ -95,12 +95,12 @@ section {
 
 
 #navbar {
-    position: fixed;
-    margin-left: -70px;
+    /*position: fixed;*/
+    /*margin-left: -70px;*/
 
     /* position fixed, immer vordergrund */
     z-index: 1;
-
+    overflow:hidden;
 }
 
 
