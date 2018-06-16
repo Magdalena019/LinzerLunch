@@ -329,9 +329,10 @@ i {
 }*/
 
 
-input[type="radio"]{
+/*input[type="radio"]{
   display:none;
-}
+}*/
+
 label.reslabel >span{
   display: inline-block;
   width: 151px;

@@ -3,6 +3,10 @@ require 'init.php';
 
 $search = $_POST["search"];
 
+$index->setSettings(array(
+  "searchableAttributes" => ["info"]
+));
+
 $hits = [];
 foreach ($index->browse($search) as $hit) {
     $hits[] = $hit;
