@@ -30,6 +30,10 @@
   cursor: pointer;
 }
 
+.thumbImage {
+  max-width: 40%;
+}
+
 .hit:hover {
   border-color: #fccda0;
   border: 1px solid;
@@ -40,6 +44,7 @@
   margin-top: 2%;
   text-align: center;
 }
+
 
 
 /*
