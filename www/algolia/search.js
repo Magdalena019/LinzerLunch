@@ -212,9 +212,9 @@ function search() {
   }
 }
 
-document.addEventListener('click', (e) => {
-  if (e.target.matches('.moreInfo')) {
-    let name = e.target.value;
+document.addEventListener('click', function() {
+  if (event.target.matches('.moreInfo')) {
+    var name = event.target.value;
     $('.moreInfoTemplate[value="' + name + '"]').toggleClass("hide");
     if ($('.moreInfo[value="' + name + '"]').text() == "Mehr Infos hier!") {
       $('.moreInfo[value="' + name + '"]').text('Weniger anzeigen!');
@@ -222,7 +222,7 @@ document.addEventListener('click', (e) => {
       $('.moreInfo[value="' + name + '"]').text('Mehr Infos hier!');
     }
   }
-})
+});
 
 $(document).ready(init);
 $(document).ready(search);

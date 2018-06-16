@@ -45,7 +45,7 @@ $(document).ready(function() {
       });
 
       $('#textHits').html($hits);
-    };
+    }
   });
 
   textSearch.start();
@@ -66,10 +66,10 @@ $(document).ready(function() {
 
 });
 
-document.addEventListener('click', (e) => {
-  if (e.target.matches('.getInfo')) {
+document.addEventListener('click', function () {
+  if (event.target.matches('.getInfo')) {
     $('.resultInfo').addClass('hide');
     $('.getInfo').addClass('hide');
     $('.hit').removeClass('hide');
   }
-})
+});
