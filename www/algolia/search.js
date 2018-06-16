@@ -5,6 +5,7 @@ function init() {
   $('#search').val(" ");
   $('div#checkicons').hide();
 
+
   /*var togSrc= ["images/icons/resgoldy.png","images/icons/cafe.png"];
   $('#iconRes').click(function(){
     this.src=togSrc.reverse()[0];
@@ -167,6 +168,11 @@ function search() {
     $('div#checkicons').fadeOut(1000, 0);
 
     $('html, body').animate({ scrollTop: $('#chooseType').offset().top}, 500, 'linear');
+
+    $('.randomrestaurant').removeClass('checked');
+    $('.randomcafe').removeClass('checked');
+    $('.randombar').removeClass('checked');
+    $('.randomall').removeClass('checked');
     setSettings();
     startSearch();
   });
@@ -212,9 +218,9 @@ function search() {
   }
 }
 
-document.addEventListener('click', (event) => {
-  if (event.target.matches('.moreInfo')) {
-    var name = event.target.value;
+document.addEventListener('click', (e) => {
+  if (e.target.matches('.moreInfo')) {
+    let name = e.target.value;
     $('.moreInfoTemplate[value="' + name + '"]').toggleClass("hide");
     if ($('.moreInfo[value="' + name + '"]').text() == "Mehr Infos hier!") {
       $('.moreInfo[value="' + name + '"]').text('Weniger anzeigen!');
@@ -222,7 +228,7 @@ document.addEventListener('click', (event) => {
       $('.moreInfo[value="' + name + '"]').text('Mehr Infos hier!');
     }
   }
-});
+})
 
 $(document).ready(init);
 $(document).ready(search);

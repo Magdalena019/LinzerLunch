@@ -270,4 +270,54 @@ function stickIt() {
 }
 
 
+/*random restaurants*/
+$('.randomres').each(function(){
+    $(this).hide().after('<div class="randomrestaurant" value="restaurant"/>');
+});
+
+$('.randomrestaurant').on('click',function(){
+  $(this).toggleClass('checked').prev().prop('checked',$(this).is('.checked'));
+$('.randomcafe').removeClass('checked');
+$('.randombar').removeClass('checked');
+$('.randomall').removeClass('checked');
+
+});
+
+$('.randomcaf').each(function(){
+    $(this).hide().after('<div class="randomcafe" value="cafe"/>');
+});
+
+$('.randomcafe').on('click',function(){
+  $(this).toggleClass('checked').prev().prop('checked',$(this).is('.checked'));
+$('.randomrestaurant').removeClass('checked');
+$('.randombar').removeClass('checked');
+$('.randomall').removeClass('checked');
+
+});
+
+$('.randomba').each(function(){
+    $(this).hide().after('<div class="randombar" value="bar"/>');
+});
+
+$('.randombar').on('click',function(){
+  $(this).toggleClass('checked').prev().prop('checked',$(this).is('.checked'));
+$('.randomrestaurant').removeClass('checked');
+$('.randomcafe').removeClass('checked');
+$('.randomall').removeClass('checked');
+
+});
+
+$('.randomal').each(function(){
+    $(this).hide().after('<div class="randomall" value=""/>');
+});
+
+$('.randomall').on('click',function(){
+  $(this).toggleClass('checked').prev().prop('checked',$(this).is('.checked'));
+$('.randomrestaurant').removeClass('checked');
+$('.randomcafe').removeClass('checked');
+$('.randombar').removeClass('checked');
+
+});
+
+
 });
