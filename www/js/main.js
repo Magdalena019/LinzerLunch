@@ -21,7 +21,8 @@ request.onload= function(){
     $('#thirdCounter').attr("data-count", val.bar);
 
   });
-}
+};
+
 $('.input_class_checkbox').each(function(){
     $(this).hide().after('<div class="wifiID" value="wifi"/>');
 

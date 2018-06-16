@@ -14,6 +14,28 @@
     padding-left: 10%;
 }
 
+#descriptionSection1 {
+    text-align: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Icon Search und Icons Mid ist das gleiche - iconSearch muss dann gelöscht werden das hab ich nur damit es auch wirkt
+weil die Klasse .iconsMid im Javascript noch nicht zugewiesen wurde */
+#iconSearch {
+    margin-right: auto;
+    padding-left: 23%;
+}
+
+.iconsMid {
+    margin-right: auto;
+    padding-left: 23%;
+}
+
+/* -------------------- */
+
+
 body {
   font-size: 16px;
   line-height: 1.8;
