@@ -132,7 +132,7 @@ function search() {
     startSearch();
     $('#hits').removeClass('hide');
     $('#headline').removeClass('hide');
-
+    $('html, body').animate({ scrollTop: $('#results').offset().top}, 500, 'linear');
     $.ajax({
       url: 'algolia/searchSettings.php',
       type: 'POST',
@@ -165,6 +165,8 @@ function search() {
     $('#headline').addClass('hide');
     $('input[type=checkbox] + .checked').removeClass('checked');
     $('div#checkicons').fadeOut(1000, 0);
+
+    $('html, body').animate({ scrollTop: $('#chooseType').offset().top}, 500, 'linear');
     setSettings();
     startSearch();
   });
@@ -179,6 +181,7 @@ function search() {
     $('#search').val($('input[name=category]:checked', '#iconRestaurant').val());
     $('input:checkbox').prop('checked', false);
     $('#hits').addClass('hide');
+    $('#checkicons input[type=checkbox] +div').removeClass('checked');
     setSettings();
     startSearch();
   });

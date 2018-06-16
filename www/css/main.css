@@ -23,10 +23,10 @@
 
 /* Icon Search und Icons Mid ist das gleiche - iconSearch muss dann gelöscht werden das hab ich nur damit es auch wirkt
 weil die Klasse .iconsMid im Javascript noch nicht zugewiesen wurde */
-#iconSearch {
+/*#iconSearch {
     margin-right: auto;
     padding-left: 23%;
-}
+}*/
 
 .iconsMid {
     margin-right: auto;
@@ -336,7 +336,7 @@ label.reslabel >span{
   background-size: 150px;
 }
 
-input[type="radio"]#restaurant:checked +label.reslabel > span{
+input[type="radio"]#restaurant:checked +label.reslabel > span, input[type="radio"]#randomrestaurant:checked +label.reslabel > span{
   background-image:  url(../images/icons/res.png);
   opacity: 0.5;
 }
@@ -349,7 +349,7 @@ label.caflabel >span{
   background-size: 150px;
 }
 
-input[type="radio"]#cafe:checked +label.caflabel > span{
+input[type="radio"]#cafe:checked +label.caflabel > span, input[type="radio"]#randomcafe:checked +label.caflabel > span{
   background-image:  url(../images/icons/cafe.png);
   opacity: 0.5;
 }
@@ -362,7 +362,7 @@ label.barlabel >span{
   background-size: 150px;
 }
 
-input[type="radio"]#bar:checked +label.barlabel > span{
+input[type="radio"]#bar:checked +label.barlabel > span, input[type="radio"]#randombar:checked +label.barlabel > span{
   background-image:  url(../images/icons/bar.png);
   opacity: 0.5;
 }
@@ -375,7 +375,7 @@ label.mix >span{
   background-size: 150px;
 }
 
-input[type="radio"]#all:checked +label.mix > span{
+input[type="radio"]#all:checked +label.mix > span, input[type="radio"]#randomall:checked +label.mix > span{
   background-image:  url(../images/icons/allblack.png);
   opacity: 0.5;
 }
