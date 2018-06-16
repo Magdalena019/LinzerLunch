@@ -66,7 +66,7 @@ $(document).ready(function() {
 
 });
 
-document.addEventListener('click', function () {
+document.addEventListener('click', (event) => {
   if (event.target.matches('.getInfo')) {
     $('.resultInfo').addClass('hide');
     $('.getInfo').addClass('hide');

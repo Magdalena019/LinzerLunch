@@ -212,7 +212,7 @@ function search() {
   }
 }
 
-document.addEventListener('click', function() {
+document.addEventListener('click', (event) => {
   if (event.target.matches('.moreInfo')) {
     var name = event.target.value;
     $('.moreInfoTemplate[value="' + name + '"]').toggleClass("hide");
