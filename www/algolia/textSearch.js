@@ -27,13 +27,15 @@ $(document).ready(function() {
 
         var button = $();
 
-        var $hit = $('<div class="hit">' + hit.name + '</div>' +
-                        '<div class="resultInfo hide" value="' + hit.name + '">' +
-                            '<p>' + hit.name + '</p>' +
-                            '<p>Beschreibung: ' + hit.description + '</p>' +
-                            '<p>Info: ' + hit.info + '</p>' +
-                        '</div>' +
-                        '<button class="getInfo hide" value="' + hit.name + '">Zurück</button>');
+        var $hit = $('<em><br></em>' +
+            '<div class="hit">' + hit.name + '</div>' +
+            '<div class="resultInfo hide" value="' + hit.name + '">' +
+            '<img src="../www/restaurants/' + hit.path + '/01.jpg" class="rounded mx-auto d-block">' +
+            '<p><b><br>' + hit.name + '</b></p>' +
+            '<p>' + hit.description + '</p>' +
+            '<p>Info: ' + hit.info + '</p>' +
+            '</div>' +
+            '<button class="getInfo hide" value="' + hit.name + '">Zurück</button>');
 
           $hit.click(function() {
           var name = hit['name'];

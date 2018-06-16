@@ -16,6 +16,32 @@
   display: none;
 }
 
+/* Formattierung für die Volltextsuche */
+
+
+.hit {
+  text-align: center;
+  background-color: white;
+  border: 1px solid #cccccc;
+  color: #696969;
+  padding: 1rem;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.hit:hover {
+  border-color: #fccda0;
+  border: 1px solid;
+  color: #fccda0;
+}
+
+.resultInfo {
+  margin-top: 2%;
+  text-align: center;
+}
+
+
 /*
 #search {
   display: none;
