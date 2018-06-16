@@ -43,8 +43,9 @@ $(document).ready(function() {
         });
         $hits.push($hit);
       });
+
       $('#textHits').html($hits);
-    }
+    };
   });
 
   textSearch.start();
