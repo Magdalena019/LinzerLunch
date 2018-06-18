@@ -15,6 +15,7 @@ header {
   padding: 10px;
   color: var(--goldy);
   text-align: center;
+  z-index: 98;
 }
 
 
@@ -22,7 +23,9 @@ header {
   color: var(--goldy);
 }
 
-#marginTop {}
+#marginTop {
+  z-index: initial;
+}
 
 #backgroundIMG {
   background: #ffffff;

@@ -79,7 +79,7 @@ function search() {
 
               //TODO: Template hier bauen:
 
-              return '<div class="ais-hits--item  col-xs-4 col-sm-4 col-md-4 col-lg-4>"' +
+              return '<div class="ais-hits--item  col-xs-4 col-sm-4 col-md-4 col-lg-4 style="height:400px">' +
               '<section>' +
                 '<ul class="cards">' +
                   '<li class="cards__item ">' +
@@ -93,8 +93,8 @@ function search() {
 
                         //TODO: Aufklappbares Template bauen:
                         '<div class="moreInfoTemplate hide" value="' + hit.name +'">' +
-                          '<p>' + hit.street + '</p>' +
-                          '<p>' + hit.zip + '&nbsp;' + hit.city + '</p>' +
+                          '<p>' + hit.street + '<br>' +
+                          hit.zip + '&nbsp;' + hit.city + '</p>' +
                         '</div>' +
 
                         '<button class="moreInfo btn btn--block card__btn" value="' + hit.name +'">Mehr Infos hier!</button>' +
