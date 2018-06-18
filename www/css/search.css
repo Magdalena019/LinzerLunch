@@ -29,6 +29,7 @@ height: 500px;
   border: 1px solid #cccccc;
   color: #696969;
   padding: 0.5rem;
+  font-size: 1.3vw; /*making the text responsive*/
 }
 .btn--block {
   display: block;
@@ -310,13 +311,16 @@ height: 500px;
   color: #bbb
 }
 
+/* Mal auskommentiert weil hier Fehlermeldungen geworfen wurden */
+/*
 .sbx-sffv__input:-ms-input-placeholder, .sbx-sffv__input::-ms-input-placeholder {
   color: #bbb
-}
+}*/
 
+/*
 .sbx-sffv__input::placeholder {
   color: #bbb
-}
+}*/
 
 .sbx-sffv__submit {
   position: absolute;
