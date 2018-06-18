@@ -11,6 +11,9 @@
   padding: 10px;
   color: var(--goldy);
   text-align: right;
+  width: 130vw;
+  position: fixed;
+  z-index: 4;
 }
 
 /* wenns groß is */
