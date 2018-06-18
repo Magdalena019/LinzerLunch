@@ -14,8 +14,9 @@ header {
   background-color: var(--grey);
   padding: 10px;
   color: var(--goldy);
-  text-align: right;
+  text-align: center;
 }
+
 
 .navbarLink {
   color: var(--goldy);

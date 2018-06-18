@@ -6,23 +6,44 @@
   <header>
 
     <div id="navbar" class="row">
-
       <!-- <form class="navbar-form navbar-right" role="search"> <div class="form-group"> <input type="text" class="form-control" placeholder="Search"> <div class="mag-line"></div> <button class="btn btn-default" type="submit">Go!</button> </div>
       </form>-->
 
       <!-- Include Here -->
-      <a href="#restaurantSearch" class="col-3 align-middle navbarLink" style="color:#fccda0;">Nach bestimmtem Restaurant suchen?</a>
-      <a href="index.php" class="offset-2 col-1 align-middle navbarLink"><img src="images/LogoLLgoldig.png" height="40px"></a>
-      <a href="#about" class="offset-2 col-2 align-middle navbarLink" style="color:#fccda0;">Wer sind wir?</a>
-      <a href="#randomSection" class="col-2 align-middle navbarLink" style="color:#fccda0;">Lass dich überraschen.</a>
+      <a href="#restaurantSearch" class="col-md-3 col-lg-3 align-middle navbarLink hiddenmobile" style="color:#fccda0;">Nach bestimmtem Restaurant suchen?</a>
+
+      <!-- dropdown für mobile-->
+      <div class="dropdown" id="dropdown">
+        <button class="btn btn-primary dropdown-toggle col-xs-2" type="button" data-toggle="dropdown" id="drpbtn">
+          <i class="fa fa-bars"></i>
+          <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#chooseType">Wo isst du heute?</a>
+          </li>
+          <li>
+            <a href="#restaurantSearch">Nach bestimmtem Restaurant suchen?</a>
+          </li>
+          <li>
+            <a href="#randomSection">Lass dich überraschen.</a>
+          </li>
+          <li>
+            <a href="#about">Wer sind wir?</a>
+          </li>
+        </ul>
+      </div>
+
+      <a href="index.php" class="offset-lg-2 offset-md-1 col-lg-1 align-middle navbarLink" id="imgLogoMobile"><img src="images/LogoLLgoldig.png" height="40px"></a>
+      <a href="#about" class="offset-lg-2 offset-md-1 col-lg-2 align-middle navbarLink hiddenmobile" style="color:#fccda0;">Wer sind wir?</a>
+      <a href="#randomSection" class="col-lg-2 align-middle navbarLink hiddenmobile" style="color:#fccda0;">Lass dich überraschen.</a>
+
     </div>
+
     <div id="marginTop">
       <div class="layer row" id="backgroundIMG">
         <img src="images/LogoLLgoldig.png" id="headerLogo">
       </div>
-      <!-- Hab das hier mal weiter unten platziert damit man den Pfeil schöner sieht und einfach hats so
-      nicht so sehr unten geklebt beim Bild sondern dann bei der Section darunter - ich fands schöner sonst können
-      wirs wieder ändern -->
+      <!-- Hab das hier mal weiter unten platziert damit man den Pfeil schöner sieht und einfach hats so nicht so sehr unten geklebt beim Bild sondern dann bei der Section darunter - ich fands schöner sonst können wirs wieder ändern -->
       <!--<h3 id="vonlinzern" class="offset-3 col-6">Von LINZERN - für LINZER</h3>-->
     </div>
 
@@ -31,22 +52,25 @@
   <!-- Scroll Down Button -->
 
   <section id="section02" class="demo row">
-    <a href="#about"><span></span></a>
+    <a href="#about">
+      <span></span></a>
   </section>
 
-  <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+  <a href="javascript:" id="return-to-top">
+    <i class="icon-chevron-up"></i>
+  </a>
 
   <!-- Start About Section -->
 
   <section id="about" class="row">
     <em><br><br></em>
-    <h3 id="vonfürLinzer" class="col-12 center">Von LINZERN - für LINZER</h3>
+    <!--<h3 id="vonfürLinzer" class="col-12 center">Von LINZERN - für LINZER</h3>-->
     <h3 id="wirsind" class="col-12 center">Was ist Linzer Lunch?</h3>
     <h5 class="col-12 center">Das neue Linzer Restaurant-Portal!</h5>
 
     <p id="descriptionSection1">
-      Linzer Lunch ist EURE neue Informationsseite über die kulinarische Welt von Linz. Ihr findet hier eine Übersicht über
-      tolle Restaurants, Bars und Cafés. <br>Lasst euch von uns überraschen, oder benutzt unsere angenehme Icon-Suche!
+      Linzer Lunch ist EURE neue Informationsseite über die kulinarische Welt von Linz. Ihr findet hier eine Übersicht über tolle Restaurants, Bars und Cafés.
+      <br>Lasst euch von uns überraschen, oder benutzt unsere angenehme Icon-Suche!
     </p>
 
     <h5 class="col-12 center">Momentan habt ihr die Auswahl aus ...
@@ -118,9 +142,7 @@
       <h3 id="wirsind" class="offset-3 col-5"><br><br>Lass dich überraschen:</h3>
 
       <p id="description">
-        Du weißt nicht genau worauf du Lust hast? Wähle eine Oberkategorie und lass dich von unserem kleinen
-        Glücksrad einfach überraschen! Natürlich kannst du das auch öfter machen, oder dich einfach auf unserer
-        Seite so umsehen.
+        Du weißt nicht genau worauf du Lust hast? Wähle eine Oberkategorie und lass dich von unserem kleinen Glücksrad einfach überraschen! Natürlich kannst du das auch öfter machen, oder dich einfach auf unserer Seite so umsehen.
       </p>
 
       <!-- Algolia Search -->

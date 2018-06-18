@@ -1,5 +1,0 @@
-sind alle im css-ordner, da wo sie hingehören!
-aufgeteilt je nach seite
-
-im main.css sind sachen sie auf allein seiten gleich sind.
-zb schrift, background, body & co
