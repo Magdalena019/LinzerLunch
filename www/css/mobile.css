@@ -14,19 +14,24 @@
 }
 
 /* wenns groß is */
-
-@media only screen and (min-width: 739px) {
-  #drpbtn {
+@media only screen and (min-width: 900px) {
+  #navbarMobile {
     display: none;
   }
+
 }
 
 /* wenns klein is */
 
-@media only screen and (max-width: 739px) {
-  .hiddenmobile {
+@media only screen and (max-width: 900px) {
+  #navbarDesktop {
     display: none;
   }
+  .hiddenMobile {
+    display: none;
+  }
+
+
   #imgLogoMobile {
     width: 40px;
     margin-left: 30%;
@@ -49,13 +54,25 @@ i {
 
 #drpbtn:focus {
   outline: none !important;
-   box-shadow: none;
+  box-shadow: none;
 }
 
 .dropdown-menu {
-  background-color: var(--goldy);
-  color: var(--grey);
+  background-color: var(--grey);
+  color: var(--goldy);
   border-radius: 0;
   z-index: 99;
-  width: 100%;
+  width: 100vw;
+  padding: 10%;
+  margin-left: -3vw;
+  text-align: center;
+}
+
+.dropdown a:hover {
+  text-decoration: underline;
+}
+
+.dropdown li {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
 }

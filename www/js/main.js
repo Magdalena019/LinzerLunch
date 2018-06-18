@@ -242,7 +242,7 @@ $('.lunch').on('click',function(){
 
 //create sticky menu
 // Create a clone of the menu, right next to original.
-$('#navbar').addClass('original').clone().insertAfter('#navbar').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
+$('#navbarDesktop').addClass('original').clone().insertAfter('#navbarDesktop').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
 
 scrollIntervalID = setInterval(stickIt, 10);
 
