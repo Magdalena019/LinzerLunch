@@ -53,16 +53,24 @@ $(document).ready(function() {
 
   textSearch.start();
 
-  $('#textSearch').keydown(function() {
+  $('#textSearch').keydown(function(event) {
+  //  console.log(event.which);
+    if ( event.which == 32 ||$('#textSearch').val().search(/\S/)==-1) {
+       $('#textHits').addClass('hide');
+   //event.preventDefault();
+ }else{
+   $('#textHits').removeClass('hide');
+ }
 
+//console.log($('#textSearch').val().search(/\S/));
     //regex - buchstabe zwischen a bis z und A bis Z
-    /*if ($('#textSearch').val().trim().length == 0) {
+  /*  if ($('#textSearch').val().search(/\S/) == -1) {
         $('#hits').addClass('hide');
     } else {
         $('#hits').removeClass('hide');
-    } */
+    }*/
 
-    $('#hits').addClass('hide');
+    //$('#hits').addClass('hide');
 
     $.ajax({
       url: 'algolia/textSettings.php',
@@ -71,7 +79,7 @@ $(document).ready(function() {
       }
     });
 
-    $('#textHits').removeClass('hide');
+  //  $('#textHits').removeClass('hide');
     $('.resultInfo').addClass('hide');
   });
 
