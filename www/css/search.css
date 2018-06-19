@@ -22,8 +22,24 @@ height: 500px;
 }
 
 .col-md-4 {
-  border-right: none;
+  border: none;
 }
+
+.col-lg-4 {
+   border: none;
+}
+
+.col-sm-4 {
+    border: none;
+}
+
+.col-xs-4 {
+    border:none;
+}
+
+
+
+
 
 /* CSS Vom Natascha Pen */
 
