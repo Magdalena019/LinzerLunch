@@ -45,11 +45,25 @@ $(document).ready(function() {
               '</div>' +
               '<button class="getInfo hide" value="' + hit.name + '">Zurück</button>');
 
+              $('#randomhit').click(function(){
+                if($('.randomclass').hasClass("hide")){
+                  $('.randomclass').removeClass("hide");
+                }else{
+                  $('.randomclass').addClass("hide");
+                }
+            });
+
           $hit.click(function() {
           var name = hit['name'];
-          $('.resultInfo[value="' + name + '"]').removeClass('hide');
-          $(this).removeClass('hide');
-          $('.hit').addClass('hide');
+          if($('.resultInfo[value="' + name + '"]').hasClass("hide")){
+            $('.resultInfo[value="' + name + '"]').removeClass("hide");
+            $(this).removeClass('hide');
+            $('.hit').addClass('hide');
+          }else{
+            $('.resultInfo[value="' + name + '"]').addClass("hide");
+          }
+        /*  $('.resultInfo[value="' + name + '"]').removeClass('hide');*/
+
         });
         $hits.push($hit);
       });
