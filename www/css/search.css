@@ -21,6 +21,9 @@
 height: 500px;
 }
 
+.col-md-4 {
+  border-right: none;
+}
 
 /* CSS Vom Natascha Pen */
 
