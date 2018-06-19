@@ -7,6 +7,8 @@ function random() {
     startRandomSearch();
   });
 
+
+
   function startRandomSearch() {
     $.ajax({
       url: 'algolia/getRandom.php',
@@ -21,8 +23,8 @@ function random() {
         //TODO: hier dem template die werte zuweisen
         /*random.text(data["name"] + " " + data["info"]);*/
         random.html('<em><br></em>' +
-            '<div class="hit">' + data["name"] + '</div>' +
-            '<div class="resultInfo" value="' + data["name"] + '">' +
+            '<div class="hit" id="randomhit">' + data["name"] + '</div>' +
+            '<div class="resultInfo randomclass hide" value="' + data["name"] + '">' +
             '<img src="../www/restaurants/' + data["path"] + '/01.jpg" class="rounded thumbImage">' +
             '<h4><b><br>' + data["name"] + '</b></h4>' +
             '<p>' + data["description"] + '</p>' +
@@ -36,9 +38,21 @@ function random() {
             'Samstag: ' + data["hours"]["sat"] + '<br>' +
             'Sonntag: ' + data["hours"]["sun"]+ '</p>' +
             '</div>')
+
+            $('#randomhit').click(function(){
+              if($('.randomclass').hasClass("hide")){
+                $('.randomclass').removeClass("hide");
+              }else{
+                $('.randomclass').addClass("hide");
+              }
+          });
       }
     });
   }
+
+
 }
+
+
 
 $(document).ready(random);
