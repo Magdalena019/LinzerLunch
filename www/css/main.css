@@ -645,3 +645,9 @@ input[type="radio"]#randomres:checked >label > span{
   background-image:  url(../images/icons/res.png);
   opacity: 0.5;
 }*/
+
+
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}

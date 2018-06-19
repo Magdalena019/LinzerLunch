@@ -80,32 +80,40 @@ function search() {
 
               //TODO: Template hier bauen:
 
-              return '<div class="ais-hits--item  col-xs-4 col-sm-4 col-md-4 col-lg-4>"' +
-              '<section>' +
-                '<ul class="cards">' +
-                  '<li class="cards__item ">' +
-                    '<div class="card">' +
+              return '<div class="ais-hits--item  col-xs-4 col-sm-4 col-md-4 col-lg-4>' +
+            '<section>' +
+              '<ul class="cards">' +
+                '<li class="cards__item ">' +
+                  '<div class="card">' +
 
-                      '<img src="../www/restaurants/' + hit.path + '/01.jpg" class="card__image" height="40%"' +
-                      '<div class="card__content">' +
-                      '<br>' +
-                        '<h2 class="card-title">' + hit.name + '</h2>' +
-                        '<p class="card__text">' + hit.description + '</p>' +
-
-                        //TODO: Aufklappbares Template bauen:
-                        '<div class="moreInfoTemplate hide" value="' + hit.name +'">' +
-                          '<p>' + hit.street + '</p>' +
-                          '<p>' + hit.zip + '&nbsp;' + hit.city + '</p>' +
-                        '</div>' +
-
-                        '<button class="moreInfo btn btn--block card__btn" value="' + hit.name +'">Mehr Infos hier!</button>' +
+                    '<img src="../www/restaurants/' + hit.path + '/01.jpg" class="card__image hideMore" height="20%" value="' + hit.name +'"' +
+                    '<div class="card__content">' +
+                    '<br>' +
+                      '<h2 class="card-title">' + hit.name + '</h2>' +
+                      '<p class="card__text information" value="' + hit.name +'">' + hit.description + '</p>' +
+                      //TODO: Aufklappbares Template bauen:
+                      '<div class="moreInfoTemplate hide" value="' + hit.name +'">' +
+                        '<p value="' + hit.name +'" class="information">' +
+                          hit.street + '<br>' +
+                          // hit.zip + '&nbsp;' + hit.city + is eigentlich nicht notwendig im Moment haben ja sowieso nur LinzInnenstadt
+                          '<br>Mo: ' +   hit.hours.mon +
+                          '<br>Di: ' + hit.hours.tue +
+                          '<br>Mi: ' + hit.hours.wed +
+                          '<br>Do: ' + hit.hours.thu +
+                          '<br>Fr: ' + hit.hours.fri +
+                          '<br>Sa: ' + hit.hours.sat +
+                          '<br>So: ' + hit.hours.sun +
+                        '</p>' +
                       '</div>' +
+
+                      '<button class="moreInfo btn btn--block card__btn" value="' + hit.name +'">Mehr Infos hier!</button>' +
                     '</div>' +
-                  '</li>' +
-                '</ul>' +
-                '</section>' +
-              '</div>';
-            });
+                  '</div>' +
+                '</li>' +
+              '</ul>' +
+              '</section>' +
+            '</div>';
+          });
 
           } else {
             html = ['Leider kein passendes Restaurant gefunden!'];
@@ -231,6 +239,7 @@ document.addEventListener('click', (e) => {
     } else {
       $('.moreInfo[value="' + name + '"]').text('Mehr Infos hier!');
     }
+    $('.hideMore[value="' + name + '"]').toggleClass("hide");
   }
 })
 
