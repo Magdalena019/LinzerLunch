@@ -10,22 +10,18 @@ header {
  margin-bottom: 5%;
 }
 
-#navbarDesktop {
+#navbar {
   background-color: var(--grey);
   padding: 10px;
   color: var(--goldy);
-  text-align: center;
-  z-index: 98;
+  text-align: right;
 }
-
 
 .navbarLink {
   color: var(--goldy);
 }
 
-#marginTop {
-  z-index: initial;
-}
+#marginTop {}
 
 #backgroundIMG {
   background: #ffffff;

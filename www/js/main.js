@@ -322,5 +322,4 @@ $('.randombar').removeClass('checked');
 
 
 
-
 });

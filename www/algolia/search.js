@@ -4,6 +4,7 @@ function init() {
   $('input:radio').removeAttr('checked');
   $('#search').val(" ");
   $('div#checkicons').hide();
+  $('div#stats').addClass('hide');
 
 
   /*var togSrc= ["images/icons/resgoldy.png","images/icons/cafe.png"];
@@ -79,7 +80,7 @@ function search() {
 
               //TODO: Template hier bauen:
 
-              return '<div class="ais-hits--item  col-xs-4 col-sm-4 col-md-4 col-lg-4 style="height:400px">' +
+              return '<div class="ais-hits--item  col-xs-4 col-sm-4 col-md-4 col-lg-4>"' +
               '<section>' +
                 '<ul class="cards">' +
                   '<li class="cards__item ">' +
@@ -93,8 +94,8 @@ function search() {
 
                         //TODO: Aufklappbares Template bauen:
                         '<div class="moreInfoTemplate hide" value="' + hit.name +'">' +
-                          '<p>' + hit.street + '<br>' +
-                          hit.zip + '&nbsp;' + hit.city + '</p>' +
+                          '<p>' + hit.street + '</p>' +
+                          '<p>' + hit.zip + '&nbsp;' + hit.city + '</p>' +
                         '</div>' +
 
                         '<button class="moreInfo btn btn--block card__btn" value="' + hit.name +'">Mehr Infos hier!</button>' +
@@ -166,6 +167,7 @@ function search() {
     $('#headline').addClass('hide');
     $('input[type=checkbox] + .checked').removeClass('checked');
     $('div#checkicons').fadeOut(1000, 0);
+    $('div#stats').addClass('hide');
 
     $('html, body').animate({ scrollTop: $('#chooseType').offset().top}, 500, 'linear');
 
@@ -181,9 +183,11 @@ function search() {
     //$('input:checkbox').prop('checked', false);
     $('div#checkicons').fadeTo(1000, 1.0);
     $('#hits').addClass('hide');
+    $('div#stats').removeClass('hide');
   });
 
   $('#iconRestaurant').change(function() {
+
     $('#search').val($('input[name=category]:checked', '#iconRestaurant').val());
     $('input:checkbox').prop('checked', false);
     $('#hits').addClass('hide');
