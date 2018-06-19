@@ -260,7 +260,7 @@ function stickIt() {
     coordsOrgElement = orgElement.offset();
     leftOrgElement = coordsOrgElement.left;
     widthOrgElement = orgElement.css('width');
-    $('.cloned').css('left',leftOrgElement+'px').css('top',0).css('width',widthOrgElement).css('background-color','black').css('margin-left','0px').css('margin-right','0px').show();
+    $('.cloned').css('left',leftOrgElement+'px').css('top',0).css('width',widthOrgElement).css('background-color','black').css('margin-left','0px').css('margin-right','0px').css('padding-top','5px').css('padding-bottom','5px').show();
     $('.original').css('visibility','hidden');
   } else {
     // not scrolled past the menu; only show the original menu.
