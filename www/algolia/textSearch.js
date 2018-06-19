@@ -31,10 +31,17 @@ $(document).ready(function() {
               '<div class="hit">' + hit.name + '</div>' +
               '<div class="resultInfo hide" value="' + hit.name + '">' +
               '<img src="../www/restaurants/' + hit.path + '/01.jpg" class="rounded thumbImage">' +
-              '<p><b><br>' + hit.name + '</b></p>' +
+              '<h4><b><br>' + hit.name + '</b></h4>' +
               '<p>' + hit.description + '</p>' +
               '<p>Info: ' + hit.info + '</p>' +
-              '<p>Öffnungszeiten: ' + hit.hours.monAMstart + '</p>' +
+              '<h5>Öffnungszeiten: ' + '</h5>' +
+              '<p>Montag: ' + hit.hours.mon + '<br>' +
+              'Dienstag: ' + hit.hours.tue + '<br>' +
+              'Mittwoch: ' + hit.hours.wed + '<br>' +
+              'Donnerstag: ' + hit.hours.thu + '<br>' +
+              'Freitag: ' + hit.hours.fri + '<br>' +
+              'Samstag: ' + hit.hours.sat + '<br>' +
+              'Sonntag: ' + hit.hours.sun + '</p>' +
               '</div>' +
               '<button class="getInfo hide" value="' + hit.name + '">Zurück</button>');
 
