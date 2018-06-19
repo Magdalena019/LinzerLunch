@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  //$('#textSearch').val(' ');
+  $('#textSearch').val(' ');
 
   const textSearch = instantsearch({
     appId: 'Z0U7V7EJ1E',
@@ -34,7 +34,7 @@ $(document).ready(function() {
               '<p><b><br>' + hit.name + '</b></p>' +
               '<p>' + hit.description + '</p>' +
               '<p>Info: ' + hit.info + '</p>' +
-              '<p>Öffnungszeiten: ' + hit.hours + '</p>' +
+              '<p>Öffnungszeiten: ' + hit.hours.monAMstart + '</p>' +
               '</div>' +
               '<button class="getInfo hide" value="' + hit.name + '">Zurück</button>');
 
@@ -54,6 +54,14 @@ $(document).ready(function() {
   textSearch.start();
 
   $('#textSearch').keydown(function() {
+
+    //regex - buchstabe zwischen a bis z und A bis Z
+    /*if ($('#textSearch').val().trim().length == 0) {
+        $('#hits').addClass('hide');
+    } else {
+        $('#hits').removeClass('hide');
+    } */
+
     $('#hits').addClass('hide');
 
     $.ajax({

@@ -22,7 +22,16 @@ $r = (isset($_POST['restaurant']) ? 1 : 0);
 $c = (isset($_POST['cafe']) ? 1 : 0);
 $b = (isset($_POST['bar']) ? 1 : 0);
 
-$monAMstart = input($_POST['mon1vm']);
+$mon = input($_POST['mon']);
+$tue = input($_POST['tue']);
+$wed = input($_POST['wed']);
+$thu = input($_POST['thu']);
+$fri = input($_POST['fri']);
+$sat = input($_POST['sat']);
+$sun = input($_POST['sun']);
+
+
+/*$monAMstart = input($_POST['mon1vm']);
 $monAMend = input($_POST['mon2vm']);
 $monPMstart = input($_POST['mon1nm']);
 $monPMend = input($_POST['mon2nm']);
@@ -55,7 +64,7 @@ $satPMend = input($_POST['sat2nm']);
 $sunAMstart = input($_POST['sun1vm']);
 $sunAMend = input($_POST['sun2vm']);
 $sunPMstart = input($_POST['sun1nm']);
-$sunPMend = input($_POST['sun2nm']);
+$sunPMend = input($_POST['sun2nm']); */
 
 $wifi = (isset($_POST['wifi']) ? "wifi" : "");
 $nonSmoker = (isset($_POST['nonSmoker']) ? "nonSmoker" : "");
@@ -84,7 +93,15 @@ if (!$error) {
     "zip" => $zip,
     "city" => $city,
     "hours" => array(
-      "monAMstart" =>  $monAMstart,
+      "mon" =>  $mon,
+      "tue" =>  $tue,
+      "wed" =>  $wed,
+      "thu" =>  $thu,
+      "fri" =>  $fri,
+      "sat" =>  $sat,
+      "sun" =>  $sun
+
+      /*"monAMstart" =>  $monAMstart,
       "monAMend" =>  $monAMend,
       "monPMstart" =>  $monPMstart,
       "monPMend" =>  $monPMend,
@@ -117,7 +134,7 @@ if (!$error) {
       "sunAMstart" =>  $sunAMstart,
       "sunAMend" =>  $sunAMend,
       "sunPMstart" =>  $sunPMstart,
-      "sunPMend" =>  $sunPMend
+      "sunPMend" =>  $sunPMend */
     ),
     "web" => $web,
     "menu" => $menu,
