@@ -54,7 +54,7 @@ weil die Klasse .iconsMid im Javascript noch nicht zugewiesen wurde */
 body {
   font-size: 16px;
   line-height: 1.8;
-  background-color: var(--grey);
+  background-color: #0a0f10;
   font-family: 'Montserrat', sans-serif;
   padding: 0% 4% 0% 4%;
 }

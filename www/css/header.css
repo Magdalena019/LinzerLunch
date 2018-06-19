@@ -10,11 +10,12 @@ header {
  margin-bottom: 5%;
 }
 
-#navbar {
+#navbarDesktop {
   background-color: var(--grey);
   padding: 10px;
   color: var(--goldy);
   text-align: right;
+  height: 7vh;
 }
 
 .navbarLink {
