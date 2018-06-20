@@ -11,18 +11,25 @@ header {
 }
 
 #navbarDesktop {
-  background-color: var(--grey);
-  padding: 10px;
+  background-color: var(--grey) !important;
+  padding: auto 10px;
+  padding-top: 15px !important;
   color: var(--goldy);
   text-align: right;
-  height: 7vh;
+  height: 80px;
 }
 
 .navbarLink {
   color: var(--goldy);
+
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-#marginTop {}
+#imgLogoMobile {
+  margin-left: 15%;
+}
+
 
 #backgroundIMG {
   background: #ffffff;

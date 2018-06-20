@@ -16,8 +16,9 @@
   z-index: 4;
 }
 
+
 /* wenns groß is */
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1000px) {
   #navbarMobile {
     display: none;
   }
@@ -26,7 +27,7 @@
 
 /* wenns klein is */
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1001px) {
   #navbarDesktop {
     display: none;
   }
