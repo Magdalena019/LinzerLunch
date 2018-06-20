@@ -225,8 +225,10 @@ $('.lunch').on('click',function(){
     });
   });
 
+
   /* Function for the Return to Top Button */
   // ===== Scroll to Top ====
+  /*
   $(window).scroll(function() {
     if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
       $('#return-to-top').fadeIn(200);    // Fade in the arrow
@@ -238,7 +240,7 @@ $('.lunch').on('click',function(){
     $('body,html').animate({
       scrollTop : 0                       // Scroll to top of body
     }, 500);
-  });
+  });*/
 
   /* Function for replacing the Icon Text with the corresponding icons */
   // ===== Replace the Café Word with Café Icon ====

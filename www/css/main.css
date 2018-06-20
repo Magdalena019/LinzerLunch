@@ -390,90 +390,125 @@ input[type="radio"]#all:checked +label.mix > span, input[type="radio"]#randomall
 /* CSS FOR THE SCROLL DOWN BUTTON */
 /** Pen -- https://codepen.io/nxworld/pen/OyRrGy */
 
-.demo a {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    z-index: 2;
-    display: inline-block;
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    color: #fccda0;
-    letter-spacing: .1em;
-    transition: opacity .3s;
-}
-.demo a:hover {
-    opacity: .5;
+#secondbutton {
+    margin-left: 10%;
+    margin-bottom: 5%;
 }
 
-#section02 a {
-    padding-top: 40px;
-}
-#section02 a span {
-    position: absolute;
-    margin-left: -15px;
-    top: 0;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #fccda0;
-    border-radius: 100%;
-    box-sizing: border-box;
-}
-#section02 a span::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    content: '';
-    width: 16px;
-    height: 16px;
-    margin: -12px 0 0 -8px;
-    border-left: 1px solid #fccda0;
-    border-bottom: 1px solid #fccda0;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    box-sizing: border-box;
-}
-
-
-/** Code for the Return to Top Button **/
-
-#return-to-top {
-    position: fixed;
-    bottom: 60px;
-    right: 60px;
-    background: #fccda0;
-    width: 60px;
-    height: 60px;
-    display: block;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
-    border-radius: 35px;
-    display: none;
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+#firstbutton {
+    margin-top: -15%;
+    top: -20px;
+    position: inherit;
     z-index: 1;
 }
-#return-to-top i {
-    color: #fff;
+
+@-webkit-keyframes ani-mouse {
+    0% {
+        opacity: 1;
+        top: 29%;
+    }
+    15% {
+        opacity: 1;
+        top: 50%;
+    }
+    50% {
+        opacity: 0;
+        top: 50%;
+    }
+    100% {
+        opacity: 0;
+        top: 29%;
+    }
+}
+@-moz-keyframes ani-mouse {
+    0% {
+        opacity: 1;
+        top: 29%;
+    }
+    15% {
+        opacity: 1;
+        top: 50%;
+    }
+    50% {
+        opacity: 0;
+        top: 50%;
+    }
+    100% {
+        opacity: 0;
+        top: 29%;
+    }
+}
+@keyframes ani-mouse {
+    0% {
+        opacity: 1;
+        top: 29%;
+    }
+    15% {
+        opacity: 1;
+        top: 50%;
+    }
+    50% {
+        opacity: 0;
+        top: 50%;
+    }
+    100% {
+        opacity: 0;
+        top: 29%;
+    }
+}
+.scroll-btn {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.scroll-btn > * {
+    display: inline-block;
+    line-height: 18px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #fccda0;
+    font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 2px;
+}
+.scroll-btn > *:hover,
+.scroll-btn > *:focus,
+.scroll-btn > *.active {
+    color: #fccda0;
+}
+.scroll-btn > *:hover,
+.scroll-btn > *:focus,
+.scroll-btn > *:active,
+.scroll-btn > *.active {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+.scroll-btn .mouse {
     position: relative;
-    left: 21px;
-    top: 20px;
-    font-size: 40px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    display: block;
+    width: 35px;
+    height: 55px;
+    margin: 0 auto 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 3px solid #fccda0;
+    border-radius: 23px;
 }
-#return-to-top:hover {
+.scroll-btn .mouse > * {
+    position: absolute;
+    display: block;
+    top: 29%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
     background: #fccda0;
-}
-#return-to-top:hover i {
-    color: #fff;
-    top: 5px;
+    border-radius: 50%;
+    -webkit-animation: ani-mouse 2.5s linear infinite;
+    -moz-animation: ani-mouse 2.5s linear infinite;
+    animation: ani-mouse 2.5s linear infinite;
 }
 
 
@@ -548,3 +583,45 @@ input[type="radio"]#randomres:checked >label > span{
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
+
+
+/** Code for the Return to Top Button **/
+/*
+#return-to-top {
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    background: #fccda0;
+    width: 60px;
+    height: 60px;
+    display: block;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+#return-to-top i {
+    color: #fff;
+    position: relative;
+    left: 21px;
+    top: 20px;
+    font-size: 40px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: #fccda0;
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}*/
