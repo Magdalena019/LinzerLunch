@@ -33,7 +33,7 @@ $(document).ready(function() {
               '<img src="../www/restaurants/' + hit.path + '/01.jpg" class="rounded thumbImage">' +
               '<h4><b><br>' + hit.name + '</b></h4>' +
               '<p>' + hit.description + '</p>' +
-              '<p>Info: ' + hit.info + '</p>' +
+              '<p>' +  hit.info + '</p>' +
               '<h5>Öffnungszeiten: ' + '</h5>' +
               '<p>Montag: ' + hit.hours.mon + '<br>' +
               'Dienstag: ' + hit.hours.tue + '<br>' +
@@ -54,6 +54,44 @@ $(document).ready(function() {
             });
 
           $hit.click(function() {
+
+              /* Funktionen zum Icons replacen - NICHT hier rauslöschen ist wichtig dass es hier drin bleibt*/
+
+              var bodySelector = $("body");
+
+              /* HIIIIER DARAN LIEGTS DAS ES IWIE NED GEHT - denke an dem Return oder so */
+              /* Aber musste es hier aufrufen damit es auch greift */
+
+              // ===== Replace the Café Word with Café Icon ====
+              var cafeImage = "<img src='../www/images/icons/cafegoldy.png' height='5%' width='3%' />";
+              bodySelector.html(function (_, html) {
+                  return html.replace(/cafe/g , cafeImage )
+              });
+
+              // ===== Replace the NonSmoker Word with NonSmoker Icon ====
+             /* var nonSmokerImage = "<img src='../www/images/icons/foodicons/NonSmoker.png' height='5%' width='3%' />";
+              bodySelector.html(function (_, html) {
+                  return html.replace(/nonSmoker/g , nonSmokerImage )
+              });
+
+              // ===== Replace the Smoker Word with Smoker Icon ====
+              var smokerImage = "<img src='../www/images/icons/foodicons/NonSmoker.png' height='5%' width='3%' />";
+              bodySelector.html(function (_, html) {
+                  return html.replace(/nonSmoker/g , smokerImage )
+              });
+
+              // ===== Replace the Restaurant Word with Smoker Icon ====
+              var restaurantImage = "<img src='../www/images/icons/foodicons/NonSmoker.png' height='5%' width='3%' />";
+              bodySelector.html(function (_, html) {
+                  return html.replace(/nonSmoker/g , smokerImage )
+              }); */
+
+
+
+
+              /* Ende der Funktionen zum Icons replacen */
+              /* --------------------------------- */
+
           var name = hit['name'];
           if($('.resultInfo[value="' + name + '"]').hasClass("hide")){
             $('.resultInfo[value="' + name + '"]').removeClass("hide");

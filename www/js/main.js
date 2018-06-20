@@ -240,6 +240,19 @@ $('.lunch').on('click',function(){
     }, 500);
   });
 
+  /* Function for replacing the Icon Text with the corresponding icons */
+  // ===== Replace the Café Word with Café Icon ====
+  /* NICHT HIER RAUSLÖSCHEN WEISS NOCH NICHT OB ICHS NOCH BRAUCH */
+  /*
+  var cafeImage = "<img src='../www/images/icons/cafegoldy.png' height='5%' width='3%' />";
+  $("body").html(function (_, html) {
+    return html.replace(/cafe/g , cafeImage )
+  });
+  */
+
+
+  // =================================================
+
 //create sticky menu
 // Create a clone of the menu, right next to original.
 $('#navbarDesktop').addClass('original').clone().insertAfter('#navbarDesktop').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
