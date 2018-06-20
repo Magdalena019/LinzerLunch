@@ -61,6 +61,9 @@ $(document).ready(function() {
 
               /* HIIIIER DARAN LIEGTS DAS ES IWIE NED GEHT - denke an dem Return oder so */
               /* Aber musste es hier aufrufen damit es auch greift */
+              /* Hab die andren Icons mal auskommentiert damit man mit dem Café testen kann - muss dann einfach
+              auf die anderen Icons übertragen werden
+               Größe passt bereits, ist bereits full responsive */
 
               // ===== Replace the Café Word with Café Icon ====
               var cafeImage = "<img src='../www/images/icons/cafegoldy.png' height='5%' width='3%' />";
@@ -68,25 +71,78 @@ $(document).ready(function() {
                   return html.replace(/cafe/g , cafeImage )
               });
 
+              /*
+              // ===== Replace the Restaurant Word with Restaurant Icon ====
+              var restaurantImage = "<img src='../www/images/icons/resgoldy.png' height='5%' width='3%' />";
+              bodySelector.html(function (_, html) {
+                  return html.replace(/restaurant/g , restaurantImage )
+              });
+
+              // ===== Replace the Bar Word with Bar Icon ====
+              var barImage = "<img src='../www/images/icons/bargoldy.png' height='5%' width='3%' />";
+              bodySelector.html(function (_, html) {
+                  return html.replace(/bar/g , barImage )
+              });
+
+              // ===== Replace the WIFI Word with WLAN Icon ====
+              var wifiImage = "<img src='../www/images/icons/wifi.png' height='5%' width='3%' />";
+              bodySelector.html(function (_, html) {
+                  return html.replace(/wifi/g , wifiImage )
+              });
+
               // ===== Replace the NonSmoker Word with NonSmoker Icon ====
-             /* var nonSmokerImage = "<img src='../www/images/icons/foodicons/NonSmoker.png' height='5%' width='3%' />";
+              var nonSmokerImage = "<img src='../www/images/icons/foodicons/NonSmoker.png' height='5%' width='3%' />";
               bodySelector.html(function (_, html) {
                   return html.replace(/nonSmoker/g , nonSmokerImage )
               });
 
               // ===== Replace the Smoker Word with Smoker Icon ====
-              var smokerImage = "<img src='../www/images/icons/foodicons/NonSmoker.png' height='5%' width='3%' />";
+              var smokerImage = "<img src='../www/images/icons/foodicons/Smoker.png' height='5%' width='3%' />";
               bodySelector.html(function (_, html) {
                   return html.replace(/nonSmoker/g , smokerImage )
               });
 
-              // ===== Replace the Restaurant Word with Smoker Icon ====
-              var restaurantImage = "<img src='../www/images/icons/foodicons/NonSmoker.png' height='5%' width='3%' />";
+              // ===== Replace the Veggie Word with Veggie Icon ====
+              var veggieImage = "<img src='../www/images/icons/foodicons/veggie.png' height='5%' width='3%' />";
               bodySelector.html(function (_, html) {
-                  return html.replace(/nonSmoker/g , smokerImage )
-              }); */
+                  return html.replace(/veggie/g , veggieImage )
+              });
 
+              // ===== Replace the Vegan Word with Vegan Icon ====
+              var veganImage = "<img src='../www/images/icons/foodicons/veggie.png' height='5%' width='3%' />";
+              bodySelector.html(function (_, html) {
+                  return html.replace(/vegan/g , veganImage )
+              });
 
+              // ===== Replace the Breakfast Word with Breakfast Icon ====
+              var breakfastImage = "<img src='../www/images/icons/foodicons/Breakfast.png' height='5%' width='3%' />";
+              bodySelector.html(function (_, html) {
+              return html.replace(/breakfast/g , breakfastImage )
+              });
+
+              // ===== Replace the Glutenfree Word with Glutenfree Icon ====
+              var glutImage = "<img src='../www/images/icons/foodicons/glutenfree2.png' height='5%' width='3%' />";
+              bodySelector.html(function (_, html) {
+                  return html.replace(/glutenFree/g , glutImage )
+              });
+
+              // ===== Replace the Delivery Word with Delivery Icon ====
+              var deliveryImage = "<img src='../www/images/icons/foodicons/delivery.png' height='5%' width='3%' />";
+              bodySelector.html(function (_, html) {
+                  return html.replace(/delivery/g , deliveryImage )
+              });
+
+              // ===== Replace the Lunch Word with Lunch Icon ====
+              var lunchImage = "<img src='../www/images/icons/foodicons/lunch.png' height='5%' width='3%' />";
+              bodySelector.html(function (_, html) {
+                  return html.replace(/nonSmoker/g , lunchImage )
+              });
+
+              // ===== Replace the Garden Word with Garden Icon ====
+              var gardenImage = "<img src='../www/images/icons/foodicons/garden.png' height='5%' width='3%' />";
+              bodySelector.html(function (_, html) {
+              return html.replace(/garden/g , gardenImage )
+              });
 
 
               /* Ende der Funktionen zum Icons replacen */
