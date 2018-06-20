@@ -169,6 +169,12 @@ height: 500px;
 }
 
 /*
+.hours {
+  text-align: left;
+  padding-left: 20%;
+} */
+
+/*
 @media (min-width: 40rem) {
   .card__image::before {
     padding-top: 66.6%;

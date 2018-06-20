@@ -93,7 +93,7 @@ function search() {
                       '<p class="card__text information" value="' + hit.name +'">' + hit.description + '</p>' +
                       //TODO: Aufklappbares Template bauen:
                       '<div class="moreInfoTemplate hide" value="' + hit.name +'">' +
-                        '<p value="' + hit.name +'" class="information">' +
+                        '<p value="' + hit.name +'" class="information hours">' +
                           hit.street + '<br>' +
                           // hit.zip + '&nbsp;' + hit.city + is eigentlich nicht notwendig im Moment haben ja sowieso nur LinzInnenstadt
                           '<br>Mo: ' +   hit.hours.mon +
