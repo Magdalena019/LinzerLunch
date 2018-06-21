@@ -393,15 +393,23 @@ input[type="radio"]#all:checked +label.mix > span, input[type="radio"]#randomall
 /** Pen -- https://codepen.io/nxworld/pen/OyRrGy */
 
 #secondbutton {
-    margin-left: 10%;
-    margin-bottom: 5%;
+    margin-left: 48.0%;
+    margin-bottom: 10%;
+    z-index: 1;
+    display: inline-block;
+    position: relative;
 }
 
 #firstbutton {
-    margin-top: -15%;
-    top: -20px;
-    position: inherit;
-    z-index: 1;
+    margin-top: -5%;
+    margin-left: 48.5%;
+    z-index: 0;
+    display: inline-block;
+    position: relative;
+}
+
+#thirdbutton {
+    margin-top: -10%;
 }
 
 @-webkit-keyframes ani-mouse {
