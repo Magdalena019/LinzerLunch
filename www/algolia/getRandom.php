@@ -12,7 +12,7 @@ foreach ($index->browse($search) as $hit) {
     $hits[] = $hit;
 }
 
-$random = $hits[array_rand($hits)];
+//$random = $hits[array_rand($hits)];
 
-echo json_encode($random);
+echo json_encode($hits);
 ?>

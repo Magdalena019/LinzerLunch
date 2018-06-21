@@ -15,7 +15,7 @@ request.onload= function(){
   var json= request.response;
   $.each(json, function(key,val){
     //items.push(val);
-    console.log(val.restaurant);
+    //console.log(val.restaurant);
     $('#firstCounter').attr("data-count", val.restaurant);
     $('#secondCounter').attr("data-count", val.cafe);
     $('#thirdCounter').attr("data-count", val.bar);
