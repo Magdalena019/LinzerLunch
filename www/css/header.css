@@ -1,13 +1,13 @@
 :root {
-  --bluedark:#ade5d8;
-  --bluelight:#ffcca1;
+  --bluedark: #ade5d8;
+  --bluelight: #ffcca1;
   --goldy: #fccda0;
   --grey: #0a0f10;
   --white: #ffffff;
 }
 
 header {
- margin-bottom: 5%;
+  margin-bottom: 5%;
 }
 
 #navbarDesktop {
@@ -23,7 +23,6 @@ header {
 
 .navbarLink {
   color: var(--goldy);
-
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -32,8 +31,6 @@ header {
   margin-left: 15%;
   margin-top: 2px;
 }
-
-
 
 #backgroundIMG {
   background: #ffffff;
@@ -49,15 +46,18 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -45%);
-  max-width:60%;
-
+  max-width: 60%;
 }
 
 #vonlinzern {
-    margin-top: -55px;
+  margin-top: -55px;
+  font-size: 24pt;
+  color: var(--goldy);
+  font-weight: 600;
+  text-align: center;
+}
 
-    font-size: 24pt;
-    color: var(--goldy);
-    font-weight: 600;
-    text-align: center;
+#wifiDescription {
+  margin-left: 47%;
+  margin-top: 5px;
 }

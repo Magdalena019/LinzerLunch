@@ -18,7 +18,7 @@
 
 /* wenns groß is */
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
   #navbarMobile {
     display: none;
   }
@@ -26,7 +26,7 @@
 
 /* wenns klein is */
 
-@media only screen and (max-width: 1001px) {
+@media only screen and (max-width: 1201px) {
   #navbarDesktop {
     display: none;
   }
@@ -42,6 +42,45 @@
   }
   #iconSearch {
     padding-left: 3%;
+  }
+  label.reslabel>span, label.caflabel>span, label.barlabel>span, label.mix>span {
+    width: 15vw;
+    height: 15vw;
+    background-size: 15vw;
+  }
+  .wifiID, .nosmoker, .smoker, .veggie, .vegan, .breakfast, .glutenFree, .delivery, .lunch, .garden, .randomrestaurant, .randomcafe, .randombar, .randomall {
+    width: 15vw;
+    height: 15vw;
+    background-size: 15vw;
+  }
+  #iconGo, #iconReset {
+    width: 15vw;
+    height: 15vw;
+    background-size: 15vw;
+  }
+
+  #iconRandom {
+    margin-left: -5% !important; 
+  }
+
+}
+
+/* wenns klein is */
+
+@media only screen and (max-width: 900px) {
+  .icon {
+    text-align: center;
+  }
+  .wifiID, .nosmoker, .smoker, .veggie, .vegan, .breakfast, .glutenFree, .delivery, .lunch, .garden {
+    text-align: center;
+    margin-left: 20%;
+  }
+  #descriptionIcons {
+    text-align: center;
+    margin-left: 20%;
+  }
+  #wifiDescription {
+    *margin-left: 0px !important;
   }
 }
 
