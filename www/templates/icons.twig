@@ -1,115 +1,132 @@
 <section id="chooseType" class="row">
   <div class="small"></div>
   <h3 class="offset-3 col-6">Jetzt das perfekte Lokal finden!</h3>
-  <h6 class="offset-4 col-4">Schnell und einfach aus 20 Lokalen wählen!</h6>
+  <!--<h6 class="offset-4 col-lg-4 col-md-5">Schnell und einfach aus mehreren Lokalen wählen!</h6>-->
 
   <div id="iconSearch" class="col-lg-12">
 
-  <div id="iconRestaurant" class="col-12 row">
-    <div class="col-lg-3 col-md-3 col-sm-3" id="resBG">
-      <input type="radio" name="category" value="restaurant" id="restaurant"/>
-      <label class="reslabel" for="restaurant">
-        <span width=150px></span>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-3" id="cafBG">
-      <input type="radio" name="category" value="cafe" id="cafe"/>
-      <label class="caflabel" for="cafe">
-        <span width=150px></span>
-      </label>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-3" id="barBG">
-      <input type="radio" name="category" value="bar" id="bar"/>
-      <label class="barlabel" for="bar">
-              <span width=150px></span>
-      </label>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-3" id="allBGs">
-      <input type="radio" name="category" value="" id="all"/>
-      <label class="mix" for="all">
-        <span width=150px></span>
-    </div>
-  </div>
+    <div id="iconRestaurant" class="col-12 row">
 
-  <div id="checkicons" class="col-12 row">
-    <div class="col-lg-3 col-md-3 col-sm-3">
-    <input type="checkbox" name="info" value="wifi" class="input_class_checkbox"/>
-      <label class="wifi" for="wifi">
-        <span width=150px></span>
-      </label>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-3">
-      <input class="input_class_checkbox_nosmoker" type="checkbox" name="info" value="nonSmoker"/>
-      <label for="nonSmoker">
-          <span width=150px></span>
-      </label>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-3">
-      <input class="input_class_checkbox_smoker"type="checkbox" name="info" value="smoker"/>
-      <label for="smoker">
-        <span width=150px></span>
-      </label>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-3">
-      <input class="input_class_checkbox_veggie" type="checkbox" name="info" value="veggie"/>
-      <label for="veggie">
-        <span width=150px></span>
-      </label>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-3">
-      <input class="input_class_checkbox_vegan" type="checkbox" name="info" value="vegan"/>
-      <label for="vegan">
-        <span width=150px></span>
-      </label>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-3">
-      <input class="input_class_checkbox_breakfast" type="checkbox" name="info" value="breakfast"/>
-      <label for="breakfast">
-        <span width=150px></span>
-      </label>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-3">
-      <input class="input_class_checkbox_glutenfree" type="checkbox" name="info" value="glutenFree"/>
-      <label for="glutenFree">
-        <span width=150px></span>
-      </label>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-3">
-      <input class="input_class_checkbox_delivery"type="checkbox" name="info" value="delivery"/>
-      <label for="delivery">
-          <span width=150px></span>
-        <!--<img id="iconDelivery" class="foodicons" src="images/icons/foodicons/delivery.png" alt="Icon for Restaurant" width="150">-->
-      </label>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-3">
-      <input class="input_class_checkbox_lunch" type="checkbox" name="info" value="lunch"/>
-      <label for="lunch">
-        <span width=150px></span>
-      </label>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-3">
-      <input class="input_class_checkbox_garden" type="checkbox" name="info" value="garden"/>
-      <label for="garden">
-        <span width=150px></span>
-      </label>
+      <div class="col-lg-3 col-md-3 col-sm-3 icon" id="resBG">
+        <input type="radio" name="category" value="restaurant" id="restaurant"/>
+        <label class="reslabel" for="restaurant">
+          <span width="150px" ></span>
+          <h6 class="descriptionIcons" style="margin-top:5px;">Restaurant</h6>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-3 icon" id="cafBG">
+          <input type="radio" name="category" value="cafe" id="cafe"/>
+          <label class="caflabel" for="cafe">
+            <span width="150px"></span>
+            <h6 class="descriptionIcons" style="margin-top:5px;">Café</h6>
+          </label>
+
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 icon" id="barBG">
+          <input type="radio" name="category" value="bar" id="bar"/>
+          <label class="barlabel" for="bar">
+            <span width="150px" ></span>
+            <h6 class="descriptionIcons" style="margin-top:5px;">Bar</h6>
+          </label>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 icon" id="allBGs">
+          <input type="radio" name="category" value="" id="all"/>
+          <label class="mix" for="all">
+            <span width="150px"></span>
+            <h6 class="descriptionIcons" style="margin-top:5px;">"Ist egal"</h6>
+          </div>
+        </div>
+
+        <div id="checkicons" class="col-12 row">
+          <div class="col-lg-3 col-md-3 col-sm-3 icon">
+            <input type="checkbox" name="info" value="wifi" class="input_class_checkbox"/>
+            <label class="wifi" for="wifi">
+              <span width="150px"></span>
+              <h6 class="descriptionIcons" style="margin-left:47%;margin-top:5px;">WLAN</h6>
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 icon">
+            <input class="input_class_checkbox_nosmoker" type="checkbox" name="info" value="nonSmoker"/>
+            <label for="nonSmoker">
+              <span width="150px"></span>
+              <h6 class="descriptionIcons" style="margin-left:17%;margin-top:5px;">Nichtraucher</h6>
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 icon">
+            <input class="input_class_checkbox_smoker" type="checkbox" name="info" value="smoker"/>
+            <label for="smoker">
+              <span width="150px"></span>
+              <h6 class="descriptionIcons" style="margin-left:39%;">Raucher</h6>
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 icon">
+            <input class="input_class_checkbox_veggie" type="checkbox" name="info" value="veggie"/>
+            <label for="veggie">
+              <span width="150px"></span>
+              <h6 class="descriptionIcons" style="margin-left:23%;">Vegetarisch</h6>
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 icon">
+            <input class="input_class_checkbox_vegan" type="checkbox" name="info" value="vegan"/>
+            <label for="vegan">
+              <span width="150px"></span>
+              <h6 class="descriptionIcons" style="margin-left:47%;margin-top:5px;">Vegan</h6>
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 icon">
+            <input class="input_class_checkbox_breakfast" type="checkbox" name="info" value="breakfast"/>
+            <label for="breakfast">
+              <span width="150px"></span>
+              <h6 class="descriptionIcons" style="margin-left:31%;margin-top:5px;">Frühstück</h6>
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 icon">
+            <input class="input_class_checkbox_glutenfree" type="checkbox" name="info" value="glutenFree"/>
+            <label for="glutenFree">
+              <span width="150px"></span>
+              <h6 class="descriptionIcons" style="margin-left:31%;margin-top:5px;">Glutenfrei</h6>
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 icon">
+            <input class="input_class_checkbox_delivery" type="checkbox" name="info" value="delivery"/>
+            <label for="delivery">
+              <span width="150px"></span>
+              <h6 class="descriptionIcons" style="margin-left:20%;margin-top:5px;">Lieferservice</h6>
+              <!--<img id="iconDelivery" class="foodicons" src="images/icons/foodicons/delivery.png" alt="Icon for Restaurant" width="150">-->
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <input class="input_class_checkbox_lunch" type="checkbox" name="info" value="lunch"/>
+            <label for="lunch">
+              <span width="150px" ></span>
+              <h6 class="descriptionIcons" style="margin-left:15%;margin-top:5px;">Mittagsmenü</h6>
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <input class="input_class_checkbox_garden" type="checkbox" name="info" value="garden"/>
+            <label for="garden">
+              <span width="150px"></span>
+              <h6 class="descriptionIcons" style="margin-left:23%;margin-top:5px;">Gastgarten</h6>
+            </label>
+          </div>
+
+          <div id="iconSearch" class="offset-2 col-12 row" style="margin-left:18% !important  ;">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <button id="goButton" class="buttons">
+                <img id="iconGo" src="images/icons/goButton.png" width="150">
+              </button>
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <button id="resetButton" class="buttons"><img id="iconReset" src="images/icons/resetButton.png" width="150"></button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- <a href="venuelist.php" class="offset-5 col-1 align-middle navbarLink"><img id="iconArrow" class="foodicons" src="images/icons/foodicons/arrow.png" alt="Icon for Restaurant" width="150"></a> -->
+      <!-- TODO @Magda Gastgarten, Reset, Go, Alle -->
+      <!-- TODO @Magda id Go-Button: goButton Reset-Button: resetButton-->
     </div>
 
-    <div id="iconSearch" class="offset-2 col-12 row">
-      <div class="col-lg-3 col-md-3 col-sm-3">
-        <button id="goButton" class="buttons">
-          <img id="iconGo" src="images/icons/goButton.png" width="150">
-        </button>
-      </label>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-3">
-      <button id="resetButton" class="buttons"><img id="iconReset" src="images/icons/resetButton.png" width="150"></button>
-    </div>
-  </div>
-
-  </div>
-
-  <!-- <a href="venuelist.php" class="offset-5 col-1 align-middle navbarLink"><img id="iconArrow" class="foodicons" src="images/icons/foodicons/arrow.png" alt="Icon for Restaurant" width="150"></a> -->
-  <!-- TODO @Magda Gastgarten, Reset, Go, Alle -->
-  <!-- TODO @Magda id Go-Button: goButton Reset-Button: resetButton-->
-</div>
-
-</section>
+  </section>

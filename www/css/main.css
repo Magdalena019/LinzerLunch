@@ -11,7 +11,7 @@
 }
 
 #iconSearch {
-    padding-left: 10%;
+    padding-left: 7%;
 }
 
 #randomSearch {
@@ -247,6 +247,8 @@ label.reslabel >span{
   height:151px;
   background: url(../images/icons/resgoldy.png) 0 center no-repeat;
   background-size: 150px;
+  margin: auto;
+
 }
 
 
@@ -463,6 +465,7 @@ input[type="radio"]#all:checked +label.mix > span, input[type="radio"]#randomall
     right: 0;
     text-align: center;
 }
+
 .scroll-btn > * {
     display: inline-block;
     line-height: 18px;

@@ -19,3 +19,17 @@
 #iconSearch {
   margin-top: 5%;
 }
+
+#icon {
+  text-align: center;
+}
+
+#descriptionIcons {
+  margin: 5px auto;
+
+}
+
+span {
+  margin-left: auto;
+  margin-right: auto;
+}

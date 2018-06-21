@@ -13,10 +13,9 @@
       <a href="#restaurantSearch" class="col-md-3 col-lg-3 align-middle navbarLink hiddenMobile align-middle" style="color:#fccda0;text-align:left;padding-left:0px;">Nach bestimmtem Restaurant suchen?</a>
       <a href="index.php" class="offset-lg-2 offset-md-1 col-lg-1 align-middle navbarLink hiddenMobile" id="imgLogoMobile"><img src="images/LogoLLgoldig.png" height="50px"></a>
       <a href="#about" class="offset-lg-2 offset-md-1 col-lg-2 align-middle navbarLink hiddenMobile align-middle" style="color:#fccda0;">Wer sind wir?</a>
-      <a href="#randomSearch" class="col-lg-2 align-middle navbarLink hiddenMobile" style="color:#fccda0;">Lass dich überraschen.</a>
+      <a href="#randomSearch" class="col-lg-2 align-middle navbarLink hiddenMobile" id="surprise" style="color:#fccda0;padding-right:0px;">Lass dich überraschen.</a>
 
     </div>
-
 
     <!-- MOBIEL HEADER -->
     <div id="navbarMobile" class="row col-xs-12">
@@ -42,7 +41,6 @@
       </div>
       <a href="index.php" class="col-xs-1 col-sm-1 align-middle navbarLink" id="imgLogoMobile"><img src="images/LogoLLgoldig.png" height="40px"></a>
 
-
     </div>
 
     <div id="marginTop">
@@ -54,33 +52,24 @@
 
       <!-- First Scroll Down Buttwon -->
       <span id="firstbutton">
-      <span class="scroll-btn">
-	<a href="#about">
-		<span class="mouse">
-			<span>
-			</span>
-		</span>
-	</a>
-    </span>
-    </span>
+        <span class="scroll-btn">
+          <a href="#about">
+            <span class="mouse">
+              <span></span>
+            </span>
+          </a>
+        </span>
+      </span>
 
     </div>
-
 
   </header>
 
   <!-- Scroll Down Button -->
 
-  <!--
-  <section id="section02" class="demo row">
-    <a href="#about">
-      <span></span></a>
-  </section>-->
+  <!-- <section id="section02" class="demo row"> <a href="#about"> <span></span></a> </section>-->
 
-  <!--
-  <a href="javascript:" id="return-to-top">
-    <i class="icon-chevron-up"></i>
-  </a>-->
+  <!-- <a href="javascript:" id="return-to-top"> <i class="icon-chevron-up"></i> </a>-->
 
   <!-- Start About Section -->
 
@@ -91,7 +80,7 @@
     <h5 class="col-12 center">Das neue Linzer Restaurant-Portal!</h5>
 
     <p id="descriptionSection1">
-      Linzer Lunch ist EURE neue Informationsseite über die kulinarische Welt von Linz. Ihr findet hier eine Übersicht über tolle Restaurants, Bars und Cafés.
+      Linzer Lunch ist EURE neue Informationsseite über die kulinarische Welt von Linz. <br>Ihr findet hier eine Übersicht über tolle Restaurants, Bars und Cafés.
       <br>Lasst euch von uns überraschen, oder benutzt unsere angenehme Icon-Suche!
     </p>
 
@@ -127,13 +116,12 @@
     <!-- Second Scroll Down Buttwon -->
     <span id="secondbutton">
       <span class="scroll-btn">
-	<a href="#iconSearch">
-		<span class="mouse">
-			<span>
-			</span>
-		</span>
-	</a>
-    </span>
+        <a href="#iconSearch">
+          <span class="mouse">
+            <span></span>
+          </span>
+        </a>
+      </span>
     </span>
 
   </section>
@@ -156,7 +144,6 @@
     {% include 'search.twig'%}
 
   </span>
-
 
   <!-- -------------------------------- -->
   <!-- Start Second Parallax Section - wollten ja irgendwie noch nen dritten Bereich -->

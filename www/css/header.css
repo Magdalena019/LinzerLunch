@@ -17,6 +17,7 @@ header {
   color: var(--goldy);
   text-align: right;
   height: 80px;
+  width: 93vw;
 }
 
 .navbarLink {
@@ -28,7 +29,9 @@ header {
 
 #imgLogoMobile {
   margin-left: 15%;
+  margin-top: 2px;
 }
+
 
 
 #backgroundIMG {
