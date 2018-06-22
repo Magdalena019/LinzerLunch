@@ -175,7 +175,8 @@ $(document).ready(function() {
 
   $('#textSearch').keydown(function(event) {
   //  console.log(event.which);
-    if ( event.which == 32 ||$('#textSearch').val().search(/\S/)==-1) {
+//  ||$('#textSearch').val().search(/\S/)==-1
+    if ( event.which == 32 ) {
        $('#textHits').addClass('hide');
    //event.preventDefault();
  }else{
