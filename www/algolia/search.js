@@ -1,3 +1,8 @@
+var res;
+var check = true;
+var checkVal;
+var old = 1000;
+
 function init() {
   $('input:checkbox').removeAttr('checked');
   $('input:checkbox').removeClass('checked');
@@ -5,12 +10,8 @@ function init() {
   $('#search').val(" ");
   $('div#checkicons').hide();
   $('div#stats').addClass('hide');
-
-
-  /*var togSrc= ["images/icons/resgoldy.png","images/icons/cafe.png"];
-  $('#iconRes').click(function(){
-    this.src=togSrc.reverse()[0];
-  }*/
+  $('#heading').addClass('hide');
+  $('#noResult').addClass('hide');
 }
 
 function search() {
@@ -76,6 +77,26 @@ function search() {
 
           if (params.results.nbHits > 0) {
 
+            res = params.results.nbHits;
+            //alert(res);
+            /*if (res > old) {
+              if (check) {
+                check = false;
+                checkVal = old;
+                alert(checkVal);
+              }
+              $('#heading').addClass('hide');
+              $('#noResult').removeClass('hide');
+            } else if (res < old && $('#heading').hasClass('hide')) {
+              //$('#heading').removeClass('hide');
+              //$('#noResult').addClass('hide');
+            } else if (res < old && !check && res <= checkVal) {
+              $('#heading').removeClass('hide');
+              $('#noResult').addClass('hide');
+            } */
+
+            old = res;
+
             html = hits.map(function(hit) {
 
               //TODO: Template hier bauen:
@@ -115,8 +136,6 @@ function search() {
             '</div>';
           });
 
-          } else {
-            html = ['Leider kein passendes Restaurant gefunden!'];
           }
 
           hitsContainer.append(html.join(''));
@@ -134,6 +153,7 @@ function search() {
 
   search.start();
 
+
   $('#search').keydown(function() {
     return false;
   });
@@ -141,7 +161,6 @@ function search() {
   $('#goButton').click(function() {
     startSearch();
     $('#hits').removeClass('hide');
-    $('#headline').removeClass('hide');
     $('html, body').animate({ scrollTop: $('#results').offset().top}, 500, 'linear');
     $.ajax({
       url: 'algolia/searchSettings.php',
@@ -152,12 +171,14 @@ function search() {
       },
 
       success: function(data) {
-        if (data == 0) {
-          $('#headline').addClass('hide');
-          $('#noResult').removeClass('hide');
-        } else {
-          $('#headline').removeClass('hide');
+        if (data > 0) {
+          $('div#stats').removeClass('hide');
+          $('#heading').removeClass('hide');
           $('#noResult').addClass('hide');
+        } else {
+          $('div#stats').removeClass('hide');
+          $('#heading').addClass('hide');
+          $('#noResult').removeClass('hide');
         }
       }
     });
@@ -172,12 +193,14 @@ function search() {
     $('input:radio').prop('checked', false);
     $('#search').val($('input[name=category]:checked', '#iconRestaurant').val());
     $('#hits').addClass('hide');
-    $('#headline').addClass('hide');
     $('input[type=checkbox] + .checked').removeClass('checked');
     $('div#checkicons').fadeOut(1000, 0);
     $('div#stats').addClass('hide');
-
+    $('#heading').addClass('hide');
+    $('#noResult').addClass('hide');
     $('html, body').animate({ scrollTop: $('#chooseType').offset().top}, 500, 'linear');
+
+    old = 1000;
 
     $('.randomrestaurant').removeClass('checked');
     $('.randomcafe').removeClass('checked');
@@ -188,14 +211,14 @@ function search() {
   });
 
   $('#iconRestaurant').click(function() {
-    //$('input:checkbox').prop('checked', false);
     $('div#checkicons').fadeTo(1000, 1.0);
     $('#hits').addClass('hide');
-    $('div#stats').removeClass('hide');
+    $('div#stats').addClass('hide');
+    $('#heading').addClass('hide');
+    $('#noResult').addClass('hide');
   });
 
   $('#iconRestaurant').change(function() {
-
     $('#search').val($('input[name=category]:checked', '#iconRestaurant').val());
     $('input:checkbox').prop('checked', false);
     $('#hits').addClass('hide');
@@ -211,7 +234,9 @@ function search() {
       $('#search').val($('#search').val().replace($(this).attr("value"), ""));
     }
     $('#hits').addClass('hide');
-    $('#headline').addClass('hide');
+    $('div#stats').addClass('hide');
+    $('#heading').addClass('hide');
+    $('#noResult').addClass('hide');
     setSettings();
     startSearch();
   });

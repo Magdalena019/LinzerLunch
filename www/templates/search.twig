@@ -5,11 +5,9 @@
   </div>
 
   <main class="col-lg-12">
+    <h3 id="heading">Anzahl an gefundenen Lokalen:</h3>
+    <h3 id="noResult" class="hide">Leider kein passendes Lokal gefunden.<br />Diese könnten dir auch gefallen:</h3>
     <div id="stats"></div>
-    <div id="headings" class="hide">
-      <h1 id="headline" class="text-center">Gefundene Lokale</h1>
-      <h1 id="noResult" class="text-center hide">Leider kein passendes Restaurant gefunden!<br />Ähnliche Restaurants:</h1>
-    </div>
     <div id="hits" class="row"></div>
   </main>
 
@@ -48,7 +46,6 @@
   <!--Template für die Anzahl Ergebnisse-->
   <script type="text/html" id="stats-template">
       <div class="stats-content" id="contentstats">
-        <h3>Anzahl an gefundenen Restaurants: </h3>
         <h3 id="numberOfResults">{% verbatim %}{{nbHits}}{% endverbatim %}</h3>
       </div>
     </div>
