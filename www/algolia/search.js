@@ -33,7 +33,7 @@ function search() {
 
   search.addWidget({
     init: function(params) {
-      params.helper.setQueryParameter('hitsPerPage', 5);
+      /*params.helper.setQueryParameter('hitsPerPage', 5);
 
       function scrollhandler() {
 
@@ -46,10 +46,11 @@ function search() {
         }
       }
 
-      $(window).bind("scroll", scrollhandler);
+      $(window).bind("scroll", scrollhandler); */
     },
 
     render: function(params) {
+      params.helper.setQueryParameter('hitsPerPage', 40);
 
       readyToFetchMore = true;
 

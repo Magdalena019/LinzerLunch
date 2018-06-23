@@ -2,9 +2,9 @@
 require 'init.php';
 
 //infinite scroll
-$index->setSettings([
+/*$index->setSettings([
   'paginationLimitedTo' => 0
-]);
+]); */
 
 $index->setSettings(array(
   "searchableAttributes" => ["info"]
@@ -17,9 +17,9 @@ foreach ($index->browse($search) as $hit) {
     $counter++;
 }
 
-$index->setSettings([
+/*$index->setSettings([
   'hitsPerPage' => $counter
-]);
+]); */
 
 echo $counter;
 
