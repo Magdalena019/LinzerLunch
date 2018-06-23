@@ -137,26 +137,11 @@ function search() {
   });
 
   $('#goButton').click(function() {
+    setSettings();
     startSearch();
     $('#hits').removeClass('hide');
-    $('html, body').animate({
-      scrollTop: $('#results').offset().top
-    }, 500, 'linear');
-    $.ajax({
-      url: 'algolia/searchSettings.php',
-      type: 'POST',
-
-      data: {
-        search: $('#search').val()
-      },
-
-      success: function(data) {
-      }
-    });
-
+    $('html, body').animate({scrollTop: $('#results').offset().top}, 500, 'linear');
     $('div.ais-hits--item').addClass('col-lg-3 cl-sm-1');
-
-
   });
 
   $('#resetButton').click(function() {
@@ -174,14 +159,11 @@ function search() {
       scrollTop: $('#chooseType').offset().top
     }, 500, 'linear');
 
-    old = 1000;
-
     $('.randomrestaurant').removeClass('checked');
     $('.randomcafe').removeClass('checked');
     $('.randombar').removeClass('checked');
     $('.randomall').removeClass('checked');
     setSettings();
-    startSearch();
   });
 
   $('#iconRestaurant').click(function() {
@@ -191,6 +173,7 @@ function search() {
     $('#heading').addClass('hide');
     $('#noResult').addClass('hide');
     start = false;
+    setSettings();
   });
 
   $('#iconRestaurant').change(function() {
@@ -199,7 +182,6 @@ function search() {
     $('#hits').addClass('hide');
     $('#checkicons input[type=checkbox] +div').removeClass('checked');
     setSettings();
-    startSearch();
   });
 
   $('#checkicons input[type=checkbox] +div').click(function() {
@@ -212,9 +194,8 @@ function search() {
     $('div#stats').removeClass('hide');
     $('#heading').removeClass('hide');
     start = true;
-    //$('#noResult').addClass('hide');
+
     setSettings();
-    startSearch();
   });
 
   function startSearch() {
@@ -226,6 +207,7 @@ function search() {
     $.ajax({
       url: 'algolia/searchSettings.php',
       type: 'POST',
+      data: { search: '' },
       success: function(data) {}
     });
   }
