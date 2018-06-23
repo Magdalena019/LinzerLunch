@@ -1,7 +1,5 @@
-var res;
 var check = true;
-var checkVal;
-var old = 1000;
+var start = false;
 
 function init() {
   $('input:checkbox').removeAttr('checked');
@@ -33,114 +31,93 @@ function search() {
     })
   );
 
-  /*  search.addWidget(
-      instantsearch.widgets.hits({
-        container: '#hits',
-        templates: {
-          item: document.getElementById('hit-template').innerHTML,
-          empty: "Leider kein passendes Restaurant gefunden!"
+  search.addWidget({
+    init: function(params) {
+      params.helper.setQueryParameter('hitsPerPage', 5);
+
+      function scrollhandler() {
+
+        var isAtBottomOfPage = $(window).scrollTop() + $(window).height() >
+          $(document).height() - 1000;
+
+        if (readyToFetchMore && isAtBottomOfPage) {
+          readyToFetchMore = false;
+          params.helper.nextPage().search();
         }
-      })
-    );
+      }
 
-    /* Infinte Scroll */
-   search.addWidget({
-        init: function(params) {
-          params.helper.setQueryParameter('hitsPerPage', 8);
+      $(window).bind("scroll", scrollhandler);
+    },
 
-          function scrollhandler() {
+    render: function(params) {
 
-            var isAtBottomOfPage = $(window).scrollTop() + $(window).height() >
-              $(document).height() - 1000;
+      readyToFetchMore = true;
 
-            if (readyToFetchMore && isAtBottomOfPage) {
-              readyToFetchMore = false;
-              params.helper.nextPage().search();
-            }
-          }
+      var hits = params.results.hits;
 
-          $(window).bind("scroll", scrollhandler);
-        },
+      if (params.results.nbHits == 0) {
+        params.helper.setQueryParameter('removeWordsIfNoResults', 'allOptional').search();
+        $('#heading').addClass('hide');
+        $('#noResult').removeClass('hide');
+        check = false;
+      } else if (params.results.nbHits != 0 && check && start) {
+        $('#heading').removeClass('hide');
+        $('#noResult').addClass('hide');
+      }
 
-        render: function(params) {
+      if (params.state.page === 0) {
+        hitsContainer.html('');
+      }
 
-          readyToFetchMore = true;
+      var html = '';
 
-          var hits = params.results.hits;
+      if (params.results.nbHits > 0) {
+        check = true;
+        html = hits.map(function(hit) {
 
+          //TODO: Template hier bauen:
 
-          if (params.state.page === 0) {
-            hitsContainer.html('');
-          }
-
-          var html = '';
-
-          if (params.results.nbHits > 0) {
-
-            res = params.results.nbHits;
-            //alert(res);
-            /*if (res > old) {
-              if (check) {
-                check = false;
-                checkVal = old;
-                alert(checkVal);
-              }
-              $('#heading').addClass('hide');
-              $('#noResult').removeClass('hide');
-            } else if (res < old && $('#heading').hasClass('hide')) {
-              //$('#heading').removeClass('hide');
-              //$('#noResult').addClass('hide');
-            } else if (res < old && !check && res <= checkVal) {
-              $('#heading').removeClass('hide');
-              $('#noResult').addClass('hide');
-            } */
-
-            old = res;
-
-            html = hits.map(function(hit) {
-
-              //TODO: Template hier bauen:
-
-              return '<div class="ais-hits--item  col-xs-4 col-sm-4 col-md-4 col-lg-4>' +
+          return '<div class="ais-hits--item  col-xs-4 col-sm-4 col-md-4 col-lg-4>' +
             '<section>' +
-              '<ul class="cards">' +
-                '<li class="cards__item ">' +
-                  '<div class="card">' +
+            '<ul class="cards">' +
+            '<li class="cards__item ">' +
+            '<div class="card">' +
 
-                    '<img src="../www/restaurants/' + hit.path + '/01.jpg" class="card__image hideMore" height="20%" value="' + hit.name +'"' +
-                    '<div class="card__content">' +
-                    '<br>' +
-                      '<h2 class="card-title">' + hit.name + '</h2>' +
-                      '<p class="card__text information" value="' + hit.name +'">' + hit.description + '</p>' +
-                      //TODO: Aufklappbares Template bauen:
-                      '<div class="moreInfoTemplate hide" value="' + hit.name +'">' +
-                        '<p value="' + hit.name +'" class="information hours">' +
-                          hit.street + '<br>' +
-                          // hit.zip + '&nbsp;' + hit.city + is eigentlich nicht notwendig im Moment haben ja sowieso nur LinzInnenstadt
-                          '<br>Mo: ' +   hit.hours.mon +
-                          '<br>Di: ' + hit.hours.tue +
-                          '<br>Mi: ' + hit.hours.wed +
-                          '<br>Do: ' + hit.hours.thu +
-                          '<br>Fr: ' + hit.hours.fri +
-                          '<br>Sa: ' + hit.hours.sat +
-                          '<br>So: ' + hit.hours.sun +
-                        '</p>' +
-                      '</div>' +
+            '<img src="../www/restaurants/' + hit.path + '/01.jpg" class="card__image hideMore" height="20%" value="' + hit.name + '"' +
+            '<div class="card__content">' +
+            '<br>' +
+            '<h2 class="card-title">' + hit.name + '</h2>' +
+            '<p class="card__text information" value="' + hit.name + '">' + hit.description + '</p>' +
+            //TODO: Aufklappbares Template bauen:
+            '<div class="moreInfoTemplate hide" value="' + hit.name + '">' +
+            '<p value="' + hit.name + '" class="information hours">' +
+            hit.street + '<br>' +
+            // hit.zip + '&nbsp;' + hit.city + is eigentlich nicht notwendig im Moment haben ja sowieso nur LinzInnenstadt
+            '<br>Mo: ' + hit.hours.mon +
+            '<br>Di: ' + hit.hours.tue +
+            '<br>Mi: ' + hit.hours.wed +
+            '<br>Do: ' + hit.hours.thu +
+            '<br>Fr: ' + hit.hours.fri +
+            '<br>Sa: ' + hit.hours.sat +
+            '<br>So: ' + hit.hours.sun +
+            '</p>' +
+            '</div>' +
 
-                      '<button class="moreInfo btn btn--block card__btn" value="' + hit.name +'">Mehr Infos hier!</button>' +
-                    '</div>' +
-                  '</div>' +
-                '</li>' +
-              '</ul>' +
-              '</section>' +
+            '<button class="moreInfo btn btn--block card__btn" value="' + hit.name + '">Mehr Infos hier!</button>' +
+            '</div>' +
+            '</div>' +
+            '</li>' +
+            '</ul>' +
+            '</section>' +
             '</div>';
-          });
+        });
 
-          }
+        params.helper.setQueryParameter('removeWordsIfNoResults', 'none');
+      }
 
-          hitsContainer.append(html.join(''));
-        }
-      });
+      hitsContainer.append(html.join(''));
+    }
+  });
 
   search.addWidget(
     instantsearch.widgets.stats({
@@ -161,7 +138,9 @@ function search() {
   $('#goButton').click(function() {
     startSearch();
     $('#hits').removeClass('hide');
-    $('html, body').animate({ scrollTop: $('#results').offset().top}, 500, 'linear');
+    $('html, body').animate({
+      scrollTop: $('#results').offset().top
+    }, 500, 'linear');
     $.ajax({
       url: 'algolia/searchSettings.php',
       type: 'POST',
@@ -171,15 +150,6 @@ function search() {
       },
 
       success: function(data) {
-        if (data > 0) {
-          $('div#stats').removeClass('hide');
-          $('#heading').removeClass('hide');
-          $('#noResult').addClass('hide');
-        } else {
-          $('div#stats').removeClass('hide');
-          $('#heading').addClass('hide');
-          $('#noResult').removeClass('hide');
-        }
       }
     });
 
@@ -198,7 +168,10 @@ function search() {
     $('div#stats').addClass('hide');
     $('#heading').addClass('hide');
     $('#noResult').addClass('hide');
-    $('html, body').animate({ scrollTop: $('#chooseType').offset().top}, 500, 'linear');
+    start = false;
+    $('html, body').animate({
+      scrollTop: $('#chooseType').offset().top
+    }, 500, 'linear');
 
     old = 1000;
 
@@ -216,6 +189,7 @@ function search() {
     $('div#stats').addClass('hide');
     $('#heading').addClass('hide');
     $('#noResult').addClass('hide');
+    start = false;
   });
 
   $('#iconRestaurant').change(function() {
@@ -234,9 +208,10 @@ function search() {
       $('#search').val($('#search').val().replace($(this).attr("value"), ""));
     }
     $('#hits').addClass('hide');
-    $('div#stats').addClass('hide');
-    $('#heading').addClass('hide');
-    $('#noResult').addClass('hide');
+    $('div#stats').removeClass('hide');
+    $('#heading').removeClass('hide');
+    start = true;
+    //$('#noResult').addClass('hide');
     setSettings();
     startSearch();
   });
