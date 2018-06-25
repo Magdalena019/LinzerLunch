@@ -71,19 +71,19 @@ $(document).ready(function() {
             var infoSelector = $(".infoForIcons");
 
             // ===== Replace the Café Word with Café Icon ====
-            var cafeImage = "<img src='../www/images/icons/cafegoldy.svg' height='5%' width='3%' />";
+            var cafeImage = "<img src='../www/images/icons/foodicons/cafegoldy.svg' height='5%' width='3%' />";
             infoSelector.html(function(_, html) {
               return html.replace(/cafe/g, cafeImage)
             });
 
             // ===== Replace the Restaurant Word with Restaurant Icon ====
-            var restaurantImage = "<img src='../www/images/icons/resgoldy.svg' height='5%' width='3%' />";
+            var restaurantImage = "<img src='../www/images/icons/foodicons/resgoldy.svg' height='5%' width='3%' />";
             infoSelector.html(function(_, html) {
               return html.replace(/restaurant/g, restaurantImage)
             });
 
             // ===== Replace the Bar Word with Bar Icon ====
-            var barImage = "<img src='../www/images/icons/bargoldy.svg' height='5%' width='3%' />";
+            var barImage = "<img src='../www/images/icons/foodicons/bargoldy.svg' height='5%' width='3%' />";
             infoSelector.html(function(_, html) {
               return html.replace(/bar/g, barImage)
             });
