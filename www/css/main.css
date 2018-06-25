@@ -32,6 +32,7 @@
     margin-right: auto;
 }
 
+<<<<<<< HEAD
 /* Stuff for Reponsive Stuff for the Button Stuff */
 /* Des Zeug hier muss noch bei dem Mobile Part rein damit es nur greift wenns zusammengeschoben wird */
 @media screen and (max-width: 576px){
@@ -43,6 +44,8 @@
 }
 }
 
+=======
+>>>>>>> c236b9401564c7bba0293af2e1853a157a92b92f
 
 /* Icon Search und Icons Mid ist das gleiche - iconSearch muss dann gelöscht werden das hab ich nur damit es auch wirkt
 weil die Klasse .iconsMid im Javascript noch nicht zugewiesen wurde */
@@ -51,10 +54,7 @@ weil die Klasse .iconsMid im Javascript noch nicht zugewiesen wurde */
     padding-left: 23%;
 }*/
 
-.iconsMid {
-    margin-right: auto;
-    padding-left: 23%;
-}
+
 
 #vonfürLinzer {
     margin-top: 5%;
