@@ -32,15 +32,6 @@
     margin-right: auto;
 }
 
-/* Stuff for Reponsive Stuff for the Button Stuff */
-/* Des Zeug hier muss noch bei dem Mobile Part rein damit es nur greift wenns zusammengeschoben wird */
-#wifiButtonThing, #nonSmokerButtonThing, #gardenButtonThing, #deliveryButtonThing, #smokerButtonThing,
-#resetButtonThing, #goButtonThing, #lunchButtonThing, #glutenButtonThing, #breakfastButtonThing, #veganButtonThing,
-#veggieButtonThing {
-    margin-left: 20%;
-    text-align: center;
-}
-
 
 /* Icon Search und Icons Mid ist das gleiche - iconSearch muss dann gelöscht werden das hab ich nur damit es auch wirkt
 weil die Klasse .iconsMid im Javascript noch nicht zugewiesen wurde */
@@ -49,10 +40,7 @@ weil die Klasse .iconsMid im Javascript noch nicht zugewiesen wurde */
     padding-left: 23%;
 }*/
 
-.iconsMid {
-    margin-right: auto;
-    padding-left: 23%;
-}
+
 
 #vonfürLinzer {
     margin-top: 5%;
