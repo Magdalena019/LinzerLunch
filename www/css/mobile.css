@@ -58,11 +58,9 @@
     height: 15vw;
     background-size: 15vw;
   }
-
   #iconRandom {
-    margin-left: -5% !important; 
+    margin-left: -5% !important;
   }
-
 }
 
 /* wenns klein is */
@@ -81,6 +79,10 @@
   }
   #wifiDescription {
     *margin-left: 0px !important;
+  }
+  #wifiButtonThing, #nonSmokerButtonThing, #gardenButtonThing, #deliveryButtonThing, #smokerButtonThing, #resetButtonThing, #goButtonThing, #lunchButtonThing, #glutenButtonThing, #breakfastButtonThing, #veganButtonThing, #veggieButtonThing {
+    margin-left: 20%;
+    text-align: center;
   }
 }
 
