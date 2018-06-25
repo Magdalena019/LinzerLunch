@@ -65,7 +65,7 @@
 
 /* wenns klein is */
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 576px) {
   .icon {
     text-align: center;
   }
@@ -78,7 +78,7 @@
     margin-left: 20%;
   }
   #wifiDescription {
-    *margin-left: 0px !important;
+    margin-left: 0px !important;
   }
   #wifiButtonThing, #nonSmokerButtonThing, #gardenButtonThing, #deliveryButtonThing, #smokerButtonThing, #resetButtonThing, #goButtonThing, #lunchButtonThing, #glutenButtonThing, #breakfastButtonThing, #veganButtonThing, #veggieButtonThing {
     margin-left: 20%;
