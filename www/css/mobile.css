@@ -61,6 +61,9 @@
   #iconRandom {
     margin-left: -5% !important;
   }
+  .randomrestaurant, .randomcafe, .randombar, .randomall {
+    margin-left: 35% !important;
+  }
 }
 
 /* wenns klein is */

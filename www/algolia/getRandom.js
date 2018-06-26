@@ -101,21 +101,21 @@ function random() {
             var infoSelector = $(".infoForIcons");
 
             // ===== Replace the Café Word with Café Icon ====
-            var cafeImage = "<img src='../www/images/icons/cafegoldy.png' height='5%' width='3%' />";
-            infoSelector.html(function (_, html) {
-                return html.replace(/cafe/g , cafeImage )
+            var cafeImage = "<img src='images/icons/cafegoldy.svg' height='5%' width='3%' />";
+            infoSelector.html(function(_, html) {
+              return html.replace(/cafe/g, cafeImage)
             });
 
             // ===== Replace the Restaurant Word with Restaurant Icon ====
-            var restaurantImage = "<img src='../www/images/icons/resgoldy.png' height='5%' width='3%' />";
-            infoSelector.html(function (_, html) {
-                return html.replace(/restaurant/g , restaurantImage )
+            var restaurantImage = "<img src='images/icons/restaurantgoldy.svg' height='5%' width='3%' />";
+            infoSelector.html(function(_, html) {
+              return html.replace(/restaurant/g, restaurantImage)
             });
 
             // ===== Replace the Bar Word with Bar Icon ====
-            var barImage = "<img src='../www/images/icons/bargoldy.png' height='5%' width='3%' />";
-            infoSelector.html(function (_, html) {
-                return html.replace(/bar/g , barImage )
+            var barImage = "<img src='images/icons/bargoldy.svg' height='5%' width='3%' />";
+            infoSelector.html(function(_, html) {
+              return html.replace(/bar/g, barImage)
             });
 
             // ===== Replace the WIFI Word with WLAN Icon ====
