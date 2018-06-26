@@ -3,7 +3,7 @@ var cafes;
 var bars;
 var all;
 
-function init() {
+function fillAll() {
   $.ajax({
     url: 'algolia/getRandom.php',
     type: 'POST',
@@ -13,44 +13,76 @@ function init() {
       search: ""
     },
     success: function (data) {
-      all = data;
+      if (data === undefined || data.length == 0) {
+        fillAll();
+      } else {
+        all = data;
+      }
     }});
+}
 
-    $.ajax({
-      url: 'algolia/getRandom.php',
-      type: 'POST',
-      dataType: 'json',
+function fillRes() {
+  $.ajax({
+    url: 'algolia/getRandom.php',
+    type: 'POST',
+    dataType: 'json',
 
-      data: {
-        search: "restaurant"
-      },
-      success: function (data) {
+    data: {
+      search: "restaurant"
+    },
+    success: function (data) {
+      if (data === undefined || data.length == 0) {
+        fillRes();
+      } else {
         restaurants = data;
-      }});
+      }
 
-      $.ajax({
-        url: 'algolia/getRandom.php',
-        type: 'POST',
-        dataType: 'json',
+    }});
+}
 
-        data: {
-          search: "cafe"
-        },
-        success: function (data) {
-          cafes = data;
-        }});
+function fillCaf() {
+  $.ajax({
+    url: 'algolia/getRandom.php',
+    type: 'POST',
+    dataType: 'json',
 
-        $.ajax({
-          url: 'algolia/getRandom.php',
-          type: 'POST',
-          dataType: 'json',
+    data: {
+      search: "cafe"
+    },
+    success: function (data) {
+      if (data === undefined || data.length == 0) {
+        fillCaf();
+      } else {
+        cafes = data;
+      }
+    }});
+}
 
-          data: {
-            search: "bar"
-          },
-          success: function (data) {
-            bars = data;
-          }});
+function fillBar() {
+  $.ajax({
+    url: 'algolia/getRandom.php',
+    type: 'POST',
+    dataType: 'json',
+
+    data: {
+      search: "bar"
+    },
+    success: function (data) {
+      if (data === undefined || data.length == 0) {
+        fillBar();
+      } else {
+        bars = data;
+      }
+    }});
+}
+
+function init() {
+
+    fillAll();
+    fillRes();
+    fillCaf();
+    fillBar();
+
 }
 
 function getIndex(arr) {
@@ -102,20 +134,20 @@ function random() {
 
             // ===== Replace the Café Word with Café Icon ====
             var cafeImage = "<img src='images/icons/cafegoldy.svg' height='5%' width='3%' />";
-            infoSelector.html(function(_, html) {
-              return html.replace(/cafe/g, cafeImage)
+            infoSelector.html(function (_, html) {
+                return html.replace(/cafe/g , cafeImage )
             });
 
             // ===== Replace the Restaurant Word with Restaurant Icon ====
             var restaurantImage = "<img src='images/icons/restaurantgoldy.svg' height='5%' width='3%' />";
-            infoSelector.html(function(_, html) {
-              return html.replace(/restaurant/g, restaurantImage)
+            infoSelector.html(function (_, html) {
+                return html.replace(/restaurant/g , restaurantImage )
             });
 
             // ===== Replace the Bar Word with Bar Icon ====
             var barImage = "<img src='images/icons/bargoldy.svg' height='5%' width='3%' />";
-            infoSelector.html(function(_, html) {
-              return html.replace(/bar/g, barImage)
+            infoSelector.html(function (_, html) {
+                return html.replace(/bar/g , barImage )
             });
 
             // ===== Replace the WIFI Word with WLAN Icon ====
