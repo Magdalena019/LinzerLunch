@@ -29,7 +29,16 @@
 
 }
 
+#iconSearchGo {
+  text-align: center;
+
+}
+
 span {
   margin-left: auto;
   margin-right: auto;
+}
+
+#iconSearchGo {
+  margin-left:16vw !important;
 }

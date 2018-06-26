@@ -15,7 +15,10 @@
 }
 
 #randomSearch {
-    padding-left: 10%;
+    padding-left: 3%;
+    padding-right: 3%;
+
+    padding-bottom: 25px;
 }
 
 #descriptionSection1 {
@@ -68,7 +71,7 @@ body {
   line-height: 1.8;
   background-color: #0a0f10;
   font-family: 'Montserrat', sans-serif;
-  padding: 0% 4% 0% 4%;
+  padding: 0% 4% 20px 4%;
 }
 
 h2{
@@ -603,8 +606,8 @@ input[type="radio"]#randomres:checked >label > span{
 
 
 .row {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 

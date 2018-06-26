@@ -62,9 +62,23 @@
     margin-left: -5% !important;
   }
   .randomrestaurant, .randomcafe, .randombar, .randomall {
-    margin-left: 35% !important;
+    margin-left: 45% !important;
   }
+  #goButtonThing, #resetButtonThing {
+    margin-left: 0px;
+  }
+  /*
+  #iconSearchGo {
+    margin-left: 3% !important;
+  }*/
 }
+
+/*
+@media only screen and (min-width: 900px) {
+  #goButtonThing {
+    margin-left:18% !important;
+  }
+} */
 
 /* wenns klein is */
 
@@ -90,6 +104,15 @@
   .iconsMid {
     margin-right: auto;
     padding-left: 23%;
+  }
+  #iconSearchGo {
+    margin-left: -7vw !important;
+  }
+  #goButtonThing {
+    margin-bottom: 10px;
+  }
+  #wifiDescription, #nonSmokerDescription, #gardenDescription, #lunchDescription, #deliveryDescription, #breakfastDescription, #glutenDescription, #veganDescription, #veggieDescription, #SmokerDescription {
+    /*display: none;*/
   }
 }
 
@@ -118,6 +141,7 @@ i {
   padding: 10%;
   margin-left: -3vw;
   text-align: center;
+  top: 8px !important;
 }
 
 .dropdown a:hover {

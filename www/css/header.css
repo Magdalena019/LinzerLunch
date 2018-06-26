@@ -56,7 +56,10 @@ header {
   text-align: center;
 }
 
-#wifiDescription {
-  /*margin-left: 47%;*/
+
+
+#wifiDescription, #nonSmokerDescription, #gardenDescription, #lunchDescription, #deliveryDescription, #breakfastDescription, #glutenDescription, #veganDescription, #veggieDescription, #SmokerDescription {
+  width: 150px;
+  text-align: center;
   margin-top: 5px;
 }
