@@ -16,7 +16,7 @@
   z-index: 501;
 }
 
-/* wenns groß is */
+/* Große Ansicht */
 
 @media only screen and (min-width: 1200px) {
   #navbarMobile {
@@ -24,7 +24,7 @@
   }
 }
 
-/* wenns klein is */
+/* Kleine Ansicht */
 
 @media only screen and (max-width: 1201px) {
   #navbarDesktop {
@@ -67,20 +67,9 @@
   #goButtonThing, #resetButtonThing {
     margin-left: 0px;
   }
-  /*
-  #iconSearchGo {
-    margin-left: 3% !important;
-  }*/
 }
 
-/*
-@media only screen and (min-width: 900px) {
-  #goButtonThing {
-    margin-left:18% !important;
-  }
-} */
-
-/* wenns klein is */
+/* Kleine Ansicht 2 */
 
 @media only screen and (max-width: 576px) {
   .icon {

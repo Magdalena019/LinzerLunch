@@ -168,33 +168,6 @@ height: 500px;
   font-size: 10pt;
 }
 
-/*
-.hours {
-  text-align: left;
-  padding-left: 20%;
-} */
-
-/*
-@media (min-width: 40rem) {
-  .card__image::before {
-    padding-top: 66.6%;
-  }
-} */
-
-/*
-@media (min-width: 40rem) {
-  .cards__item {
-    width: 50%;
-  }
-}
-@media (min-width: 56rem) {
-  .cards__item {
-    width: 33.3333%;
-  }
-} */
-
-/* ----------------- */
-
 @-webkit-keyframes sbx-reset-in {
   0% {
     -webkit-transform: translate3d(-20%, 0, 0);
@@ -647,7 +620,5 @@ height: 500px;
   color: #444;
   display: inline
 }
-
-
 
 /*# sourceMappingURL=instantsearch.min.css.map */

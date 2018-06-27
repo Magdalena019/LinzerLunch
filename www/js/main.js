@@ -225,36 +225,6 @@ $('.lunch').on('click',function(){
     });
   });
 
-
-  /* Function for the Return to Top Button */
-  // ===== Scroll to Top ====
-  /*
-  $(window).scroll(function() {
-    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
-      $('#return-to-top').fadeIn(200);    // Fade in the arrow
-    } else {
-      $('#return-to-top').fadeOut(200);   // Else fade out the arrow
-    }
-  });
-  $('#return-to-top').click(function() {      // When arrow is clicked
-    $('body,html').animate({
-      scrollTop : 0                       // Scroll to top of body
-    }, 500);
-  });*/
-
-  /* Function for replacing the Icon Text with the corresponding icons */
-  // ===== Replace the Café Word with Café Icon ====
-  /* NICHT HIER RAUSLÖSCHEN WEISS NOCH NICHT OB ICHS NOCH BRAUCH */
-  /*
-  var cafeImage = "<img src='../www/images/icons/cafegoldy.png' height='5%' width='3%' />";
-  $("body").html(function (_, html) {
-    return html.replace(/cafe/g , cafeImage )
-  });
-  */
-
-
-  // =================================================
-
 //create sticky menu
 // Create a clone of the menu, right next to original.
 $('#navbarDesktop').addClass('original').clone().insertAfter('#navbarDesktop').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
@@ -333,8 +303,6 @@ $('.randomcafe').removeClass('checked');
 $('.randombar').removeClass('checked');
 
 });
-
-
 
 
 });
