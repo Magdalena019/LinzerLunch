@@ -100,8 +100,9 @@
   #goButtonThing {
     margin-bottom: 10px;
   }
-  #wifiDescription, #nonSmokerDescription, #gardenDescription, #lunchDescription, #deliveryDescription, #breakfastDescription, #glutenDescription, #veganDescription, #veggieDescription, #SmokerDescription {
-    /*display: none;*/
+  #wifiButtonThing, #nonSmokerButtonThing, #gardenButtonThing, #deliveryButtonThing, #smokerButtonThing, #resetButtonThing, #goButtonThing, #lunchButtonThing, #glutenButtonThing, #breakfastButtonThing, #veganButtonThing, #veggieButtonThing {
+    margin-left: 20%;
+    text-align: center;
   }
 }
 
