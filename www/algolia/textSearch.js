@@ -44,6 +44,7 @@ $(document).ready(function() {
           '<h4><b><br>' + hit.name + '</b></h4>' +
           '<p>' + hit.description + '</p>' +
           '<p class="infoForIcons">' + hit.info + '</p>' +
+          '<p>' + hit.street + '</p>' +
           '<h5>Öffnungszeiten: ' + '</h5>' +
           '<p>Montag: ' + hit.hours.mon + '<br>' +
           'Dienstag: ' + hit.hours.tue + '<br>' +

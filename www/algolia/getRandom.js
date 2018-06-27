@@ -119,6 +119,7 @@ function random() {
         '<h4><b><br>' + data["name"] + '</b></h4>' +
         '<p>' + data["description"] + '</p>' +
         '<p class="infoForIcons">' + data["info"] + '</p>' +
+        '<p>' + data["street"] + '</p>' +
         '<h5>Öffnungszeiten: ' + '</h5>' +
         '<p>Montag: ' + data["hours"]["mon"] + '<br>' +
         'Dienstag: ' + data["hours"]["tue"] + '<br>' +
@@ -210,10 +211,6 @@ function random() {
                 return html.replace(/garden/g , gardenImage )
             });
 
-            /* Ende der Funktionen zum Icons replacen */
-            /* --------------------------------- */
-
-            /* So dass die If nur einmal beim Erstellen aufgerufen wird */
             iconCounter++;
           }
   }
