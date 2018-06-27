@@ -11,60 +11,34 @@
 }
 
 #iconSearch {
-    padding-left: 7%;
+  padding-left: 7%;
 }
 
 #randomSearch {
-    padding-left: 3%;
-    padding-right: 3%;
-
-    padding-bottom: 40px;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-bottom: 40px;
 }
 
 #descriptionSection1 {
-    text-align: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+  text-align: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #volltextSearchDesc {
-    text-align: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+  text-align: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-<<<<<<< HEAD
-/* Stuff for Reponsive Stuff for the Button Stuff */
-/* Des Zeug hier muss noch bei dem Mobile Part rein damit es nur greift wenns zusammengeschoben wird */
-@media screen and (max-width: 576px){
-#wifiButtonThing, #nonSmokerButtonThing, #gardenButtonThing, #deliveryButtonThing, #smokerButtonThing,
-#resetButtonThing, #goButtonThing, #lunchButtonThing, #glutenButtonThing, #breakfastButtonThing, #veganButtonThing,
-#veggieButtonThing {
-    margin-left: 20%;
-    text-align: center;
-}
-}
-
-=======
->>>>>>> c236b9401564c7bba0293af2e1853a157a92b92f
-
-/* Icon Search und Icons Mid ist das gleiche - iconSearch muss dann gelöscht werden das hab ich nur damit es auch wirkt
-weil die Klasse .iconsMid im Javascript noch nicht zugewiesen wurde */
-/*#iconSearch {
-    margin-right: auto;
-    padding-left: 23%;
-}*/
-
-
 
 #vonfürLinzer {
-    margin-top: 5%;
+  margin-top: 5%;
 }
 
 /* -------------------- */
-
 
 body {
   font-size: 16px;
@@ -74,7 +48,7 @@ body {
   padding: 0% 4% 20px 4%;
 }
 
-h2{
+h2 {
   font-size: 1.3rem;
 }
 
@@ -89,7 +63,7 @@ h6 {
   text-align: center;
 }
 
-h4{
+h4 {
   font-size: 20pt;
   color: var(--goldy);
   font-weight: 600;
@@ -123,95 +97,90 @@ section {
   padding: 5px;
 }
 
-
 #navbar {
-    /*position: fixed;*/
-    /*margin-left: -70px;*/
-
-    /* position fixed, immer vordergrund */
-    z-index: 1;
-    overflow:hidden;
+  /*position: fixed;*/
+  /*margin-left: -70px;*/
+  /* position fixed, immer vordergrund */
+  z-index: 1;
+  overflow: hidden;
 }
-
 
 /**
  * COUNTERS
  */
 
+.counters {
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  list-style-type: none;
+  padding: 100px 100px;
+}
 
- .counters {
-   top: 50%;
-   left: 50%;
-   width: 100vw;
-   list-style-type:none;
-   padding: 100px 100px;
- }
- @media screen and (min-width: 769px) {
-   .counters .column {
-     padding-left: 0;
-     float:left;
-   }
- }
+@media screen and (min-width: 769px) {
+  .counters .column {
+    padding-left: 0;
+    float: left;
+  }
+}
 
- .counter {
-   padding-bottom: 1rem;
-   border-bottom: 1px solid #eee;
-   text-align: center;
- }
- @media screen and (min-width: 769px) {
-   .counter {
-     border-bottom: 0;
-     border-right: 1px solid #eee;
-   }
- }
- .column:last-of-type .counter {
-   border-bottom: 0;
-   border-right: 0;
- }
- .counter-number {
-   display: block;
-   font-size: 4rem;
-   font-weight: 700;
- }
- .counter-name {
-   display: block;
- }
+.counter {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
 
+@media screen and (min-width: 769px) {
+  .counter {
+    border-bottom: 0;
+    border-right: 1px solid #eee;
+  }
+}
+
+.column:last-of-type .counter {
+  border-bottom: 0;
+  border-right: 0;
+}
+
+.counter-number {
+  display: block;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.counter-name {
+  display: block;
+}
 
 /* Start CSS Parallax */
 
 .parallax1 {
-    /* The image used */
-    background-image: url("../images/bg3.jpg");
-
-    /* Set a specific height */
-    height: 300px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    padding: 0% -40% 0% -4%;
+  /* The image used */
+  background-image: url("../images/bg3.jpg");
+  /* Set a specific height */
+  height: 300px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0% -40% 0% -4%;
 }
 
 .parallax2 {
-    /* The image used */
-    background-image: url("../images/bg4.jpg");
-
-    /* Set a specific height */
-    height: 300px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  /* The image used */
+  background-image: url("../images/bg4.jpg");
+  /* Set a specific height */
+  height: 300px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body .parallax {
-    padding: 0% -4% 0% -4%;
+  padding: 0% -4% 0% -4%;
 }
 
 /* Ende Parallax */
@@ -219,435 +188,383 @@ body .parallax {
 /* Start jQuery Counter Animation */
 
 .col-md-4 {
-    text-align: center;
-    padding-bottom: 50px;
-    border-right: 1px dashed black;
+  text-align: center;
+  padding-bottom: 50px;
+  border-right: 1px dashed black;
 }
 
 .col-md-4:last-child {
-    border-right: 0px solid black;
+  border-right: 0px solid black;
 }
 
 .counter {
-    animation-duration: 1s;
-    animation-delay: 0s;
+  animation-duration: 1s;
+  animation-delay: 0s;
 }
 
 i {
-    font-size: 20px !Important;
+  font-size: 20px !Important;
 }
 
 @media (max-width: 991px) {
-    .col-md-4 {
-        border-right: 0px dashed black;
-        border-bottom: 1px dashed black;
-        width: 50%;
-        margin: auto auto;
-    }
-
-    .col-md-4:last-child {
-        border-bottom: 0px dashed black;
-    }
+  .col-md-4 {
+    border-right: 0px dashed black;
+    border-bottom: 1px dashed black;
+    width: 50%;
+    margin: auto auto;
+  }
+  .col-md-4:last-child {
+    border-bottom: 0px dashed black;
+  }
 }
 
 /*                 */
 
-input[type="radio"]{
-  display:none;
+input[type="radio"] {
+  display: none;
 }
 
-label.reslabel >span{
+label.reslabel>span {
   display: inline-block;
   width: 151px;
-  height:151px;
+  height: 151px;
   background: url(../images/icons/resgoldy.png) 0 center no-repeat;
   background-size: 150px;
   margin: auto;
-
 }
 
-
-input[type="radio"]#restaurant:checked +label.reslabel > span{
-  background-image:  url(../images/icons/res.png);
+input[type="radio"]#restaurant:checked+label.reslabel>span {
+  background-image: url(../images/icons/res.png);
   opacity: 0.5;
 }
 
-label.caflabel >span{
+label.caflabel>span {
   display: inline-block;
   width: 151px;
-  height:151px;
+  height: 151px;
   background: url(../images/icons/cafegoldy.png) 0 center no-repeat;
   background-size: 150px;
 }
 
-input[type="radio"]#cafe:checked +label.caflabel > span, input[type="radio"]#randomcafe:checked +label.caflabel > span{
-  background-image:  url(../images/icons/cafe.png);
+input[type="radio"]#cafe:checked+label.caflabel>span, input[type="radio"]#randomcafe:checked+label.caflabel>span {
+  background-image: url(../images/icons/cafe.png);
   opacity: 0.5;
 }
 
-label.barlabel >span{
+label.barlabel>span {
   display: inline-block;
   width: 151px;
-  height:151px;
+  height: 151px;
   background: url(../images/icons/bargoldy.png) 0 center no-repeat;
   background-size: 150px;
 }
 
-input[type="radio"]#bar:checked +label.barlabel > span, input[type="radio"]#randombar:checked +label.barlabel > span{
-  background-image:  url(../images/icons/bar.png);
+input[type="radio"]#bar:checked+label.barlabel>span, input[type="radio"]#randombar:checked+label.barlabel>span {
+  background-image: url(../images/icons/bar.png);
   opacity: 0.5;
 }
 
-label.mix >span{
+label.mix>span {
   display: inline-block;
   width: 151px;
-  height:151px;
+  height: 151px;
   background: url(../images/icons/allgoldy.png) 0 center no-repeat;
   background-size: 150px;
 }
 
-input[type="radio"]#all:checked +label.mix > span, input[type="radio"]#randomall:checked +label.mix > span{
-  background-image:  url(../images/icons/allblack.png);
+input[type="radio"]#all:checked+label.mix>span, input[type="radio"]#randomall:checked+label.mix>span {
+  background-image: url(../images/icons/allblack.png);
   opacity: 0.5;
 }
 
-
 /*checkbox toggle class*/
-.wifiID{
+
+.wifiID {
   display: block;
   width: 151px;
-  height:151px;
+  height: 151px;
   background: url(../images/icons/foodicons/Wifi.png) 0 center no-repeat;
   background-size: 150px;
 }
 
-.nosmoker{
+.nosmoker {
   display: block;
   width: 151px;
-  height:151px;
+  height: 151px;
   background: url(../images/icons/foodicons/NonSmoker.png) 0 center no-repeat;
   background-size: 150px;
 }
 
-.smoker{
+.smoker {
   display: block;
   width: 151px;
-  height:151px;
+  height: 151px;
   background: url(../images/icons/foodicons/smoker.png) 0 center no-repeat;
   background-size: 150px;
 }
 
-.smoker.checked, .veggie.checked, .nosmoker.checked, .wifiID.checked, .vegan.checked, .breakfast.checked, .glutenfree.checked, .delivery.checked, .lunch.checked, .garden.checked{
+.smoker.checked, .veggie.checked, .nosmoker.checked, .wifiID.checked, .vegan.checked, .breakfast.checked, .glutenfree.checked, .delivery.checked, .lunch.checked, .garden.checked {
   opacity: 0.5;
 }
 
-.veggie{
+.veggie {
   display: block;
   width: 151px;
-  height:151px;
+  height: 151px;
   background: url(../images/icons/foodicons/veggie.png) 0 center no-repeat;
   background-size: 150px;
 }
 
-.vegan{
+.vegan {
   display: block;
   width: 151px;
-  height:151px;
+  height: 151px;
   background: url(../images/icons/foodicons/vegan.png) 0 center no-repeat;
   background-size: 150px;
 }
 
-.breakfast{
+.breakfast {
   display: block;
   width: 151px;
-  height:151px;
+  height: 151px;
   background: url(../images/icons/foodicons/Breakfast.png) 0 center no-repeat;
   background-size: 150px;
 }
-.glutenfree{
+
+.glutenfree {
   display: block;
   width: 151px;
-  height:151px;
+  height: 151px;
   background: url(../images/icons/foodicons/glutenfree2.png) 0 center no-repeat;
   background-size: 150px;
 }
-.delivery{
+
+.delivery {
   display: block;
   width: 151px;
-  height:151px;
+  height: 151px;
   background: url(../images/icons/foodicons/delivery.png) 0 center no-repeat;
   background-size: 150px;
 }
-.garden{
+
+.garden {
   display: block;
   width: 151px;
-  height:151px;
+  height: 151px;
   background: url(../images/icons/foodicons/garden.png) 0 center no-repeat;
   background-size: 150px;
 }
-.lunch{
+
+.lunch {
   display: block;
   width: 151px;
-  height:151px;
+  height: 151px;
   background: url(../images/icons/foodicons/lunch.png) 0 center no-repeat;
   background-size: 150px;
 }
 
-.ais-hits--item{
-  float:left;
-  height:480px;
-//  width:33%;
+.ais-hits--item {
+  float: left;
+  height: 480px;
+  //  width:33%;
 }
 
-.cards__item{
-  height:400px;
+.cards__item {
+  height: 400px;
 }
-
 
 /* CSS FOR THE SCROLL DOWN BUTTON */
+
 /** Pen -- https://codepen.io/nxworld/pen/OyRrGy */
 
 #secondbutton {
-    margin-left: 48.0%;
-    margin-bottom: 10%;
-    z-index: 1;
-    display: inline-block;
-    position: relative;
+  margin-left: 48.0%;
+  margin-bottom: 10%;
+  z-index: 1;
+  display: inline-block;
+  position: relative;
 }
 
 #firstbutton {
-    margin-top: -5%;
-    margin-left: 48.5%;
-    z-index: 0;
-    display: inline-block;
-    position: relative;
+  margin-top: -5%;
+  margin-left: 48.5%;
+  z-index: 0;
+  display: inline-block;
+  position: relative;
 }
 
 #thirdbutton {
-    margin-top: -10%;
+  margin-top: -10%;
 }
 
 @-webkit-keyframes ani-mouse {
-    0% {
-        opacity: 1;
-        top: 29%;
-    }
-    15% {
-        opacity: 1;
-        top: 50%;
-    }
-    50% {
-        opacity: 0;
-        top: 50%;
-    }
-    100% {
-        opacity: 0;
-        top: 29%;
-    }
-}
-@-moz-keyframes ani-mouse {
-    0% {
-        opacity: 1;
-        top: 29%;
-    }
-    15% {
-        opacity: 1;
-        top: 50%;
-    }
-    50% {
-        opacity: 0;
-        top: 50%;
-    }
-    100% {
-        opacity: 0;
-        top: 29%;
-    }
-}
-@keyframes ani-mouse {
-    0% {
-        opacity: 1;
-        top: 29%;
-    }
-    15% {
-        opacity: 1;
-        top: 50%;
-    }
-    50% {
-        opacity: 0;
-        top: 50%;
-    }
-    100% {
-        opacity: 0;
-        top: 29%;
-    }
-}
-.scroll-btn {
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
-
-.scroll-btn > * {
-    display: inline-block;
-    line-height: 18px;
-    font-size: 13px;
-    font-weight: normal;
-    color: #fccda0;
-    font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    letter-spacing: 2px;
-}
-.scroll-btn > *:hover,
-.scroll-btn > *:focus,
-.scroll-btn > *.active {
-    color: #fccda0;
-}
-.scroll-btn > *:hover,
-.scroll-btn > *:focus,
-.scroll-btn > *:active,
-.scroll-btn > *.active {
-    opacity: 0.8;
-    filter: alpha(opacity=80);
-}
-.scroll-btn .mouse {
-    position: relative;
-    display: block;
-    width: 35px;
-    height: 55px;
-    margin: 0 auto 20px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: 3px solid #fccda0;
-    border-radius: 23px;
-}
-.scroll-btn .mouse > * {
-    position: absolute;
-    display: block;
+  0% {
+    opacity: 1;
     top: 29%;
-    left: 50%;
-    width: 8px;
-    height: 8px;
-    margin: -4px 0 0 -4px;
-    background: #fccda0;
-    border-radius: 50%;
-    -webkit-animation: ani-mouse 2.5s linear infinite;
-    -moz-animation: ani-mouse 2.5s linear infinite;
-    animation: ani-mouse 2.5s linear infinite;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
 }
 
+@-moz-keyframes ani-mouse {
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
+}
+
+@keyframes ani-mouse {
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
+}
+
+.scroll-btn {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.scroll-btn>* {
+  display: inline-block;
+  line-height: 18px;
+  font-size: 13px;
+  font-weight: normal;
+  color: #fccda0;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 2px;
+}
+
+.scroll-btn>*:hover, .scroll-btn>*:focus, .scroll-btn>*.active {
+  color: #fccda0;
+}
+
+.scroll-btn>*:hover, .scroll-btn>*:focus, .scroll-btn>*:active, .scroll-btn>*.active {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+.scroll-btn .mouse {
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 55px;
+  margin: 0 auto 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 3px solid #fccda0;
+  border-radius: 23px;
+}
+
+.scroll-btn .mouse>* {
+  position: absolute;
+  display: block;
+  top: 29%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  background: #fccda0;
+  border-radius: 50%;
+  -webkit-animation: ani-mouse 2.5s linear infinite;
+  -moz-animation: ani-mouse 2.5s linear infinite;
+  animation: ani-mouse 2.5s linear infinite;
+}
 
 /*random icons*/
-.randomrestaurant{
+
+.randomrestaurant {
   display: block;
   width: 151px;
-  height:151px;
+  height: 151px;
   background: url(../images/icons/resgoldy.png) 0 center no-repeat;
   background-size: 150px;
 }
 
-.randomrestaurant.checked{
-  background-image:  url(../images/icons/res.png);
+.randomrestaurant.checked {
+  background-image: url(../images/icons/res.png);
   opacity: 0.5;
 }
 
-
-.randomcafe{
+.randomcafe {
   display: block;
   width: 151px;
-  height:151px;
+  height: 151px;
   background: url(../images/icons/cafegoldy.png) 0 center no-repeat;
   background-size: 150px;
 }
 
-.randomcafe.checked{
-  background-image:  url(../images/icons/cafe.png);
+.randomcafe.checked {
+  background-image: url(../images/icons/cafe.png);
   opacity: 0.5;
 }
 
-.randombar{
+.randombar {
   display: block;
   width: 151px;
-  height:151px;
+  height: 151px;
   background: url(../images/icons/bargoldy.png) 0 center no-repeat;
   background-size: 150px;
 }
 
-.randombar.checked{
-  background-image:  url(../images/icons/bar.png);
+.randombar.checked {
+  background-image: url(../images/icons/bar.png);
   opacity: 0.5;
 }
 
-.randomall{
+.randomall {
   display: block;
   width: 151px;
-  height:151px;
+  height: 151px;
   background: url(../images/icons/allgoldy.png) 0 center no-repeat;
   background-size: 150px;
 }
 
-.randomall.checked{
-  background-image:  url(../images/icons/allblack.png);
+.randomall.checked {
+  background-image: url(../images/icons/allblack.png);
   opacity: 0.5;
 }
-/*label#randomrestaurant >span{
-  display: inline-block;
-  width: 151px;
-  height:151px;
-  background: url(../images/icons/resgoldy.png) 0 center no-repeat;
-  background-size: 150px;
-}
-
-input[type="radio"]#randomres:checked >label > span{
-  background-image:  url(../images/icons/res.png);
-  opacity: 0.5;
-}*/
 
 
 .row {
   margin-left: 0;
   margin-right: 0;
 }
-
-
-/** Code for the Return to Top Button **/
-/*
-#return-to-top {
-    position: fixed;
-    bottom: 60px;
-    right: 60px;
-    background: #fccda0;
-    width: 60px;
-    height: 60px;
-    display: block;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
-    border-radius: 35px;
-    display: none;
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    z-index: 1;
-}
-#return-to-top i {
-    color: #fff;
-    position: relative;
-    left: 21px;
-    top: 20px;
-    font-size: 40px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-#return-to-top:hover {
-    background: #fccda0;
-}
-#return-to-top:hover i {
-    color: #fff;
-    top: 5px;
-}*/
