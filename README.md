@@ -12,7 +12,7 @@ surprising section where users get a random pick to inspire them.
 - Cordova
 
 ## Contributors
-LinzerLunch was build by students from the [University of Applied Sciences Upper Austria](https://www.fh-ooe.at/en/hagenberg-campus/).
+LinzerLunch was build by students from the [University of Applied Sciences Upper Austria](https://www.fh-ooe.at/en/hagenberg-campus/). 
 
 - [Magdalena Geißbauer](https://github.com/Magdalena019)
 - [Birgit Haselmayr](https://github.com/S1610238029)
